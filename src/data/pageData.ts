@@ -3,7 +3,7 @@ export const pageData = {
     title: "소액결제 현금화",
     description: "SKT, KT, LGU+ 모든 통신사 소액결제 한도를 즉시 현금으로! 업계 최고 지급률, 3분 입금을 경험하세요.",
     contactButtonText: "소액결제 즉시 상담",
-    themeColor: "green",
+    themeColor: "sky",
     sections: [
       {
         type: "intro",

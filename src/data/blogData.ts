@@ -141,7 +141,7 @@ export const blogContentData: { [key: string]: any } = {
     "14": {
       content: `
         <h2>서론: 현명한 이용의 마무리, '상환 계획'</h2>
-        <p><strong><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold">소액결제 현금화</a></strong>는 급할 때 매우 유용한 서비스지만, 현명한 이용은 '상환'까지 완벽하게 계획하는 것입니다. 다음 달 통신요금에 합산되어 청구되는 금액을 미리 관리하지 않으면, 자칫 연체로 이어져 신용등급 하락 등 더 큰 어려움을 겪을 수 있습니다. 이 글에서는 소액결제 이용 후 요금을 스마트하게 관리하여 연체를 막고 신용을 지키는 현실적인 방법들을 알려드립니다.</p>
+        <p><strong><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold">소액결제 현금화</a></strong>는 급할 때 매우 유용한 서비스지만, 현명한 이용은 '상환'까지 완벽하게 계획하는 것입니다. 다음 달 통신요금에 합산되어 청구되는 금액을 미리 관리하지 않으면, 자칫 연체로 이어져 신용등급 하락 등 더 큰 어려움을 겪을 수 있습니다. 이 글에서는 소액결제 이용 후 요금을 스마트하게 관리하여 연체를 막고 신용을 지키는 현실적인 방법들을 알려드립니다.</p>
         <h3>1. 청구 금액 정확히 파악하기: 모든 것의 시작</h3>
         <p>가장 기본은 내가 다음 달에 얼마를 갚아야 하는지 정확히 아는 것입니다. 통신사 앱(T월드, 마이케이티, U+고객센터)의 '소액결제 내역' 메뉴에서 이번 달에 사용한 금액을 미리 확인하고, 다음 달 예상 요금을 계산해보는 습관을 들이세요. 예상치 못한 금액에 당황하는 일을 막을 수 있습니다.</p>
         <h3>2. '미리 납부' 기능 적극 활용하기</h3>
@@ -150,7 +150,7 @@ export const blogContentData: { [key: string]: any } = {
         <p>요금 납부가 어려울 것 같다면, 절대 방치해서는 안 됩니다. 통신 요금 연체는 서울보증보험 등을 통해 채무 불이행 정보가 공유되어 신용등급 하락의 직접적인 원인이 될 수 있습니다.</p>
         <ul>
           <li><strong>통신사 분할납부 상담:</strong> 가장 먼저 해야 할 일입니다. 통신사 고객센터(114)에 직접 연락하여 "소액결제 이용 금액에 대해 분할 납부가 가능한지" 문의하세요. 장기 상습 연체가 아니라면 대부분 2~3개월 분납을 지원해줍니다. 연체 이자가 발생하기 전에 먼저 상담하는 것이 핵심입니다.</li>
-          <li><strong>다른 금융 서비스 검토:</strong> 만약 분할납부가 어렵다면, <a href="/blog/7" class="text-green-600 hover:underline font-semibold">다른 금융 옵션</a>을 단기적으로 활용하여 통신 요금을 먼저 해결하는 것이 신용등급을 지키는 데 더 유리할 수 있습니다.</li>
+          <li><strong>다른 금융 서비스 검토:</strong> 만약 분할납부가 어렵다면, <a href="/blog/7" class="text-sky-600 hover:underline font-semibold">다른 금융 옵션</a>을 단기적으로 활용하여 통신 요금을 먼저 해결하는 것이 신용등급을 지키는 데 더 유리할 수 있습니다.</li>
         </ul>
         <h3>4. 건강한 금융 습관 만들기</h3>
         <p>소액결제는 편리하지만, 결국 '빚'이라는 사실을 잊지 말아야 합니다. 건강한 이용 습관을 만드는 것이 중요합니다.</p>
@@ -159,13 +159,13 @@ export const blogContentData: { [key: string]: any } = {
           <li><strong>예산 관리:</strong> 한 달 수입과 고정 지출을 간단하게라도 기록하여, 다음 달 자금 계획을 세우는 습관을 들이는 것이 건강한 금융 생활의 첫걸음입니다.</li>
         </ul>
         <h3>결론: 구름페이는 여러분의 건강한 금융 생활을 응원합니다</h3>
-        <p>구름페이는 단순히 현금을 마련해드리는 것을 넘어, 고객님들이 건강한 금융 생활을 유지하실 수 있도록 돕고자 합니다. 소액결제 이용 후 상환 계획에 어려움이 있거나 궁금한 점이 있다면, 언제든지 저희 <a href="/contact" class="text-green-600 hover:underline font-semibold">24시간 상담센터</a>에 문의해주세요. 함께 해결책을 찾아드리겠습니다.</p>
+        <p>구름페이는 단순히 현금을 마련해드리는 것을 넘어, 고객님들이 건강한 금융 생활을 유지하실 수 있도록 돕고자 합니다. 소액결제 이용 후 상환 계획에 어려움이 있거나 궁금한 점이 있다면, 언제든지 저희 <a href="/contact" class="text-sky-600 hover:underline font-semibold">24시간 상담센터</a>에 문의해주세요. 함께 해결책을 찾아드리겠습니다.</p>
       `,
     },
     "13": {
       content: `
         <h2>서론: 어떤 현금화 서비스가 나에게 맞을까?</h2>
-        <p>급하게 현금이 필요할 때, <strong><a href="/" class="text-green-600 hover:underline font-semibold">구름페이</a></strong>와 같은 현금화 서비스는 매우 유용한 해결책이 될 수 있습니다. 하지만 저희가 제공하는 다양한 서비스들—<strong><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold">소액결제 현금화</a></strong>, <strong><a href="/services/information-fee" class="text-green-600 hover:underline font-semibold">정보이용료 현금화</a></strong>, <strong><a href="/services/credit-card" class="text-green-600 hover:underline font-semibold">신용카드 현금화</a></strong>—각각의 특징과 장단점이 명확하기에, 어떤 서비스를 이용해야 할지 헷갈릴 수 있습니다. 이 글에서는 각 서비스의 특징을 꼼꼼하게 비교하여, 여러분의 상황에 가장 적합한 최적의 선택을 하실 수 있도록 도와드리겠습니다.</p>
+        <p>급하게 현금이 필요할 때, <strong><a href="/" class="text-sky-600 hover:underline font-semibold">구름페이</a></strong>와 같은 현금화 서비스는 매우 유용한 해결책이 될 수 있습니다. 하지만 저희가 제공하는 다양한 서비스들—<strong><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold">소액결제 현금화</a></strong>, <strong><a href="/services/information-fee" class="text-sky-600 hover:underline font-semibold">정보이용료 현금화</a></strong>, <strong><a href="/services/credit-card" class="text-sky-600 hover:underline font-semibold">신용카드 현금화</a></strong>—각각의 특징과 장단점이 명확하기에, 어떤 서비스를 이용해야 할지 헷갈릴 수 있습니다. 이 글에서는 각 서비스의 특징을 꼼꼼하게 비교하여, 여러분의 상황에 가장 적합한 최적의 선택을 하실 수 있도록 도와드리겠습니다.</p>
         <h3>한눈에 보는 서비스 비교표</h3>
         <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr><th class="border p-2">구분</th><th class="border p-2">소액결제 현금화</th><th class="border p-2">정보이용료 현금화</th><th class="border p-2">신용카드 현금화</th></tr></thead><tbody><tr><td class="border p-2"><strong>주요 대상</strong></td><td class="border p-2">휴대폰 사용자 누구나</td><td class="border p-2">구글/애플 계정 사용자</td><td class="border p-2">신용카드 소지자</td></tr><tr><td class="border p-2"><strong>평균 지급률</strong></td><td class="border p-2">70-80%</td><td class="border p-2">60-70%</td><td class="border p-2">82-88%</td></tr><tr><td class="border p-2"><strong>평균 속도</strong></td><td class="border p-2">3분</td><td class="border p-2">3분</td><td class="border p-2">5분</td></tr><tr><td class="border p-2"><strong>장점</strong></td><td class="border p-2">가장 보편적이고 빠름</td><td class="border p-2">소액결제 외 추가 한도</td><td class="border p-2">높은 지급률, 신용도 무관</td></tr><tr><td class="border p-2"><strong>단점</strong></td><td class="border p-2">미납/정책 시 제한 가능성</td><td class="border p-2">소액결제보다 낮은 지급률</td><td class="border p-2">카드 한도 내에서만 가능</td></tr></tbody></table></div>
         <h3>1. 소액결제 현금화: 가장 빠르고 간편한 대표 주자</h3>
@@ -196,7 +196,7 @@ export const blogContentData: { [key: string]: any } = {
     "12": {
       content: `
         <h2>서론: 소액결제 현금화, 제대로 알고 사용하고 계신가요?</h2>
-        <p>2025년, 급한 자금이 필요할 때 가장 먼저 떠오르는 단어 중 하나는 단연 <strong><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold">소액결제 현금화</a></strong>일 것입니다. 하지만 '빠르고 간편하다'는 장점 뒤에는 '수수료', '안전성', '미납 정책' 등 반드시 알아야 할 중요한 정보들이 숨어있습니다. 이 글에서는 흩어져 있는 모든 정보를 총정리하여, 여러분이 가장 현명하고 안전하게 소액결제 현금화 서비스를 이용할 수 있도록 돕는 완벽한 가이드가 되어 드리겠습니다.</p>
+        <p>2025년, 급한 자금이 필요할 때 가장 먼저 떠오르는 단어 중 하나는 단연 <strong><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold">소액결제 현금화</a></strong>일 것입니다. 하지만 '빠르고 간편하다'는 장점 뒤에는 '수수료', '안전성', '미납 정책' 등 반드시 알아야 할 중요한 정보들이 숨어있습니다. 이 글에서는 흩어져 있는 모든 정보를 총정리하여, 여러분이 가장 현명하고 안전하게 소액결제 현금화 서비스를 이용할 수 있도록 돕는 완벽한 가이드가 되어 드리겠습니다.</p>
         <h3>1부: 소액결제 현금화의 작동 원리 (A to Z)</h3>
         <p>소액결제 현금화는 어떻게 이루어질까요? 그 원리는 생각보다 간단합니다.</p>
         <ol>
@@ -211,14 +211,14 @@ export const blogContentData: { [key: string]: any } = {
         <h3>3부: 안전한 업체 선택을 위한 5가지 필수 체크리스트</h3>
         <p>안전보다 중요한 것은 없습니다. 아래 5가지 기준을 통과하지 못하는 업체는 절대 이용하지 마세요.</p>
         <ul>
-          <li><strong>정식 사업자 정보 공개:</strong> 웹사이트 하단에 상호명, 대표자명, 사업자등록번호가 명확히 기재되어 있는지 확인하세요. (<a href="/safety" class="text-green-600 hover:underline font-semibold">구름페이 안전 거래 안내</a> 참조)</li>
+          <li><strong>정식 사업자 정보 공개:</strong> 웹사이트 하단에 상호명, 대표자명, 사업자등록번호가 명확히 기재되어 있는지 확인하세요. (<a href="/safety" class="text-sky-600 hover:underline font-semibold">구름페이 안전 거래 안내</a> 참조)</li>
           <li><strong>유선 연락처 보유:</strong> 언제든지 연락 가능한 대표번호가 있는지 확인해야 합니다.</li>
           <li><strong>선입금 및 과도한 정보 요구 금지:</strong> 보증금, 수수료 등 선입금을 요구하거나, 통장 비밀번호, 공인인증서 등을 요구하는 곳은 100% 사기입니다.</li>
           <li><strong>현실적인 지급률:</strong> 위에서 설명한 것처럼 70~80% 수준의 합리적인 지급률을 제시하는지 확인하세요.</li>
           <li><strong>충분한 상담:</strong> 거래를 재촉하지 않고, 고객의 질문에 친절하고 명확하게 답변하는지 확인하세요.</li>
         </ul>
         <h3>4부: '미납'과 '정책', 막혔을 때 해결 방법 총정리</h3>
-        <p>결제가 거부되는 가장 큰 두 가지 원인은 '미납'과 '정책'입니다. (<a href="/blog/10" class="text-green-600 hover:underline font-semibold">미납 정책 해결 가이드</a> 참조)</p>
+        <p>결제가 거부되는 가장 큰 두 가지 원인은 '미납'과 '정책'입니다. (<a href="/blog/10" class="text-sky-600 hover:underline font-semibold">미납 정책 해결 가이드</a> 참조)</p>
         <ul>
           <li><strong>미납 해결:</strong> 연체된 통신 요금을 납부하는 것이 가장 확실한 해결책입니다.</li>
           <li><strong>정책 해결:</strong> 신규 개통, 잦은 결제 시도 등으로 막힌 경우, 결제 금액을 낮춰보거나, 하루 정도 기다린 후 시도하거나, 통신사 고객센터에 직접 문의하는 방법이 있습니다.</li>
@@ -231,7 +231,7 @@ export const blogContentData: { [key: string]: any } = {
     "11": {
       content: `
         <h2>서론: 왜 '안전'이 가장 중요할까요?</h2>
-        <p>급하게 현금이 필요해 <strong><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold">소액결제 현금화</a></strong>를 알아보실 때, 가장 먼저 눈에 들어오는 것은 아마 '지급률'이나 '수수료'일 것입니다. 하지만 가장 중요한 것은 바로 <strong>'안전'</strong>입니다. 아무리 지급률이 높아도, 내 개인정보가 유출되거나 입금을 받지 못하는 '먹튀' 사기를 당한다면 아무 소용이 없기 때문입니다. 2025년, 더욱 교묘해진 사기 수법에 당하지 않도록 최신 유형과 예방법을 구름페이가 총정리해 드립니다.</p>
+        <p>급하게 현금이 필요해 <strong><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold">소액결제 현금화</a></strong>를 알아보실 때, 가장 먼저 눈에 들어오는 것은 아마 '지급률'이나 '수수료'일 것입니다. 하지만 가장 중요한 것은 바로 <strong>'안전'</strong>입니다. 아무리 지급률이 높아도, 내 개인정보가 유출되거나 입금을 받지 못하는 '먹튀' 사기를 당한다면 아무 소용이 없기 때문입니다. 2025년, 더욱 교묘해진 사기 수법에 당하지 않도록 최신 유형과 예방법을 구름페이가 총정리해 드립니다.</p>
         <h3>최신 사기 유형 TOP 3</h3>
         <p>최근 기승을 부리는 대표적인 사기 유형들입니다. 반드시 숙지하세요.</p>
         <h4>유형 1: 비정상적으로 높은 지급률로 유인</h4>
@@ -243,19 +243,19 @@ export const blogContentData: { [key: string]: any } = {
         <h3>안전한 업체 구별하는 확실한 체크리스트</h3>
         <p>아래 4가지만 확인해도 99%의 사기를 예방할 수 있습니다.</p>
         <ol>
-          <li><strong>정식 사업자 등록 여부:</strong> 웹사이트 하단에 상호명, 대표자명, 사업자등록번호가 명확히 기재되어 있는지 확인하세요. 저희 <a href="/safety" class="text-green-600 hover:underline font-semibold">구름페이</a>는 모든 정보를 투명하게 공개합니다.</li>
+          <li><strong>정식 사업자 등록 여부:</strong> 웹사이트 하단에 상호명, 대표자명, 사업자등록번호가 명확히 기재되어 있는지 확인하세요. 저희 <a href="/safety" class="text-sky-600 hover:underline font-semibold">구름페이</a>는 모든 정보를 투명하게 공개합니다.</li>
           <li><strong>고정된 유선 연락처:</strong> 언제든지 연락 가능한 대표번호(예: 02-xxxx-xxxx)가 있는지 확인하세요. 카카오톡이나 휴대폰 번호만으로 운영되는 곳은 문제가 생겼을 때 잠적할 위험이 있습니다.</li>
           <li><strong>현실적인 수수료:</strong> 너무 높은 지급률을 제시하는 곳은 일단 의심해야 합니다. 여러 업체를 비교하여 현실적인 수수료 수준을 파악하는 것이 중요합니다.</li>
           <li><strong>충분한 상담 제공:</strong> 거래를 재촉하지 않고, 고객의 질문에 친절하고 상세하게 답변해주는지 확인하세요. 신뢰할 수 있는 업체는 고객의 불안감을 먼저 해소해 드립니다.</li>
         </ol>
         <h3>결론: 신뢰할 수 있는 파트너, 구름페이</h3>
-        <p>소액결제 현금화는 신뢰가 전부입니다. 구름페이는 월 3만 건 이상의 풍부한 거래 경험과 99.9%의 고객 만족도로 그 신뢰를 증명하고 있습니다. 불법 사기 업체에 대한 걱정 없이, 가장 안전하고 빠른 서비스를 원하신다면 지금 바로 <a href="/contact" class="text-green-600 hover:underline font-semibold">구름페이 24시간 상담센터</a>에 문의하세요.</p>
+        <p>소액결제 현금화는 신뢰가 전부입니다. 구름페이는 월 3만 건 이상의 풍부한 거래 경험과 99.9%의 고객 만족도로 그 신뢰를 증명하고 있습니다. 불법 사기 업체에 대한 걱정 없이, 가장 안전하고 빠른 서비스를 원하신다면 지금 바로 <a href="/contact" class="text-sky-600 hover:underline font-semibold">구름페이 24시간 상담센터</a>에 문의하세요.</p>
       `,
     },
     "10": {
         content: `
         <h2>"고객님은 정책상 이 결제를 이용하실 수 없습니다."</h2>
-        <p><strong><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold">소액결제 현금화</a></strong>를 시도하다가 위와 같은 메시지를 받으셨나요? 급하게 현금이 필요한 상황에서 결제가 거부되면 당황스럽고 답답하기만 합니다. 이 '정책'이라는 것의 정체는 무엇이며, 어떻게 해결해야 할까요? 2025년 최신 정보를 바탕으로 구름페이가 그 해결책을 명쾌하게 제시해 드립니다.</p>
+        <p><strong><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold">소액결제 현금화</a></strong>를 시도하다가 위와 같은 메시지를 받으셨나요? 급하게 현금이 필요한 상황에서 결제가 거부되면 당황스럽고 답답하기만 합니다. 이 '정책'이라는 것의 정체는 무엇이며, 어떻게 해결해야 할까요? 2025년 최신 정보를 바탕으로 구름페이가 그 해결책을 명쾌하게 제시해 드립니다.</p>
         <h3>'미납'과 '정책', 무엇이 다른가요?</h3>
         <p>두 가지는 비슷해 보이지만 원인이 다릅니다.</p>
         <ul>
@@ -277,12 +277,12 @@ export const blogContentData: { [key: string]: any } = {
           <li><strong>결제 금액 낮추기:</strong> 한 번에 너무 큰 금액을 결제하기보다, 1만원, 3만원 등 소액으로 나누어 여러 번 시도해 보세요.</li>
           <li><strong>시간차를 두고 시도하기:</strong> 결제가 거부된 직후 반복해서 시도하기보다, 몇 시간 또는 하루 정도 기다린 후 다시 시도하면 성공 확률이 높아집니다.</li>
           <li><strong>통신사 고객센터 문의:</strong> 통신사 고객센터(114)에 직접 전화하여 "정책상 결제가 거부되는데, 해결할 수 있는 방법이 있는지" 문의해 보세요. 때로는 간단한 본인 확인 절차 후 제한을 풀어주기도 합니다.</li>
-          <li><strong>다른 결제 수단 활용:</strong> 소액결제가 막혔다면, <a href="/services/information-fee" class="text-green-600 hover:underline font-semibold">정보이용료(콘텐츠이용료) 현금화</a>와 같이 다른 한도를 이용하는 것도 좋은 방법입니다.</li>
+          <li><strong>다른 결제 수단 활용:</strong> 소액결제가 막혔다면, <a href="/services/information-fee" class="text-sky-600 hover:underline font-semibold">정보이용료(콘텐츠이용료) 현금화</a>와 같이 다른 한도를 이용하는 것도 좋은 방법입니다.</li>
         </ol>
         <h3>혼자서 해결이 어렵다면? 구름페이가 있습니다!</h3>
         <p>위의 방법들을 모두 시도했는데도 해결되지 않나요? 걱정하지 마세요. 바로 이럴 때 전문가의 도움이 필요합니다.</p>
         <p>저희 <strong>구름페이는 미납·정책 해결을 전문</strong>으로 하며, 업계 최고 수준인 <strong>99.9%의 승인 성공률</strong>을 자랑합니다. 다년간의 경험과 노하우를 바탕으로, 고객님의 상황을 정확히 진단하고 가장 빠르고 안전한 해결책을 찾아드립니다.</p>
-        <p>더 이상 혼자 고민하지 마시고, 지금 바로 <a href="/contact" class="text-green-600 hover:underline font-semibold">24시간 상담센터</a>의 문을 두드려 주세요. 구름페이가 속 시원하게 해결해 드리겠습니다!</p>
+        <p>더 이상 혼자 고민하지 마시고, 지금 바로 <a href="/contact" class="text-sky-600 hover:underline font-semibold">24시간 상담센터</a>의 문을 두드려 주세요. 구름페이가 속 시원하게 해결해 드리겠습니다!</p>
       `,
     },
     "9": {
@@ -297,16 +297,16 @@ export const blogContentData: { [key: string]: any } = {
         <p><strong>핵심은, 무조건 수수료가 싸다고 좋은 업체는 아니라는 것입니다.</strong> 비정상적으로 낮은 수수료를 제시하는 곳은 추가 비용을 요구하거나 사기(먹튀) 업체일 가능성이 있으니 각별한 주의가 필요합니다.</p>
         <h3>안전하고 수수료 낮은 업체 찾는 3가지 꿀팁</h3>
         <h4>1. 정식 사업자 등록 여부 확인은 필수!</h4>
-        <p>가장 기본적이면서도 중요한 단계입니다. 웹사이트 하단에 <strong>사업자등록번호, 상호명, 대표자명</strong>이 명확하게 기재되어 있는지 확인하세요. 저희 <a href="/safety" class="text-green-600 hover:underline font-semibold">구름페이</a>는 모든 정보를 투명하게 공개하는 정식 등록 업체입니다.</p>
+        <p>가장 기본적이면서도 중요한 단계입니다. 웹사이트 하단에 <strong>사업자등록번호, 상호명, 대표자명</strong>이 명확하게 기재되어 있는지 확인하세요. 저희 <a href="/safety" class="text-sky-600 hover:underline font-semibold">구름페이</a>는 모든 정보를 투명하게 공개하는 정식 등록 업체입니다.</p>
         <h4>2. 추가 수수료가 있는지 꼼꼼히 문의하세요.</h4>
         <p>상담 시, 처음에 안내받은 수수료 외에 보증료, 등록비 등 추가적인 비용을 요구하는지 반드시 확인해야 합니다. 신뢰할 수 있는 업체는 처음 안내한 수수료 외에 어떠한 추가 비용도 요구하지 않습니다.</p>
         <h4>3. 실제 이용 후기를 확인하세요.</h4>
-        <p>실제 이용자들이 남긴 후기는 업체의 신뢰도를 판단하는 좋은 기준이 됩니다. 특히 입금 시간, 상담원의 친절도, 수수료 만족도 등을 중점적으로 살펴보세요. <a href="/reviews" class="text-green-600 hover:underline font-semibold">구름페이 고객 후기</a> 페이지에서 실제 이용자들의 솔직한 경험담을 확인하실 수 있습니다.</p>
+        <p>실제 이용자들이 남긴 후기는 업체의 신뢰도를 판단하는 좋은 기준이 됩니다. 특히 입금 시간, 상담원의 친절도, 수수료 만족도 등을 중점적으로 살펴보세요. <a href="/reviews" class="text-sky-600 hover:underline font-semibold">구름페이 고객 후기</a> 페이지에서 실제 이용자들의 솔직한 경험담을 확인하실 수 있습니다.</p>
         <h3>구름페이의 투명한 수수료 정책</h3>
         <p>저희 구름페이는 과도한 광고비나 불필요한 운영비를 줄여, 고객님께 업계 최저 수준의 합리적인 수수료를 제공하기 위해 노력하고 있습니다.</p>
         <ul>
-          <li><a href="/services/micropayment" class="text-green-600 hover:underline font-semibold"><strong>소액결제 현금화</strong></a><strong>:</strong> 업계 최저 수준의 수수료 보장</li>
-          <li><a href="/services/information-fee" class="text-green-600 hover:underline font-semibold"><strong>정보이용료 현금화</strong></a><strong>:</strong> 투명하고 합리적인 수수료</li>
+          <li><a href="/services/micropayment" class="text-sky-600 hover:underline font-semibold"><strong>소액결제 현금화</strong></a><strong>:</strong> 업계 최저 수준의 수수료 보장</li>
+          <li><a href="/services/information-fee" class="text-sky-600 hover:underline font-semibold"><strong>정보이용료 현금화</strong></a><strong>:</strong> 투명하고 합리적인 수수료</li>
           <li><strong>24시간 상담:</strong> 언제든지 편하게 문의하시면, 추가 비용 없이 친절하게 안내해 드립니다.</li>
         </ul>
         <p>급하다고 서두르기보다, 잠시만 시간을 내어 안전하고 정직한 업체를 선택하는 것이 중요합니다. 구름페이가 여러분의 안전한 금융 파트너가 되어드리겠습니다.</p>

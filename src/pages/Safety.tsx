@@ -23,7 +23,7 @@ const Safety: React.FC = () => {
         <div className="text-center mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔒</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -69,36 +69,36 @@ const Safety: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                <span className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-green-600">🔒</span>
+                <span className="w-8 h-8 bg-sky-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-sky-600">🔒</span>
                 </span>
                 개인정보 보호 시스템
               </h3>
               <div className="space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <div>
                       <strong>암호화 저장:</strong> 모든 개인정보는 AES-256
                       암호화하여 저장됩니다.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <div>
                       <strong>접근 제한:</strong> 권한이 있는 담당자만
                       개인정보에 접근 가능합니다.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <div>
                       <strong>자동 삭제:</strong> 거래 완료 후 30일 이내 모든
                       정보가 자동 삭제됩니다.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <div>
                       <strong>로그 관리:</strong> 모든 접근 기록을 6개월간
                       보관하여 추적 가능합니다.
@@ -193,33 +193,33 @@ const Safety: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-200">
-              <h3 className="text-xl font-bold text-green-800 mb-6">
+            <div className="bg-sky-50 rounded-2xl p-8 border-2 border-sky-200">
+              <h3 className="text-xl font-bold text-sky-800 mb-6">
                 ✅ 이런 업체는 안전해요!
               </h3>
               <div className="space-y-3">
                 <ul className="space-y-2">
-                  <li className="flex items-start text-green-700">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                  <li className="flex items-start text-sky-700">
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <strong>사업자등록증:</strong> 정식 사업자등록증과
                     통신판매업신고증 보유
                   </li>
-                  <li className="flex items-start text-green-700">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                  <li className="flex items-start text-sky-700">
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <strong>투명한 수수료:</strong> 지급률과 수수료를 명확하게
                     공개
                   </li>
-                  <li className="flex items-start text-green-700">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                  <li className="flex items-start text-sky-700">
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <strong>완전한 연락처:</strong> 고정 전화, 주소, 이메일 등
                     완전한 연락처 제공
                   </li>
-                  <li className="flex items-start text-green-700">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                  <li className="flex items-start text-sky-700">
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <strong>충분한 상담:</strong> 충분한 설명과 상담 시간을 제공
                   </li>
-                  <li className="flex items-start text-green-700">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                  <li className="flex items-start text-sky-700">
+                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     <strong>고객 후기:</strong> 실제 고객 후기와 평점을 확인할
                     수 있음
                   </li>
@@ -249,8 +249,8 @@ const Safety: React.FC = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-green-600 font-bold">2</span>
+                <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-sky-600 font-bold">2</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
                   본인 확인

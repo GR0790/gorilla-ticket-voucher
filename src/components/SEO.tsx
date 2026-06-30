@@ -26,8 +26,8 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, pageT
     "@type": "LocalBusiness",
     "name": "구름페이",
     "url": siteUrl,
-    "logo": `${siteUrl}/gorilla-mascot.png`,
-    "image": `${siteUrl}/gorilla-mascot.png`,
+    "logo": `${siteUrl}/cloud-mascot.webp`,
+    "image": `${siteUrl}/cloud-mascot.webp`,
     "description": "소액결제현금화 업계 1위. SKT·KT·LGU+ 모든 통신사 소액결제 현금화, 3분 즉시입금, 미납 99.9% 승인, 24시간 상담.",
     "telephone": "+82-10-2138-0790",
     "openingHours": "Mo-Su 00:00-24:00",
@@ -73,13 +73,13 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, pageT
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="구름페이" />
-      <meta property="og:image" content={`${siteUrl}/gorilla-mascot.png`} />
+      <meta property="og:image" content={`${siteUrl}/cloud-mascot.webp`} />
       <meta property="og:url" content={canonicalUrl} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}/gorilla-mascot.png`} />
+      <meta name="twitter:image" content={`${siteUrl}/cloud-mascot.webp`} />
 
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}

@@ -54,7 +54,7 @@ const Blog: React.FC = () => {
           </p>
           <Link
             to="/"
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors"
           >
             홈으로 돌아가기
           </Link>
@@ -85,7 +85,7 @@ const Blog: React.FC = () => {
           </h2>
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              <div className="bg-gradient-to-br from-green-400 to-green-600 p-12 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-sky-400 to-sky-600 p-12 flex items-center justify-center">
                 <div className="text-center text-white">
                   <span className="text-8xl md:text-9xl">
                     {featuredPost.fields.image}
@@ -94,7 +94,7 @@ const Blog: React.FC = () => {
               </div>
               <div className="p-8 md:p-12">
                 <div className="flex items-center mb-4">
-                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">
                     {featuredPost.fields.category}
                   </span>
                   <span className="text-gray-500 text-sm ml-4">
@@ -119,7 +119,7 @@ const Blog: React.FC = () => {
                 </div>
                 <Link
                   to={`/blog/${featuredPost.fields.id}`}
-                  className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="inline-block bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors"
                 >
                   자세히 읽기 →
                 </Link>
@@ -136,8 +136,8 @@ const Blog: React.FC = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
                   selectedCategory === category
-                    ? "bg-green-600 text-white"
-                    : "bg-white text-gray-600 hover:bg-green-50 hover:text-green-600"
+                    ? "bg-sky-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-sky-50 hover:text-sky-600"
                 }`}
               >
                 {category}
@@ -180,7 +180,7 @@ const Blog: React.FC = () => {
                   ))}
                 </div>
                 <div className="text-center">
-                  <span className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                  <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
                     읽기 →
                   </span>
                 </div>

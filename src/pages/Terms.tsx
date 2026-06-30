@@ -220,11 +220,11 @@ const Terms: React.FC = () => {
               <div>
                 <h3 className="font-bold text-gray-800 mb-4">① 제공 서비스</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-green-800 mb-2">
+                  <div className="bg-sky-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-sky-800 mb-2">
                       소액결제 현금화
                     </h4>
-                    <p className="text-green-700 text-sm">
+                    <p className="text-sky-700 text-sm">
                       휴대폰 소액결제 한도를 현금으로 전환
                     </p>
                   </div>
@@ -365,11 +365,11 @@ const Terms: React.FC = () => {
               제7조 (회사의 의무)
             </h2>
             <div className="space-y-4">
-              <div className="bg-green-50 rounded-lg p-4">
-                <h3 className="font-bold text-green-800 mb-2">
+              <div className="bg-sky-50 rounded-lg p-4">
+                <h3 className="font-bold text-sky-800 mb-2">
                   ① 서비스 제공의 의무
                 </h3>
-                <p className="text-green-700">
+                <p className="text-sky-700">
                   회사는 이용자에게 안정적이고 신뢰할 수 있는 서비스를 제공하기
                   위하여 최선을 다하여야 합니다.
                 </p>
@@ -451,11 +451,11 @@ const Terms: React.FC = () => {
                   범위에서 최소한의 개인정보를 수집합니다.
                 </p>
               </div>
-              <div className="bg-green-50 rounded-lg p-4">
-                <h3 className="font-bold text-green-800 mb-2">
+              <div className="bg-sky-50 rounded-lg p-4">
+                <h3 className="font-bold text-sky-800 mb-2">
                   ② 개인정보의 이용 및 제공
                 </h3>
-                <p className="text-green-700">
+                <p className="text-sky-700">
                   회사는 이용자의 동의 없이 개인정보를 제3자에게 제공하지
                   않으며, 수집된 개인정보는 서비스 제공 목적으로만 이용합니다.
                 </p>
@@ -558,11 +558,11 @@ const Terms: React.FC = () => {
               제12조 (분쟁의 해결)
             </h2>
             <div className="space-y-4">
-              <div className="bg-green-50 rounded-lg p-4">
-                <h3 className="font-bold text-green-800 mb-2">
+              <div className="bg-sky-50 rounded-lg p-4">
+                <h3 className="font-bold text-sky-800 mb-2">
                   ① 분쟁해결 기구
                 </h3>
-                <p className="text-green-700">
+                <p className="text-sky-700">
                   회사는 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그
                   피해를 보상처리하기 위하여 피해보상처리기구를 설치·운영합니다.
                 </p>

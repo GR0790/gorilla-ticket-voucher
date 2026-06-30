@@ -226,9 +226,9 @@ const CreditCardService: React.FC = () => {
                   <p className="text-sm text-gray-600">전 상품 지원</p>
                 </div>
 
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-green-600">신한</span>
+                <div className="text-center p-4 bg-sky-50 rounded-lg">
+                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-sm font-bold text-sky-600">신한</span>
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">신한카드</h4>
                   <p className="text-sm text-gray-600">전 상품 지원</p>
@@ -260,9 +260,9 @@ const CreditCardService: React.FC = () => {
                   <p className="text-sm text-gray-600">전 상품 지원</p>
                 </div>
 
-                <div className="text-center p-4 bg-teal-50 rounded-lg">
-                  <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-teal-600">우리</span>
+                <div className="text-center p-4 bg-sky-50 rounded-lg">
+                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-sm font-bold text-sky-600">우리</span>
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">우리카드</h4>
                   <p className="text-sm text-gray-600">전 상품 지원</p>

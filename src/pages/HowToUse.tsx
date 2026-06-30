@@ -6,7 +6,7 @@ const HowToUse: React.FC = () => {
   const [activeService, setActiveService] = useState<string>("micropayment");
 
   const services = [
-    { id: "micropayment", name: "소액결제", icon: "📱", color: "green" },
+    { id: "micropayment", name: "소액결제", icon: "📱", color: "sky" },
     { id: "information", name: "정보이용료", icon: "📊", color: "blue" },
     { id: "credit", name: "신용카드", icon: "💳", color: "purple" },
     { id: "giftcard", name: "상품권", icon: "🎁", color: "orange" },
@@ -259,7 +259,7 @@ const HowToUse: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-12 md:py-20">
+      <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             구름페이 이용 방법 가이드 📚
@@ -272,13 +272,13 @@ const HowToUse: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              className="inline-flex items-center bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors"
             >
               📞 궁금한 점 문의하기
             </Link>
             <Link
               to="/faq"
-              className="inline-flex items-center bg-white text-green-600 px-6 py-3 rounded-lg font-semibold border border-green-600 hover:bg-green-50 transition-colors"
+              className="inline-flex items-center bg-white text-sky-600 px-6 py-3 rounded-lg font-semibold border border-sky-600 hover:bg-sky-50 transition-colors"
             >
               ❓ FAQ 보기
             </Link>
@@ -327,7 +327,7 @@ const HowToUse: React.FC = () => {
                     <div className="absolute left-6 top-16 w-0.5 h-full bg-gray-200" />
                   )}
                   <div className="flex items-start space-x-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-lg font-bold">
+                    <div className="flex-shrink-0 w-12 h-12 bg-sky-600 text-white rounded-full flex items-center justify-center text-lg font-bold">
                       {step.step}
                     </div>
                     <div className="flex-grow">
@@ -347,7 +347,7 @@ const HowToUse: React.FC = () => {
                               key={detail}
                               className="flex items-center text-gray-700"
                             >
-                              <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0" />
+                              <span className="w-2 h-2 bg-sky-500 rounded-full mr-3 flex-shrink-0" />
                               {detail}
                             </li>
                           ))}
@@ -399,7 +399,7 @@ const HowToUse: React.FC = () => {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-gray-900 mb-2 text-center">
@@ -477,7 +477,7 @@ const HowToUse: React.FC = () => {
 
         {/* Contact CTA */}
         <section>
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-sky-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               🎯 아직도 궁금한 점이 있으신가요?
             </h2>
@@ -488,7 +488,7 @@ const HowToUse: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 📞 전화 상담 받기
               </Link>

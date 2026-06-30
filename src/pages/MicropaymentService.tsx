@@ -50,21 +50,21 @@ const MicropaymentService: React.FC = () => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-green-50 to-green-100 py-12 md:py-20">
+        <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
               🔥 소액결제현금화 디시·커뮤니티 1위 추천 업체
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               소액결제 현금화<br />
-              <span className="text-green-600">3분 즉시입금 · 업계 최저 수수료</span>
+              <span className="text-sky-600">3분 즉시입금 · 업계 최저 수수료</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               SKT · KT · LGU+ 모든 통신사 소액결제 현금화 가능!<br />
               미납·정책 99.9% 승인, 지급률 70~80%, 24시간 365일 상담
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">✅ 소액결제 현금화 방법 간단</span>
+              <span className="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-semibold">✅ 소액결제 현금화 방법 간단</span>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">⚡ 평균 2분 47초 입금</span>
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🛡️ 100% 안전 거래</span>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">💰 지급률 70~80%</span>
@@ -72,7 +72,7 @@ const MicropaymentService: React.FC = () => {
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-              className="inline-flex items-center bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-green-700 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+              className="inline-flex items-center bg-sky-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-sky-700 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
             >
               💬 소액결제 현금화 즉시 상담
             </a>
@@ -96,34 +96,34 @@ const MicropaymentService: React.FC = () => {
                     디시인사이드, 네이버 카페, 각종 커뮤니티에서 <strong>소액결제현금화 업체 추천</strong>으로 구름페이이 꾸준히 언급되는 이유는 업계 최고 수준의 <strong>지급률(70~80%)</strong>과 빠른 입금 속도 때문입니다.
                   </p>
                   <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0" />모든 통신사 지원: SKT, KT, LGU+ 상관없이 이용 가능</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0" />평균 2분 47초 입금완료 — 업계 최고 속도</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0" />미납·정책 제한 고객도 99.9% 승인</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0" />정식 사업자 등록 — 100% 안전 거래</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-sky-600 rounded-full mr-3 flex-shrink-0" />모든 통신사 지원: SKT, KT, LGU+ 상관없이 이용 가능</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-sky-600 rounded-full mr-3 flex-shrink-0" />평균 2분 47초 입금완료 — 업계 최고 속도</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-sky-600 rounded-full mr-3 flex-shrink-0" />미납·정책 제한 고객도 99.9% 승인</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-sky-600 rounded-full mr-3 flex-shrink-0" />정식 사업자 등록 — 100% 안전 거래</li>
                   </ul>
                 </div>
-                <div className="bg-green-50 rounded-xl p-6">
-                  <h3 className="font-bold text-green-800 mb-4 text-lg">📱 소액결제 현금화 방법 3단계</h3>
+                <div className="bg-sky-50 rounded-xl p-6">
+                  <h3 className="font-bold text-sky-800 mb-4 text-lg">📱 소액결제 현금화 방법 3단계</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
+                      <div className="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
                       <div>
-                        <p className="text-green-800 font-medium">상담 신청 & 소액결제 한도 확인</p>
-                        <p className="text-green-700 text-sm">24시간 채팅 상담으로 즉시 한도 확인</p>
+                        <p className="text-sky-800 font-medium">상담 신청 & 소액결제 한도 확인</p>
+                        <p className="text-sky-700 text-sm">24시간 채팅 상담으로 즉시 한도 확인</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
+                      <div className="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
                       <div>
-                        <p className="text-green-800 font-medium">간단한 본인 인증 진행</p>
-                        <p className="text-green-700 text-sm">복잡한 서류 없이 본인 확인만</p>
+                        <p className="text-sky-800 font-medium">간단한 본인 인증 진행</p>
+                        <p className="text-sky-700 text-sm">복잡한 서류 없이 본인 확인만</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
+                      <div className="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
                       <div>
-                        <p className="text-green-800 font-medium">3분 이내 즉시 입금 완료</p>
-                        <p className="text-green-700 text-sm">지정 계좌로 즉시 현금 입금</p>
+                        <p className="text-sky-800 font-medium">3분 이내 즉시 입금 완료</p>
+                        <p className="text-sky-700 text-sm">지정 계좌로 즉시 현금 입금</p>
                       </div>
                     </div>
                   </div>
@@ -190,7 +190,7 @@ const MicropaymentService: React.FC = () => {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-green-600 text-white">
+                    <tr className="bg-sky-600 text-white">
                       <th className="p-3 text-left rounded-tl-lg">소액결제 금액</th>
                       <th className="p-3 text-center">수수료 (20%)</th>
                       <th className="p-3 text-center">수수료 (25%)</th>
@@ -207,7 +207,7 @@ const MicropaymentService: React.FC = () => {
                     ].map((row, i) => (
                       <tr key={row.amount} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                         <td className="p-3 font-semibold text-gray-900">{row.amount}</td>
-                        <td className="p-3 text-center text-green-700 font-medium">{row.fee20}</td>
+                        <td className="p-3 text-center text-sky-700 font-medium">{row.fee20}</td>
                         <td className="p-3 text-center text-blue-700 font-medium">{row.fee25}</td>
                         <td className="p-3 text-center text-purple-700 font-medium">{row.fee30}</td>
                       </tr>
@@ -232,7 +232,7 @@ const MicropaymentService: React.FC = () => {
                 { icon: "🛡️", title: "24시간 안전 상담", desc: "정식 사업자 등록 업체. 소액결제 현금화 안전 거래를 24시간 365일 보장합니다." },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">{item.icon}</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{item.title}</h3>
@@ -274,7 +274,7 @@ const MicropaymentService: React.FC = () => {
                     <div className="flex text-yellow-400 mr-2">
                       {"⭐".repeat(review.stars)}
                     </div>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">{review.tag}</span>
+                    <span className="text-xs bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full">{review.tag}</span>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">"{review.review}"</p>
                   <p className="text-gray-500 text-xs font-semibold">{review.name}</p>
@@ -282,7 +282,7 @@ const MicropaymentService: React.FC = () => {
               ))}
             </div>
             <div className="mt-6 text-center">
-              <Link to="/reviews" className="text-green-600 font-semibold hover:text-green-700">
+              <Link to="/reviews" className="text-sky-600 font-semibold hover:text-sky-700">
                 소액결제 현금화 후기 더 보기 →
               </Link>
             </div>
@@ -306,8 +306,8 @@ const MicropaymentService: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 text-center bg-green-50 p-4 rounded-lg">
-                <p className="text-green-800">
+              <div className="mt-8 text-center bg-sky-50 p-4 rounded-lg">
+                <p className="text-sky-800">
                   더 많은 질문은{" "}
                   <Link to="/faq" className="font-semibold hover:underline">자주 묻는 질문 전체 보기</Link>를 확인해주세요.
                 </p>
@@ -317,7 +317,7 @@ const MicropaymentService: React.FC = () => {
 
           {/* CTA */}
           <section className="text-center">
-            <div className="bg-green-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-sky-600 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 지금 바로 소액결제 현금화 상담받아보세요!
               </h2>
@@ -328,7 +328,7 @@ const MicropaymentService: React.FC = () => {
               <a
                 href="#"
                 onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-                className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
+                className="inline-block bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 💬 소액결제 현금화 즉시 상담 시작
               </a>

@@ -47,7 +47,7 @@ const BlogPost: React.FC = () => {
           </p>
           <Link
             to="/blog"
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors"
           >
             블로그 목록으로 돌아가기
           </Link>
@@ -113,7 +113,7 @@ const BlogPost: React.FC = () => {
                   dangerouslySetInnerHTML={{ __html: post.fields.contentBody }}
                 />
                 <div className="mt-12 pt-8 border-t border-gray-200">
-                  <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 text-center">
+                  <div className="bg-gradient-to-r from-sky-50 to-sky-100 rounded-2xl p-8 text-center">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       더 궁금한 점이 있으신가요?
                     </h3>

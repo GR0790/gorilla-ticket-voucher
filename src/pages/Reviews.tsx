@@ -136,7 +136,7 @@ const Reviews: React.FC = () => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-green-50 to-green-100 py-12 md:py-20">
+        <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               구름페이 고객 후기
@@ -154,7 +154,7 @@ const Reviews: React.FC = () => {
           {/* 통계 섹션 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16">
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg">
-              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-sky-600 mb-2">
                 {stats.totalReviews.toLocaleString()}+
               </div>
               <div className="text-gray-600 text-sm md:text-base">총 후기 수</div>
@@ -193,8 +193,8 @@ const Reviews: React.FC = () => {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <span className="text-green-600 font-bold text-lg">
+                      <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-sky-600 font-bold text-lg">
                           {review.name.charAt(0)}
                         </span>
                       </div>
@@ -219,7 +219,7 @@ const Reviews: React.FC = () => {
                   </p>
 
                   <div className="flex items-center justify-between text-sm">
-                    <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full">
+                    <span className="bg-sky-50 text-sky-700 px-3 py-1 rounded-full">
                       처리금액: {review.amount}
                     </span>
                     <span className="text-gray-500">
@@ -233,13 +233,13 @@ const Reviews: React.FC = () => {
 
           {/* 더 많은 후기 보기 */}
           <div className="text-center mb-12">
-            <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+            <button className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors">
               더 많은 후기 보기
             </button>
           </div>
 
           {/* 후기 작성 유도 */}
-          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-sky-600 to-sky-700 rounded-2xl p-8 md:p-12 text-white text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               🦕 구름페이 서비스는 어떠셨나요?
             </h2>
@@ -259,7 +259,7 @@ const Reviews: React.FC = () => {
               </a>
               <Link
                 to="/contact"
-                className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 📞 상담 문의하기
               </Link>

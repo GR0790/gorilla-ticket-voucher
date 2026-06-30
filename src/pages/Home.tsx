@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO"; // [추가됨]
 
 const HeroSection: React.FC = () => (
-  <section className="bg-gradient-to-br from-green-50 to-green-100 py-12 md:py-20">
+  <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         <div className="flex-shrink-0 lg:w-1/3">
           <div className="w-64 h-64 lg:w-80 lg:h-80 mx-auto">
             <img
-              src="/cloud-mascot.png"
+              src="/cloud-mascot.webp"
               alt="소액결제현금화 구름페이 마스코트"
               className="w-full h-full object-cover rounded-full drop-shadow-2xl animate-bounce-subtle border-4 border-white shadow-lg"
               width="320"
@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => (
             <br />
             <span className="text-blue-600">정보이용료현금화</span> No.1
             <br />
-            <span className="text-green-600">3분 초스피드 입금 완료</span>
+            <span className="text-sky-600">3분 초스피드 입금 완료</span>
           </h1>
 
           <div className="flex justify-center mb-6">
@@ -65,21 +65,21 @@ const HeroSection: React.FC = () => (
             다양한{" "}
             <Link
               to="/services/micropayment"
-              className="text-green-600 hover:underline font-semibold"
+              className="text-sky-600 hover:underline font-semibold"
             >
               소액결제 현금화 방법
             </Link>
             부터{" "}
             <Link
               to="/services/information-fee"
-              className="text-green-600 hover:underline font-semibold"
+              className="text-sky-600 hover:underline font-semibold"
             >
               정보이용료(콘텐츠이용료) 현금화
             </Link>
             ,{" "}
             <Link
               to="/services/credit-card"
-              className="text-green-600 hover:underline font-semibold"
+              className="text-sky-600 hover:underline font-semibold"
             >
               신용카드 현금화
             </Link>
@@ -94,7 +94,7 @@ const HeroSection: React.FC = () => (
             <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
               ✅ 정식사업자등록
             </div>
-            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-semibold">
               ⚡ 누적 3만건+ 거래실적
             </div>
             <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
@@ -105,14 +105,14 @@ const HeroSection: React.FC = () => (
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 max-w-lg mx-auto border-2 border-green-200">
+          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 max-w-lg mx-auto border-2 border-sky-200">
             <div className="text-center">
               <div className="text-sm text-red-600 font-bold mb-3">
                 🔥 소액결제현금화 실시간 거래 현황 (LIVE)
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div>
-                  <div className="text-xl font-bold text-green-600">100건+</div>
+                  <div className="text-xl font-bold text-sky-600">100건+</div>
                   <div className="text-xs text-gray-500">오늘 거래완료</div>
                 </div>
                 <div>
@@ -151,28 +151,28 @@ const ServicesSection: React.FC = () => (
           2026년 업계 최고 지급률!{" "}
           <Link
             to="/services/micropayment"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             소액결제현금화
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             정보이용료현금화
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             신용카드현금화
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             상품권현금화
           </Link>{" "}
@@ -183,10 +183,10 @@ const ServicesSection: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         <Link
           to="/services/micropayment"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-green-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📱</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -194,10 +194,10 @@ const ServicesSection: React.FC = () => (
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
               휴대폰 소액결제 한도 즉시 현금으로! 평균 3분 이내,{" "}
-              <strong className="text-green-600">지급률 70~80%</strong>로
+              <strong className="text-sky-600">지급률 70~80%</strong>로
               신속하게 비상금을 마련하세요.
             </p>
-            <span className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
               소액결제현금화 방법 보기 →
             </span>
           </div>
@@ -205,7 +205,7 @@ const ServicesSection: React.FC = () => (
 
         <Link
           to="/services/information-fee"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-green-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -221,7 +221,7 @@ const ServicesSection: React.FC = () => (
               <strong className="text-blue-600">지급률 60~70%</strong>, 빠르고
               안전한 입금을 보장합니다.
             </p>
-            <span className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
               정보이용료 방법 보기 →
             </span>
           </div>
@@ -229,7 +229,7 @@ const ServicesSection: React.FC = () => (
 
         <Link
           to="/services/credit-card"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-green-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -243,7 +243,7 @@ const ServicesSection: React.FC = () => (
               <strong className="text-purple-600">지급률 82~88%</strong>, 정식
               등록 업체에서 안전하고 빠르게 진행됩니다.
             </p>
-            <span className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
               신용카드 방법 보기 →
             </span>
           </div>
@@ -251,7 +251,7 @@ const ServicesSection: React.FC = () => (
 
         <Link
           to="/services/gift-card"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-green-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -265,7 +265,7 @@ const ServicesSection: React.FC = () => (
               <strong className="text-orange-600">지급률 75~85%</strong>로
               신속하게 현금으로 교환해 드립니다.
             </p>
-            <span className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
               상품권 현금화 방법 보기 →
             </span>
           </div>
@@ -286,28 +286,28 @@ const WhyChooseUsSection: React.FC = () => (
           풍부한 거래실적과 고객 만족도 99.9%로 증명된 신뢰!{" "}
           <Link
             to="/services/micropayment"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             소액결제현금화
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             정보이용료현금화
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             신용카드현금화
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             상품권현금화
           </Link>{" "}
@@ -331,7 +331,7 @@ const WhyChooseUsSection: React.FC = () => (
         </div>
 
         <div className="text-center group">
-          <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-700 group-hover:scale-110 transition-all duration-300">
+          <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sky-700 group-hover:scale-110 transition-all duration-300">
             <span className="text-white text-3xl">⚡</span>
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -340,7 +340,7 @@ const WhyChooseUsSection: React.FC = () => (
           <p className="text-gray-600">
             신청부터 입금까지 평균 3분! 기다림 없이 신속하게 현금화 문제를
             해결하세요.{" "}
-            <strong className="text-green-600">5분이면 거래완료</strong>
+            <strong className="text-sky-600">5분이면 거래완료</strong>
           </p>
         </div>
 
@@ -385,7 +385,7 @@ const WhyChooseUsSection: React.FC = () => (
               <div className="text-sm text-gray-600">누적 거래건수</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">
+              <div className="text-3xl font-bold text-sky-600 mb-2">
                 99.9%
               </div>
               <div className="text-sm text-gray-600">승인 성공률</div>
@@ -415,7 +415,7 @@ const WhyChooseUsSection: React.FC = () => (
       <div className="text-center mt-12">
         <Link
           to="/safety"
-          className="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors"
+          className="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors"
         >
           구름페이의 안전 거래 시스템 더 알아보기 →
         </Link>
@@ -435,28 +435,28 @@ const ReviewsSection: React.FC = () => (
           구름페이를 통해{" "}
           <Link
             to="/services/micropayment"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             소액결제현금화
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             정보이용료현금화
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             신용카드현금화
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
-            className="text-green-600 hover:underline"
+            className="text-sky-600 hover:underline"
           >
             상품권현금화
           </Link>{" "}
@@ -562,7 +562,7 @@ const ReviewsSection: React.FC = () => (
       <div className="text-center mt-12">
         <Link
           to="/reviews"
-          className="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors"
+          className="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors"
         >
           더 많은 고객 후기 보기 →
         </Link>
@@ -572,12 +572,12 @@ const ReviewsSection: React.FC = () => (
 );
 
 const FinalCTASection: React.FC = () => (
-  <section className="py-12 md:py-20 bg-green-600">
+  <section className="py-12 md:py-20 bg-sky-600">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
         지금 바로 구름페이에 문의하세요!
       </h2>
-      <p className="text-lg md:text-xl text-green-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-lg md:text-xl text-sky-100 mb-8 max-w-4xl mx-auto leading-relaxed">
         <Link to="/services/micropayment" className="hover:underline">
           소액결제현금화
         </Link>
@@ -603,7 +603,7 @@ const FinalCTASection: React.FC = () => (
           e.preventDefault();
           (window as any).startConsult();
         }}
-        className="inline-flex items-center bg-white text-green-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+        className="inline-flex items-center bg-white text-sky-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
       >
         💬 내 한도 확인 & 24시간 상담
       </a>

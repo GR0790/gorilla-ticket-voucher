@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-green-50 rounded-xl p-6">
+            <div className="bg-sky-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="text-2xl mr-2">🔒</span>
                 안전한 개인정보 보호

@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center">
               <Link
                 to="/"
-                className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
+                className="text-2xl font-bold text-sky-600 hover:text-sky-700 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded"
                 aria-label="구름페이 홈페이지로 이동"
               >
                 구름페이
@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 to="/"
-                className="text-gray-700 hover:text-green-600 transition-colors"
+                className="text-gray-700 hover:text-sky-600 transition-colors"
               >
                 홈
               </Link>
@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* 서비스 소개 메뉴 */}
               <div className="relative group">
                 <button
-                  className="text-gray-700 hover:text-green-600 flex items-center transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
+                  className="text-gray-700 hover:text-sky-600 flex items-center transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded"
                   aria-haspopup="true"
                   aria-expanded="false"
                   aria-label="서비스 소개 메뉴 열기"
@@ -77,28 +77,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 >
                   <Link
                     to="/services/micropayment"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
                     소액결제 현금화
                   </Link>
                   <Link
                     to="/services/information-fee"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
                     정보이용료 현금화
                   </Link>
                   <Link
                     to="/services/credit-card"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
                     신용카드 현금화
                   </Link>
                   <Link
                     to="/services/gift-card"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
                     상품권 현금화
@@ -108,14 +108,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <Link
                 to="/how-to-use"
-                className="text-gray-700 hover:text-green-600 transition-colors"
+                className="text-gray-700 hover:text-sky-600 transition-colors"
               >
                 이용 방법
               </Link>
               
               {/* 고객 지원 메뉴 */}
               <div className="relative group">
-                <button className="text-gray-700 hover:text-green-600 flex items-center transition-colors">
+                <button className="text-gray-700 hover:text-sky-600 flex items-center transition-colors">
                   고객 지원
                   <svg
                     className="w-4 h-4 ml-1"
@@ -162,7 +162,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* [수정됨] 24시간 빠른상담 -> /contact 페이지로 이동 (원상복구) */}
               <Link
                 to="/contact"
-                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
               >
                 24시간 빠른상담
               </Link>
@@ -170,7 +170,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded p-2"
+              className="md:hidden focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={
                 mobileMenuOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"
@@ -205,7 +205,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="space-y-2">
                 <Link
                   to="/"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                 >
                   홈
                 </Link>
@@ -216,25 +216,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <div className="pl-4 space-y-1">
                     <Link
                       to="/services/micropayment"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       소액결제 현금화
                     </Link>
                     <Link
                       to="/services/information-fee"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       정보이용료 현금화
                     </Link>
                     <Link
                       to="/services/credit-card"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       신용카드 현금화
                     </Link>
                     <Link
                       to="/services/gift-card"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       상품권 현금화
                     </Link>
@@ -253,25 +253,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <div className="pl-4 space-y-1">
                     <Link
                       to="/reviews"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       고객 후기
                     </Link>
                     <Link
                       to="/faq"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       자주묻는질문(FAQ)
                     </Link>
                     <Link
                       to="/safety"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       안전 거래 안내
                     </Link>
                     <Link
                       to="/blog"
-                      className="block py-1 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
                       정보 블로그
                     </Link>
@@ -281,7 +281,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {/* [수정됨] 모바일 메뉴 버튼 -> /contact 페이지로 이동 */}
                 <Link
                   to="/contact"
-                  className="block mx-4 mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-center"
+                  className="block mx-4 mt-4 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors text-center"
                 >
                   24시간 빠른상담
                 </Link>
@@ -453,7 +453,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
              </button>
              <p className="font-bold text-gray-800 text-sm mb-1">궁금한 건 채팅으로 문의하세요</p>
              <p className="text-xs text-gray-500 flex items-center">
-               <span className="text-green-500 mr-1">⚡</span> 빠르게 답변 받으실 수 있어요
+               <span className="text-sky-500 mr-1">⚡</span> 빠르게 답변 받으실 수 있어요
              </p>
              {/* 말풍선 꼬리 */}
              <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 border-r border-b border-gray-100"></div>
