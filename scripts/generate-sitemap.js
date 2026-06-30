@@ -10,8 +10,8 @@ dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 // 콘텐트풀 클라이언트를 생성합니다.
 // 1-1. 'contentful.createClient'가 아닌 'createClient'를 바로 사용합니다.
 const client = createClient({
-  space: process.env.VITE_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.VITE_CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.VITE_CONTENTFUL_SPACE_ID || 'placeholder',
+  accessToken: process.env.VITE_CONTENTFUL_ACCESS_TOKEN || 'placeholder',
 });
 
 async function generateSitemap() {
