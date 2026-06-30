@@ -13,15 +13,9 @@
         }
       }(window.location))
     </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M2CFRWBD');</script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/cloud-mascot.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://cdn.channel.io" />
     <link rel="preload" as="image" href="/cloud-mascot.webp" />
 
@@ -102,8 +96,6 @@
     </style>
   </head>
   <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2CFRWBD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
@@ -139,12 +131,12 @@
 
       if (savedPhone) {
           ChannelIO('boot', {
-            "pluginKey": "66c596c9-3225-4678-b746-0c024efd6f01",
+            "pluginKey": "0448c670-d91c-4ccf-ac94-a5ecc1925778",
             "memberId": savedPhone,
             "profile": { "name": savedName, "mobileNumber": savedPhone }
           });
       } else {
-          ChannelIO('boot', { "pluginKey": "66c596c9-3225-4678-b746-0c024efd6f01" });
+          ChannelIO('boot', { "pluginKey": "0448c670-d91c-4ccf-ac94-a5ecc1925778" });
       }
 
       window.autoHyphen = function(target) {
@@ -202,7 +194,7 @@
           ChannelIO('shutdown');
           setTimeout(function(){
               ChannelIO('boot', {
-                  "pluginKey": "66c596c9-3225-4678-b746-0c024efd6f01",
+                  "pluginKey": "0448c670-d91c-4ccf-ac94-a5ecc1925778",
                   "memberId": cleanPhone,
                   "profile": { "name": name, "mobileNumber": cleanPhone }
               }, function(error, user) {
