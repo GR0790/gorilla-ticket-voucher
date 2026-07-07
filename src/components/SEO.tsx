@@ -15,9 +15,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, pageType = 'general' }) => {
-  const defaultKeywords = "소액결제현금화,소액결제 현금화,소액결제 현금화 방법,소액결제현금화 디시,소액결제 현금화 후기,소액결제 현금화 수수료,소액결제 현금화 업체,소액결제 현금화 추천,소액결제 현금화 사이트,소액결제 방법,소액결제 한도,소액결제 한도 확인,휴대폰 소액결제 현금화,핸드폰 소액결제 현금화,SKT 소액결제 현금화,KT 소액결제 현금화,LGU 소액결제 현금화,미납 소액결제 현금화,소액결제 즉시입금,소액결제 현금화 안전,고릴라티켓,정보이용료현금화,신용카드현금화,상품권현금화";
+  const defaultKeywords = "상품권매입,상품권 매입,상품권 매입 방법,상품권매입 디시,상품권 매입 후기,상품권 매입 수수료,상품권 매입 업체,상품권 매입 추천,상품권 매입 사이트,상품권 방법,상품권 한도,상품권 한도 확인,휴대폰 상품권 매입,핸드폰 상품권 매입,컬쳐랜드 상품권 매입,해피머니 상품권 매입,백화점상품권 상품권 매입,모바일 상품권 매입,상품권 즉시입금,상품권 매입 안전,고릴라티켓,상품권매입,상품권매입,상품권매입";
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
-  const siteUrl = "https://xn--299a64rxvbk71bjne.com";
+  const siteUrl = "https://gr0790.github.io/gorilla-ticket-voucher";
   const canonicalUrl = `${siteUrl}${window.location.pathname}`;
   const fullTitle = `${title} | 고릴라티켓`;
 
@@ -28,7 +28,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, pageT
     "url": siteUrl,
     "logo": `${siteUrl}/gorilla-mascot.webp`,
     "image": `${siteUrl}/gorilla-mascot.webp`,
-    "description": "소액결제현금화 업계 1위. SKT·KT·LGU+ 모든 통신사 소액결제 현금화, 3분 즉시입금, 미납 99.9% 승인, 24시간 상담.",
+    "description": "상품권매입 업계 1위. 컬쳐랜드·해피머니·백화점상품권 모든 상품권 상품권 매입, 3분 즉시입금, 모바일 99.9% 승인, 24시간 상담.",
     "telephone": "+82-10-2138-0790",
     "openingHours": "Mo-Su 00:00-24:00",
     "priceRange": "수수료 20~30%",

@@ -80,28 +80,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
-                    소액결제 현금화
+                    컬쳐랜드 매입
                   </Link>
                   <Link
                     to="/services/information-fee"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
-                    정보이용료 현금화
+                    문화상품권 매입
                   </Link>
                   <Link
                     to="/services/credit-card"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
-                    신용카드 현금화
+                    해피머니 매입
                   </Link>
                   <Link
                     to="/services/gift-card"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
                     role="menuitem"
                   >
-                    상품권 현금화
+                    백화점 상품권 매입
                   </Link>
                 </div>
               </div>
@@ -218,25 +218,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       to="/services/micropayment"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      소액결제 현금화
+                      컬쳐랜드 매입
                     </Link>
                     <Link
                       to="/services/information-fee"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      정보이용료 현금화
+                      문화상품권 매입
                     </Link>
                     <Link
                       to="/services/credit-card"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      신용카드 현금화
+                      해피머니 매입
                     </Link>
                     <Link
                       to="/services/gift-card"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      상품권 현금화
+                      백화점 상품권 매입
                     </Link>
                   </div>
                 </div>
@@ -300,7 +300,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="lg:col-span-1">
               <div className="text-2xl font-bold text-white mb-4">고릴라티켓</div>
               <p className="text-gray-400 mb-4 text-sm md:text-base leading-relaxed">
-                가장 빠르고 안전한 현금화 서비스. 고릴라티켓은 고객님의 긴급한
+                가장 빠르고 안전한 매입 서비스. 고릴라티켓은 고객님의 긴급한
                 자금 문제를 신속하고 간편하게 해결해 드립니다.
               </p>
             </div>
@@ -314,7 +314,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/services/micropayment"
                     className="hover:text-white transition-colors"
                   >
-                    소액결제 현금화
+                    컬쳐랜드 매입
                   </Link>
                 </li>
                 <li>
@@ -322,7 +322,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/services/information-fee"
                     className="hover:text-white transition-colors"
                   >
-                    정보이용료 현금화
+                    문화상품권 매입
                   </Link>
                 </li>
                 <li>
@@ -330,7 +330,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/services/credit-card"
                     className="hover:text-white transition-colors"
                   >
-                    신용카드 현금화
+                    해피머니 매입
                   </Link>
                 </li>
                 <li>
@@ -338,7 +338,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/services/gift-card"
                     className="hover:text-white transition-colors"
                   >
-                    상품권 현금화
+                    백화점 상품권 매입
                   </Link>
                 </li>
               </ul>
@@ -422,10 +422,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               © 2025 고릴라티켓. 모든 권리 보유.
             </p>
             <p className="mt-2 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto">
-              본 웹사이트는 고릴라티켓에서 제공하는 소액결제, 정보이용료,
-              신용카드, 상품권 현금화 서비스에 대한 정보를 포함하고 있습니다.
+              본 웹사이트는 고릴라티켓에서 제공하는 컬쳐랜드, 문화상품권,
+              해피머니, 백화점 상품권 매입 서비스에 대한 정보를 포함하고 있습니다.
               서비스 이용 전 반드시 이용약관 및 개인정보처리방침을 확인하시기
-              바랍니다. 과도한 현금화 서비스 이용은 개인의 재정 상황에 부담을 줄
+              바랍니다. 과도한 매입 서비스 이용은 개인의 재정 상황에 부담을 줄
               수 있으니 신중한 판단 후 이용해 주시기 바라며, 불법적인 목적으로
               서비스를 이용하는 것을 엄격히 금지합니다. 고릴라티켓은 정식 등록된
               안전한 업체이며, 고객님의 안전을 최우선으로 생각합니다.
