@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 // 1. 'contentful' 라이브러리에서 'createClient'만 명시적으로 가져옵니다.
-import contentfulPkg from 'contentful';
-const { createClient } = contentfulPkg;
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { createClient } = require('contentful');
 import dotenv from 'dotenv';
 
 // .env.local 파일에서 환경 변수를 로드합니다.
