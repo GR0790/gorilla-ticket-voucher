@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/gorilla-ticket-voucher/',
+  base: '/',
   plugins: [react()],
   build: {
     // [최적화 1] 소스맵 제거: 배포용 파일 용량을 줄여줍니다.
