@@ -29,7 +29,7 @@ if (container) {
     <React.StrictMode>
       {/* [추가됨] HelmetProvider로 감싸기 */}
       <HelmetProvider>
-        <BrowserRouter basename="/gorilla-ticket-voucher">
+        <BrowserRouter basename="">
           <App />
         </BrowserRouter>
       </HelmetProvider>
