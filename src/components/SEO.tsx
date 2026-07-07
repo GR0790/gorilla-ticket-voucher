@@ -17,7 +17,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, pageType = 'general' }) => {
   const defaultKeywords = "상품권매입,상품권 매입,상품권 매입 방법,상품권매입 디시,상품권 매입 후기,상품권 매입 수수료,상품권 매입 업체,상품권 매입 추천,상품권 매입 사이트,상품권 방법,상품권 한도,상품권 한도 확인,휴대폰 상품권 매입,핸드폰 상품권 매입,컬쳐랜드 상품권 매입,해피머니 상품권 매입,백화점상품권 상품권 매입,모바일 상품권 매입,상품권 즉시입금,상품권 매입 안전,고릴라티켓,상품권매입,상품권매입,상품권매입";
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
-  const siteUrl = "https://gr0790.github.io/gorilla-ticket-voucher";
+  const siteUrl = "https://xn--299a64rxvbk71bjne.net";
   const canonicalUrl = `${siteUrl}${window.location.pathname}`;
   const fullTitle = `${title} | 고릴라티켓`;
 
