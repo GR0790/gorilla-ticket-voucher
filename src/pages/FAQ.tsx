@@ -252,9 +252,8 @@ const FAQ: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://grpay.channel.io/home"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
                 className="inline-flex items-center bg-white text-sky-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
               >
                 💬 실시간 상담하기

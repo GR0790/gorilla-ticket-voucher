@@ -121,9 +121,8 @@ const BlogPost: React.FC = () => {
                       고릴라티켓 전문 상담원이 24시간 친절하게 상담해드립니다.
                     </p>
                     <a
-                      href="https://grpay.channel.io/home"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="#"
+                      onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
                       className="inline-flex items-center bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
                     >
                       💬 1:1 상담하기
