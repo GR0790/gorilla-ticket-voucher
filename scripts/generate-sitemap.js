@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 // 1. 'contentful' 라이브러리에서 'createClient'만 명시적으로 가져옵니다.
-import { createClient } from 'contentful';
+import contentfulPkg from 'contentful';
+const { createClient } = contentfulPkg;
 import dotenv from 'dotenv';
 
 // .env.local 파일에서 환경 변수를 로드합니다.
@@ -18,17 +19,21 @@ async function generateSitemap() {
   console.log('Fetching blog posts from Contentful for sitemap...');
   
   // 콘텐트풀에서 모든 블로그 글의 ID를 가져옵니다.
-  const entries = await client.getEntries({
-    content_type: 'blogPost',
-    select: ['fields.id'], // 필요한 필드만 가져와서 속도를 높입니다.
-    limit: 1000 // 최대 1000개의 포스트를 가져옵니다.
-  });
-
-  const blogPostIds = entries.items.map(item => item.fields.id);
+  let blogPostIds = [];
+  try {
+    const entries = await client.getEntries({
+      content_type: 'blogPost',
+      select: ['fields.id'],
+      limit: 1000
+    });
+    blogPostIds = entries.items.map(item => item.fields.id);
+  } catch (e) {
+    console.warn('Contentful unavailable, skipping blog posts in sitemap:', e.message);
+  }
   console.log(`Found ${blogPostIds.length} blog posts.`);
 
   // 2. 마크다운 링크 형식이 아닌, 실제 URL 주소를 사용합니다.
-  const baseUrl = 'https://xn--299a64rxvbk71bjne.com';
+  const baseUrl = 'https://gr0790.github.io/gorilla-ticket-voucher';
   const today = new Date().toISOString().split('T')[0];
 
   // 블로그 외의 고정 페이지 목록
