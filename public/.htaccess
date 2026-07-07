@@ -6,9 +6,9 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. www 제거 (www.구름페이.com -> 구름페이.com)
+  # 2. www 제거 (www.고릴라티켓.com -> 고릴라티켓.com)
   # 누군가 www를 붙여서 들어오면, www가 없는 주소로 강제 이동시킵니다.
-  # xn--299a64rxvbk71bjne.com = 구름페이.com (퓨니코드)
+  # xn--299a64rxvbk71bjne.com = 고릴라티켓.com (퓨니코드)
   RewriteCond %{HTTP_HOST} ^www\.xn--299a64rxvbk71bjne\.com [NC]
   RewriteRule ^(.*)$ https://xn--299a64rxvbk71bjne.com/$1 [L,R=301]
 
