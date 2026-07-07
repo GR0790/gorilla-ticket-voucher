@@ -7,9 +7,9 @@ const GiftCardService: React.FC = () => {
     <>
       {/* [추가됨] 상품권 페이지 전용 SEO 설정 */}
       <SEO 
-        title="상품권 현금화 문화상품권 해피머니 85% 보장 수수료 싼곳"
-        description="상품권 현금화 업계 최고가 매입! 문화상품권, 해피머니, 신세계상품권, 도서문화상품권 현금화. 24시간 5분 즉시 입금, 수수료 싼곳 고릴라티켓입니다."
-        keywords="상품권현금화, 문화상품권현금화, 해피머니현금화, 신세계상품권현금화, 상품권매입, 구글기프트카드현금화"
+        title="상품권 매입 문화상품권 해피머니 85% 보장 수수료 싼곳"
+        description="상품권 매입 업계 최고가 매입! 문화상품권, 해피머니, 신세계상품권, 도서문화상품권 매입. 24시간 5분 즉시 입금, 수수료 싼곳 고릴라티켓입니다."
+        keywords="상품권매입, 문화상품권매입, 해피머니매입, 신세계상품권매입, 상품권매입, 구글기프트카드매입"
       />
 
       <div className="min-h-screen bg-gray-50">
@@ -17,7 +17,7 @@ const GiftCardService: React.FC = () => {
         <section className="bg-gradient-to-br from-orange-50 to-orange-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              상품권 현금화: 각종 상품권을 현금으로 바꾸세요 | 고릴라티켓
+              상품권 매입: 각종 상품권을 현금으로 바꾸세요 | 고릴라티켓
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               문화상품권, 해피머니, 도서상품권, 신세계상품권 등 보유하신 모든
@@ -33,7 +33,7 @@ const GiftCardService: React.FC = () => {
                 alt=""
                 className="mr-2 w-5 md:w-6 h-5 md:h-6"
               />
-              상품권 현금화 즉시 상담
+              상품권 매입 즉시 상담
             </Link>
           </div>
         </section>
@@ -42,13 +42,13 @@ const GiftCardService: React.FC = () => {
           {/* What is Gift Card Cashout */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🦕 상품권 현금화란 무엇인가요?
+              🦕 상품권 매입란 무엇인가요?
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    상품권 현금화는{" "}
+                    상품권 매입는{" "}
                     <strong>
                       보유하고 계신 각종 상품권을 현금으로 바꿔주는 서비스
                     </strong>
@@ -60,7 +60,7 @@ const GiftCardService: React.FC = () => {
                     >
                       고릴라티켓
                     </Link>
-                    에서는 다양한 종류의 상품권을 높은 지급률로 현금화해드리며,
+                    에서는 다양한 종류의 상품권을 높은 지급률로 매입해드리며,
                     안전하고 신속한 거래를 보장합니다.
                   </p>
 
@@ -72,7 +72,7 @@ const GiftCardService: React.FC = () => {
                       </span>
                       ,{" "}
                       <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">
-                        현금화
+                        매입
                       </span>
                       ,{" "}
                       <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">
@@ -100,7 +100,7 @@ const GiftCardService: React.FC = () => {
                 </div>
                 <div className="bg-orange-50 rounded-xl p-6">
                   <h4 className="font-bold text-orange-800 mb-4 text-lg">
-                    🎁 상품권 현금화 3단계
+                    🎁 상품권 매입 3단계
                   </h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
@@ -133,7 +133,7 @@ const GiftCardService: React.FC = () => {
                       to="/how-to-use"
                       className="text-orange-600 hover:text-orange-700 font-semibold text-sm"
                     >
-                      상품권 현금화 상세 가이드 보기 →
+                      상품권 매입 상세 가이드 보기 →
                     </Link>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const GiftCardService: React.FC = () => {
           {/* Service Features */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🚀 고릴라티켓 상품권 현금화 핵심 장점
+              🚀 고릴라티켓 상품권 매입 핵심 장점
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
@@ -155,7 +155,7 @@ const GiftCardService: React.FC = () => {
                   💰 투명한 지급률 75~85%
                 </h3>
                 <p className="text-gray-600">
-                  상품권 현금화{" "}
+                  상품권 매입{" "}
                   <strong className="text-orange-600">지급률 75~85%</strong>로
                   고객님의 상품권 가치를 최대한 보장해드립니다.
                 </p>
@@ -182,7 +182,7 @@ const GiftCardService: React.FC = () => {
                   🏪 모든 상품권 지원
                 </h3>
                 <p className="text-gray-600">
-                  문화상품권부터 백화점 상품권까지! 어떤 상품권이든 현금화
+                  문화상품권부터 백화점 상품권까지! 어떤 상품권이든 매입
                   가능합니다.
                 </p>
               </div>
@@ -208,10 +208,10 @@ const GiftCardService: React.FC = () => {
             </div>
           </section>
 
-          {/* 상품권 종류별 현금화 정보 (내용 채워넣음) */}
+          {/* 상품권 종류별 매입 정보 (내용 채워넣음) */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🎁 상품권 종류별 현금화 지원 안내
+              🎁 상품권 종류별 매입 지원 안내
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -250,7 +250,7 @@ const GiftCardService: React.FC = () => {
 
               <div className="mt-8 p-4 bg-orange-50 rounded-lg">
                 <p className="text-orange-800 text-center">
-                  💡 위에 없는 상품권도 현금화 가능할 수 있습니다!
+                  💡 위에 없는 상품권도 매입 가능할 수 있습니다!
                   <Link to="/contact" className="font-semibold ml-1">
                     상담을 통해 지급률과 가능 여부를 확인
                   </Link>
@@ -263,7 +263,7 @@ const GiftCardService: React.FC = () => {
           {/* FAQ (내용 채워넣음) */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              ❓ 상품권 현금화 자주묻는질문 FAQ 💡
+              ❓ 상품권 매입 자주묻는질문 FAQ 💡
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="space-y-6">
@@ -299,7 +299,7 @@ const GiftCardService: React.FC = () => {
                     • 24시간 거래 가능한가요?
                   </h4>
                   <p className="text-gray-700">
-                    네, 고릴라티켓은 365일 24시간 운영되므로 언제든지 상품권 현금화 상담 및 거래가 가능합니다.
+                    네, 고릴라티켓은 365일 24시간 운영되므로 언제든지 상품권 매입 상담 및 거래가 가능합니다.
                   </p>
                 </div>
               </div>
@@ -320,7 +320,7 @@ const GiftCardService: React.FC = () => {
           <section className="text-center">
             <div className="bg-orange-600 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                🦕 지금 바로, 상품권 현금화 상담받아보세요!
+                🦕 지금 바로, 상품권 매입 상담받아보세요!
               </h2>
               <p className="text-lg md:text-xl mb-8 opacity-90">
                 사용하지 않는 상품권이 있으시다면 지금 바로 현금으로 바꿔보세요!
@@ -331,7 +331,7 @@ const GiftCardService: React.FC = () => {
                 to="/contact"
                 className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mr-4"
               >
-                상품권 현금화 즉시 상담
+                상품권 매입 즉시 상담
               </Link>
             </div>
           </section>

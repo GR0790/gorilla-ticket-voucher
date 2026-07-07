@@ -294,7 +294,7 @@ const Safety: React.FC = () => {
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gray-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                        현금화 서비스 제공 및 본인 확인
+                        매입 서비스 제공 및 본인 확인
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gray-600 rounded-full mr-3 mt-2 flex-shrink-0" />

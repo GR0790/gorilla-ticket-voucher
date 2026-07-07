@@ -152,12 +152,12 @@ const Privacy: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-sky-50 rounded-lg p-6">
                 <h3 className="text-lg font-bold text-sky-800 mb-4">
-                  가. 현금화 서비스 제공
+                  가. 매입 서비스 제공
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 제공
+                    상품권, 문화상품권, 해피머니, 상품권 매입 서비스 제공
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />

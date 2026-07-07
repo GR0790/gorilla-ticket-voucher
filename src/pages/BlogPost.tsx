@@ -57,7 +57,7 @@ const BlogPost: React.FC = () => {
   }
 
   const postDescription = post.fields.summary ||
-    `고릴라티켓 블로그 - ${post.fields.title}. 소액결제현금화, 정보이용료현금화 관련 정보를 제공합니다.`;
+    `고릴라티켓 블로그 - ${post.fields.title}. 상품권매입, 상품권매입 관련 정보를 제공합니다.`;
 
   return (
     <>

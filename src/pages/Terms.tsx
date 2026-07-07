@@ -124,8 +124,8 @@ const Terms: React.FC = () => {
               제1조 (목적)
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              이 약관은 고릴라티켓(이하 "회사")가 제공하는 소액결제, 정보이용료,
-              신용카드, 상품권 현금화 서비스(이하 "서비스")의 이용조건 및 절차,
+              이 약관은 고릴라티켓(이하 "회사")가 제공하는 상품권, 문화상품권,
+              해피머니, 상품권 매입 서비스(이하 "서비스")의 이용조건 및 절차,
               회사와 이용자간의 권리, 의무, 책임사항과 기타 필요한 사항을
               규정함을 목적으로 합니다.
             </p>
@@ -143,7 +143,7 @@ const Terms: React.FC = () => {
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">1. "회사"</h3>
                 <p className="text-gray-700">
-                  현금화 서비스를 제공하는 고릴라티켓을 의미합니다.
+                  매입 서비스를 제공하는 고릴라티켓을 의미합니다.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
@@ -154,17 +154,17 @@ const Terms: React.FC = () => {
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">
-                  3. "현금화 서비스"
+                  3. "매입 서비스"
                 </h3>
                 <p className="text-gray-700">
-                  소액결제, 정보이용료, 신용카드, 상품권 등을 현금으로
+                  상품권, 문화상품권, 해피머니, 상품권 등을 현금으로
                   전환해주는 서비스를 의미합니다.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">4. "거래"</h3>
                 <p className="text-gray-700">
-                  이용자가 회사를 통해 현금화 서비스를 이용하는 모든 행위를
+                  이용자가 회사를 통해 매입 서비스를 이용하는 모든 행위를
                   의미합니다.
                 </p>
               </div>
@@ -222,31 +222,31 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-sky-50 rounded-lg p-4">
                     <h4 className="font-semibold text-sky-800 mb-2">
-                      소액결제 현금화
+                      상품권 매입
                     </h4>
                     <p className="text-sky-700 text-sm">
-                      휴대폰 소액결제 한도를 현금으로 전환
+                      상품권 한도를 현금으로 전환
                     </p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-800 mb-2">
-                      정보이용료 현금화
+                      상품권 매입
                     </h4>
                     <p className="text-blue-700 text-sm">
-                      구글, 애플 등 정보이용료를 현금으로 전환
+                      구글, 애플 등 문화상품권를 현금으로 전환
                     </p>
                   </div>
                   <div className="bg-purple-50 rounded-lg p-4">
                     <h4 className="font-semibold text-purple-800 mb-2">
-                      신용카드 현금화
+                      상품권 매입
                     </h4>
                     <p className="text-purple-700 text-sm">
-                      신용카드 한도를 활용한 현금 마련
+                      해피머니 한도를 활용한 현금 마련
                     </p>
                   </div>
                   <div className="bg-orange-50 rounded-lg p-4">
                     <h4 className="font-semibold text-orange-800 mb-2">
-                      상품권 현금화
+                      상품권 매입
                     </h4>
                     <p className="text-orange-700 text-sm">
                       각종 상품권을 현금으로 교환

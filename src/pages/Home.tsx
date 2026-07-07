@@ -9,8 +9,8 @@ const HeroSection: React.FC = () => (
         <div className="flex-shrink-0 lg:w-1/3">
           <div className="w-64 h-64 lg:w-80 lg:h-80 mx-auto">
             <img
-              src="/gorilla-mascot.webp"
-              alt="소액결제현금화 고릴라티켓 마스코트"
+              src={`${import.meta.env.BASE_URL}gorilla-mascot.webp`}
+              alt="상품권매입 고릴라티켓 마스코트"
               className="w-full h-full object-cover rounded-full drop-shadow-2xl animate-bounce-subtle border-4 border-white shadow-lg"
               width="320"
               height="320"
@@ -22,17 +22,17 @@ const HeroSection: React.FC = () => (
         <div className="flex-1 text-center">
           <div className="mb-4">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-2">
-              🔥 2026년 소액결제현금화 업계 1위! 고릴라티켓
+              🔥 2026년 상품권매입 업계 1위! 고릴라티켓
             </div>
           </div>
           {/* [수정됨] 고릴라티켓 텍스트 추가 (SEO용) */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="sr-only">고릴라티켓</span>
             <span className="text-red-600">
-              소액결제현금화 미납·정책 99.9% 승인!
+              상품권매입 온라인·모바일 99.9% 승인!
             </span>
             <br />
-            <span className="text-blue-600">정보이용료현금화</span> No.1
+            <span className="text-blue-600">상품권매입</span> No.1
             <br />
             <span className="text-sky-600">3분 초스피드 입금 완료</span>
           </h1>
@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => (
               aria-label="1:1 상담하기"
               className="inline-flex items-center bg-yellow-400 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-300 cursor-pointer"
             >
-              💬 소액결제현금화 1:1 상담
+              💬 상품권매입 1:1 상담
               <svg
                 className="ml-2 w-5 md:w-6 h-5 md:h-6"
                 fill="currentColor"
@@ -60,33 +60,33 @@ const HeroSection: React.FC = () => (
           </div>
           {/* HeroSection 나머지 내용은 기존과 동일하므로 생략하지 않고 아래에 이어집니다... */}
           <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            <strong>갑자기 급전이 필요할 땐? 고릴라티켓이 해결사!</strong>
+            <strong>갑자기 여유자금이 필요할 땐? 고릴라티켓이 해결사!</strong>
             <br />
             다양한{" "}
             <Link
               to="/services/micropayment"
               className="text-sky-600 hover:underline font-semibold"
             >
-              소액결제 현금화 방법
+              컬쳐랜드 매입
             </Link>
             부터{" "}
             <Link
               to="/services/information-fee"
               className="text-sky-600 hover:underline font-semibold"
             >
-              정보이용료(콘텐츠이용료) 현금화
+              해피머니 매입
             </Link>
             ,{" "}
             <Link
               to="/services/credit-card"
               className="text-sky-600 hover:underline font-semibold"
             >
-              신용카드 현금화
+              백화점 상품권 매입
             </Link>
             까지,
             <br />
             <span className="text-red-600 font-bold">
-              미납/정책도 99.9% 승인, 5분이면 거래완료!
+              온라인/모바일도 99.9% 승인, 5분이면 거래완료!
             </span>
           </p>
 
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => (
           <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 max-w-lg mx-auto border-2 border-sky-200">
             <div className="text-center">
               <div className="text-sm text-red-600 font-bold mb-3">
-                🔥 소액결제현금화 실시간 거래 현황 (LIVE)
+                🔥 상품권매입 실시간 거래 현황 (LIVE)
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div>
@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => (
                 </div>
                 <div>
                   <div className="text-xl font-bold text-blue-600">70~80%</div>
-                  <div className="text-xs text-gray-500">소액결제 지급률</div>
+                  <div className="text-xs text-gray-500">상품권 지급률</div>
                 </div>
                 <div>
                   <div className="text-xl font-bold text-purple-600">99.9%</div>
@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => (
           </div>
 
           <p className="text-sm text-gray-500 mt-4">
-            정식 사업자 등록 업체 고릴라티켓, 소액결제현금화 100% 안전거래 보장!
+            정식 사업자 등록 업체 고릴라티켓, 상품권매입 100% 안전거래 보장!
           </p>
         </div>
       </div>
@@ -145,7 +145,7 @@ const ServicesSection: React.FC = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          고릴라티켓 소액결제현금화 핵심 서비스 안내
+          고릴라티켓 상품권매입 핵심 서비스 안내
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
           2026년 업계 최고 지급률!{" "}
@@ -153,28 +153,28 @@ const ServicesSection: React.FC = () => (
             to="/services/micropayment"
             className="text-sky-600 hover:underline"
           >
-            소액결제현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
             className="text-sky-600 hover:underline"
           >
-            정보이용료현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
             className="text-sky-600 hover:underline"
           >
-            신용카드현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
             className="text-sky-600 hover:underline"
           >
-            상품권현금화
+            상품권매입
           </Link>{" "}
           서비스를 빠르고 안전하게 제공합니다.
         </p>
@@ -190,15 +190,15 @@ const ServicesSection: React.FC = () => (
               <span className="text-2xl">📱</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              소액결제 현금화
+              컬쳐랜드 매입
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              휴대폰 소액결제 한도 즉시 현금으로! 평균 3분 이내,{" "}
-              <strong className="text-sky-600">지급률 70~80%</strong>로
-              신속하게 비상금을 마련하세요.
+              컬쳐랜드 상품권(핀번호)을 즉시 현금으로! 평균 3분 이내,{" "}
+              <strong className="text-sky-600">지급률 90~93%</strong>로
+              신속하고 안전하게 매입해 드립니다.
             </p>
             <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              소액결제현금화 방법 보기 →
+              컬쳐랜드 매입 안내 →
             </span>
           </div>
         </Link>
@@ -212,17 +212,15 @@ const ServicesSection: React.FC = () => (
               <span className="text-2xl">💻</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              정보이용료 현금화
-              <br />
-              <span className="text-lg">(콘텐츠이용료 현금화)</span>
+              문화상품권 매입
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              구글 정보이용료(콘텐츠이용료) 등 남은 한도를 현금으로!{" "}
-              <strong className="text-blue-600">지급률 60~70%</strong>, 빠르고
+              문화상품권·구글기프트카드 등 온라인 상품권을 현금으로!{" "}
+              <strong className="text-blue-600">지급률 85~90%</strong>, 빠르고
               안전한 입금을 보장합니다.
             </p>
             <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              정보이용료 방법 보기 →
+              문화상품권 매입 안내 →
             </span>
           </div>
         </Link>
@@ -236,15 +234,15 @@ const ServicesSection: React.FC = () => (
               <span className="text-2xl">💳</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              신용카드 현금화
+              해피머니 매입
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              신용카드 한도를 활용한 비상금 마련!{" "}
-              <strong className="text-purple-600">지급률 82~88%</strong>, 정식
+              해피머니 상품권을 최고가로 매입!{" "}
+              <strong className="text-purple-600">지급률 87~90%</strong>, 정식
               등록 업체에서 안전하고 빠르게 진행됩니다.
             </p>
             <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              신용카드 방법 보기 →
+              해피머니 매입 안내 →
             </span>
           </div>
         </Link>
@@ -258,15 +256,15 @@ const ServicesSection: React.FC = () => (
               <span className="text-2xl">🎫</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              상품권 현금화
+              백화점 상품권 매입
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              모바일 문화상품권, 해피머니 등 각종 상품권을{" "}
-              <strong className="text-orange-600">지급률 75~85%</strong>로
+              신세계·롯데·현대 백화점 상품권(지류·모바일)을{" "}
+              <strong className="text-orange-600">지급률 88~93%</strong>로
               신속하게 현금으로 교환해 드립니다.
             </p>
             <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              상품권 현금화 방법 보기 →
+              백화점 상품권 매입 안내 →
             </span>
           </div>
         </Link>
@@ -280,7 +278,7 @@ const WhyChooseUsSection: React.FC = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          왜 고릴라티켓 소액결제현금화일까요? 업계 1위!
+          왜 고릴라티켓 상품권매입일까요? 업계 1위!
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
           풍부한 거래실적과 고객 만족도 99.9%로 증명된 신뢰!{" "}
@@ -288,28 +286,28 @@ const WhyChooseUsSection: React.FC = () => (
             to="/services/micropayment"
             className="text-sky-600 hover:underline"
           >
-            소액결제현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
             className="text-sky-600 hover:underline"
           >
-            정보이용료현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
             className="text-sky-600 hover:underline"
           >
-            신용카드현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
             className="text-sky-600 hover:underline"
           >
-            상품권현금화
+            상품권매입
           </Link>{" "}
           모든 서비스에서 업계 최고를 자부합니다.
         </p>
@@ -321,11 +319,11 @@ const WhyChooseUsSection: React.FC = () => (
             <span className="text-white text-3xl">🔥</span>
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-3">
-            미납·정책 99.9% 승인
+            온라인·모바일 99.9% 승인
           </h3>
           <p className="text-gray-600">
             다른 업체에서 거절당했나요? 고릴라티켓은{" "}
-            <strong className="text-red-600">미납·정책 99.9% 승인</strong>!
+            <strong className="text-red-600">온라인·모바일 99.9% 승인</strong>!
             포기하지 마시고 상담받아보세요.
           </p>
         </div>
@@ -338,7 +336,7 @@ const WhyChooseUsSection: React.FC = () => (
             3분 초고속 입금
           </h3>
           <p className="text-gray-600">
-            신청부터 입금까지 평균 3분! 기다림 없이 신속하게 현금화 문제를
+            신청부터 입금까지 평균 3분! 기다림 없이 신속하게 매입 문제를
             해결하세요.{" "}
             <strong className="text-sky-600">5분이면 거래완료</strong>
           </p>
@@ -352,9 +350,9 @@ const WhyChooseUsSection: React.FC = () => (
             투명한 지급률 시스템
           </h3>
           <p className="text-gray-600">
-            정직하고 투명한 수수료 정책! 소액결제현금화{" "}
-            <strong className="text-blue-600">70~80%</strong>, 정보이용료
-            60~70%, 신용카드 82~88% 투명한 지급률!
+            정직하고 투명한 수수료 정책! 상품권매입{" "}
+            <strong className="text-blue-600">70~80%</strong>, 문화상품권
+            60~70%, 해피머니 82~88% 투명한 지급률!
           </p>
         </div>
 
@@ -437,28 +435,28 @@ const ReviewsSection: React.FC = () => (
             to="/services/micropayment"
             className="text-sky-600 hover:underline"
           >
-            소액결제현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/information-fee"
             className="text-sky-600 hover:underline"
           >
-            정보이용료현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/credit-card"
             className="text-sky-600 hover:underline"
           >
-            신용카드현금화
+            상품권매입
           </Link>
           ,{" "}
           <Link
             to="/services/gift-card"
             className="text-sky-600 hover:underline"
           >
-            상품권현금화
+            상품권매입
           </Link>{" "}
           서비스를 경험한 고객님들의 솔직한 목소리입니다.
         </p>
@@ -474,7 +472,7 @@ const ReviewsSection: React.FC = () => (
                 className="w-8 h-8 mr-2"
               />
               <span className="font-bold text-gray-900 text-sm md:text-base">
-                김*석 고객님 (소액결제현금화)
+                김*석 고객님 (상품권매입)
               </span>
             </div>
             <div className="flex items-center">
@@ -492,7 +490,7 @@ const ReviewsSection: React.FC = () => (
           </div>
           <p className="text-gray-700 text-sm md:text-base">
             "정말 급했는데 3분도 안되서 입금됐어요! 상담도 친절하시고
-            소액결제현금화 최고입니다. 고릴라티켓 덕분에 잘 해결했어요."
+            상품권매입 최고입니다. 고릴라티켓 덕분에 잘 해결했어요."
           </p>
         </div>
 
@@ -505,7 +503,7 @@ const ReviewsSection: React.FC = () => (
                 className="w-8 h-8 mr-2"
               />
               <span className="font-bold text-gray-900 text-sm md:text-base">
-                이*희 고객님 (정보이용료현금화)
+                이*희 고객님 (상품권매입)
               </span>
             </div>
             <div className="flex items-center">
@@ -522,7 +520,7 @@ const ReviewsSection: React.FC = () => (
             </div>
           </div>
           <p className="text-gray-700 text-sm md:text-base">
-            "타업체보다 정보이용료현금화 수수료도 저렴하고 입금도 빨라서
+            "타업체보다 상품권매입 수수료도 저렴하고 입금도 빨라서
             좋았어요. 다음에도 이용할게요! 안전한 고릴라티켓 찾아서 다행이에요."
           </p>
         </div>
@@ -536,7 +534,7 @@ const ReviewsSection: React.FC = () => (
                 className="w-8 h-8 mr-2"
               />
               <span className="font-bold text-gray-900 text-sm md:text-base">
-                박*영 고객님 (신용카드현금화)
+                박*영 고객님 (상품권매입)
               </span>
             </div>
             <div className="flex items-center">
@@ -553,7 +551,7 @@ const ReviewsSection: React.FC = () => (
             </div>
           </div>
           <p className="text-gray-700 text-sm md:text-base">
-            "신용카드현금화 절차가 복잡할 줄 알았는데 고릴라티켓은 생각보다 간편하고
+            "상품권매입 절차가 복잡할 줄 알았는데 고릴라티켓은 생각보다 간편하고
             안전하게 처리해주셔서 감사합니다. 믿고 맡길 수 있겠어요."
           </p>
         </div>
@@ -579,19 +577,19 @@ const FinalCTASection: React.FC = () => (
       </h2>
       <p className="text-lg md:text-xl text-sky-100 mb-8 max-w-4xl mx-auto leading-relaxed">
         <Link to="/services/micropayment" className="hover:underline">
-          소액결제현금화
+          상품권매입
         </Link>
         ,{" "}
         <Link to="/services/information-fee" className="hover:underline">
-          정보이용료현금화
+          상품권매입
         </Link>
         ,{" "}
         <Link to="/services/credit-card" className="hover:underline">
-          신용카드현금화
+          상품권매입
         </Link>
         ,{" "}
         <Link to="/services/gift-card" className="hover:underline">
-          상품권현금화
+          상품권매입
         </Link>{" "}
         등 24시간 언제나 신속하고 친절하게 상담해드립니다. 궁금한 점이 있다면
         망설이지 말고 고릴라티켓에 연락주세요!
@@ -605,7 +603,7 @@ const FinalCTASection: React.FC = () => (
         }}
         className="inline-flex items-center bg-white text-sky-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
       >
-        💬 내 한도 확인 & 24시간 상담
+        💬 내 상품권 시세 확인 & 24시간 상담
       </a>
     </div>
   </section>
@@ -615,9 +613,9 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO 
-        title="소액결제현금화 업계 1위, 3분 즉시입금"
-        description="고릴라티켓 소액결제현금화 업계 1위! SKT·KT·LGU+ 소액결제 현금화, 미납·정책 99.9% 승인, 3분 칼입금 보장. 소액결제 방법·수수료·후기 확인. 24시간 365일 상담 가능."
-        keywords="소액결제현금화,소액결제 현금화,소액결제 현금화 업체 추천,소액결제 현금화 즉시입금,미납 소액결제 현금화,소액결제 현금화 안전,휴대폰 소액결제 현금화"
+        title="상품권매입 업계 1위, 3분 즉시입금"
+        description="고릴라티켓 상품권매입 업계 1위! 컬쳐랜드·해피머니·백화점상품권 상품권 매입, 온라인·모바일 99.9% 승인, 3분 칼입금 보장. 상품권 방법·수수료·후기 확인. 24시간 365일 상담 가능."
+        keywords="상품권매입,상품권 매입,상품권 매입 업체 추천,상품권 매입 즉시입금,모바일 상품권 매입,상품권 매입 안전,휴대폰 상품권 매입"
         pageType="home"
       />
       <HeroSection />
