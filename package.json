@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "node scripts/generate-sitemap.js && bunx vite build --outDir dist",
+    "build": "node scripts/generate-sitemap.js && bunx vite build --outDir dist && node scripts/prerender-routes.js",
     "sitemap": "node scripts/generate-sitemap.js",
     "lint": "bunx biome lint --write && bunx tsc --noEmit",
     "format": "bunx biome format --write",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^18.3.22",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.5.0",
