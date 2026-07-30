@@ -1,43 +1,44 @@
 import type React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const HowToUse: React.FC = () => {
   const [activeService, setActiveService] = useState<string>("micropayment");
 
   const services = [
-    { id: "micropayment", name: "상품권", icon: "📱", color: "sky" },
-    { id: "information", name: "문화상품권", icon: "📊", color: "blue" },
-    { id: "credit", name: "해피머니", icon: "💳", color: "purple" },
+    { id: "micropayment", name: "소액결제", icon: "📱", color: "sky" },
+    { id: "information", name: "정보이용료", icon: "📊", color: "blue" },
+    { id: "credit", name: "신용카드", icon: "💳", color: "purple" },
     { id: "giftcard", name: "상품권", icon: "🎁", color: "orange" },
     { id: "content", name: "콘텐츠이용료", icon: "🎮", color: "red" },
   ];
 
   const serviceGuides = {
     micropayment: {
-      title: "상품권 매입 이용 방법",
-      subtitle: "컬쳐랜드, 해피머니, 백화점상품권 상품권 한도를 현금으로 변환",
+      title: "소액결제 현금화 이용 방법",
+      subtitle: "SKT, KT, LGU+ 휴대폰 소액결제 한도를 현금으로 변환",
       steps: [
         {
           step: 1,
           title: "상담 신청 및 한도 확인",
           description:
-            "전화, 1:1 상담, 텔레그램으로 상담 신청 후 현재 상품권 한도를 확인합니다.",
+            "전화, 1:1 상담, 텔레그램으로 상담 신청 후 현재 소액결제 한도를 확인합니다.",
           details: [
             "본인 명의 휴대폰 번호 확인",
-            "상품권 종류 확인 (컬쳐랜드/해피머니/백화점상품권)",
-            "현재 이용 가능한 상품권 한도 조회",
-            "희망 매입 금액 상담",
+            "통신사 종류 확인 (SKT/KT/LGU+)",
+            "현재 이용 가능한 소액결제 한도 조회",
+            "희망 현금화 금액 상담",
           ],
         },
         {
           step: 2,
           title: "본인 인증 및 결제 진행",
           description:
-            "간단한 본인 인증 후 상품권를 통한 상품 구매가 진행됩니다.",
+            "간단한 본인 인증 후 소액결제를 통한 상품 구매가 진행됩니다.",
           details: [
             "휴대폰 본인 인증 (SMS 등)",
-            "상품권 비밀번호 입력",
+            "소액결제 비밀번호 입력",
             "상품 구매 완료 확인",
             "결제 내역 실시간 확인",
           ],
@@ -56,25 +57,25 @@ const HowToUse: React.FC = () => {
         },
       ],
       precautions: [
-        "상품권 한도는 상품권별로 다르며, 개인별 차이가 있습니다.",
+        "소액결제 한도는 통신사별로 다르며, 개인별 차이가 있습니다.",
         "다음 달 휴대폰 요금과 함께 청구되므로 결제 능력을 고려해 이용하세요.",
-        "연체 시 상품권에서 상품권 서비스가 제한될 수 있습니다.",
+        "연체 시 통신사에서 소액결제 서비스가 제한될 수 있습니다.",
         "본인 명의가 아닌 경우 이용이 불가능합니다.",
       ],
     },
     information: {
-      title: "상품권 매입 이용 방법",
-      subtitle: "상품권 문화상품권 한도를 활용한 매입 서비스",
+      title: "정보이용료 현금화 이용 방법",
+      subtitle: "통신사 정보이용료 한도를 활용한 현금화 서비스",
       steps: [
         {
           step: 1,
-          title: "문화상품권 한도 확인",
+          title: "정보이용료 한도 확인",
           description:
-            "상품권별 문화상품권 한도를 확인하고 이용 가능 금액을 체크합니다.",
+            "통신사별 정보이용료 한도를 확인하고 이용 가능 금액을 체크합니다.",
           details: [
-            "컬쳐랜드: 114번 또는 T멤버십 앱에서 확인",
-            "해피머니: 100번 고객센터에서 확인",
-            "백화점상품권: 1544-0010에서 확인",
+            "SKT: 114번 또는 T멤버십 앱에서 확인",
+            "KT: 100번 고객센터에서 확인",
+            "LGU+: 1544-0010에서 확인",
             "고릴라티켓 상담을 통한 실시간 확인",
           ],
         },
@@ -82,10 +83,10 @@ const HowToUse: React.FC = () => {
           step: 2,
           title: "정보서비스 이용 및 인증",
           description:
-            "문화상품권가 부과되는 서비스를 이용하고 본인 인증을 진행합니다.",
+            "정보이용료가 부과되는 서비스를 이용하고 본인 인증을 진행합니다.",
           details: [
-            "상품권 본인 인증 진행",
-            "문화상품권 결제 동의",
+            "통신사 본인 인증 진행",
+            "정보이용료 결제 동의",
             "서비스 이용 완료",
             "결제 내역 확인",
           ],
@@ -94,7 +95,7 @@ const HowToUse: React.FC = () => {
           step: 3,
           title: "현금 지급 및 완료",
           description:
-            "문화상품권 결제 확인 후 지급률에 따른 현금이 입금됩니다.",
+            "정보이용료 결제 확인 후 지급률에 따른 현금이 입금됩니다.",
           details: [
             "결제 확인 및 검증",
             "지급률 적용하여 현금 계산",
@@ -104,25 +105,25 @@ const HowToUse: React.FC = () => {
         },
       ],
       precautions: [
-        "문화상품권는 상품권와 별도 한도로 관리됩니다.",
+        "정보이용료는 소액결제와 별도 한도로 관리됩니다.",
         "월 최대 30만원까지 이용 가능하며, 개인별 차이가 있습니다.",
-        "문화상품권도 휴대폰 요금과 함께 청구됩니다.",
-        "과도한 이용 시 상품권에서 서비스 제한이 있을 수 있습니다.",
+        "정보이용료도 휴대폰 요금과 함께 청구됩니다.",
+        "과도한 이용 시 통신사에서 서비스 제한이 있을 수 있습니다.",
       ],
     },
     credit: {
-      title: "상품권 매입 이용 방법",
-      subtitle: "해피머니 결제 한도를 활용한 안전한 매입",
+      title: "신용카드 현금화 이용 방법",
+      subtitle: "신용카드 결제 한도를 활용한 안전한 현금화",
       steps: [
         {
           step: 1,
           title: "카드 정보 확인 및 상담",
           description:
-            "보유하신 해피머니 정보를 확인하고 이용 가능 한도를 체크합니다.",
+            "보유하신 신용카드 정보를 확인하고 이용 가능 한도를 체크합니다.",
           details: [
-            "해피머니 종류 및 브랜드 확인",
+            "신용카드 종류 및 브랜드 확인",
             "현재 이용 가능 한도 확인",
-            "희망 매입 금액 상담",
+            "희망 현금화 금액 상담",
             "지급률 및 수수료 안내",
           ],
         },
@@ -130,7 +131,7 @@ const HowToUse: React.FC = () => {
           step: 2,
           title: "결제 진행 및 본인 확인",
           description:
-            "해피머니로 상품을 구매하고 본인 확인 절차를 진행합니다.",
+            "신용카드로 상품을 구매하고 본인 확인 절차를 진행합니다.",
           details: [
             "카드 정보 입력 (번호, 유효기간, CVC)",
             "카드 비밀번호 또는 공인인증서 인증",
@@ -151,14 +152,14 @@ const HowToUse: React.FC = () => {
         },
       ],
       precautions: [
-        "해피머니 결제는 다음 달 결제일에 청구됩니다.",
+        "신용카드 결제는 다음 달 결제일에 청구됩니다.",
         "카드 한도를 초과하지 않도록 주의하세요.",
         "연체 시 신용점수에 영향을 줄 수 있습니다.",
         "타인 명의 카드는 절대 사용할 수 없습니다.",
       ],
     },
     giftcard: {
-      title: "상품권 매입 이용 방법",
+      title: "상품권 현금화 이용 방법",
       subtitle: "보유하신 각종 상품권을 현금으로 교환",
       steps: [
         {
@@ -197,15 +198,15 @@ const HowToUse: React.FC = () => {
         },
       ],
       precautions: [
-        "유효기간이 지난 상품권은 매입가 불가능합니다.",
+        "유효기간이 지난 상품권은 현금화가 불가능합니다.",
         "이미 사용된 상품권은 처리할 수 없습니다.",
         "위조 상품권 사용 시 법적 책임이 있습니다.",
         "대량 거래 시 별도 지급률 협의가 가능합니다.",
       ],
     },
     content: {
-      title: "콘텐츠이용료 매입 이용 방법",
-      subtitle: "앱스토어 결제 한도를 활용한 디지털 콘텐츠 매입",
+      title: "콘텐츠이용료 현금화 이용 방법",
+      subtitle: "앱스토어 결제 한도를 활용한 디지털 콘텐츠 현금화",
       steps: [
         {
           step: 1,
@@ -214,9 +215,9 @@ const HowToUse: React.FC = () => {
             "이용하실 앱스토어 플랫폼과 결제 가능 한도를 확인합니다.",
           details: [
             "구글플레이, 앱스토어, 원스토어 등 플랫폼 선택",
-            "상품권 매입 한도 확인",
+            "휴대폰 결제 한도 확인",
             "게임 또는 앱 선택",
-            "매입 가능 금액 상담",
+            "현금화 가능 금액 상담",
           ],
         },
         {
@@ -258,6 +259,11 @@ const HowToUse: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="이용 방법 - 소액결제현금화 4단계 안내"
+        description="고릴라티켓 소액결제현금화 이용 방법. 상담 신청부터 3분 즉시입금까지 간단 4단계. 소액결제·정보이용료·신용카드·상품권 현금화 이용 가이드."
+        keywords="소액결제현금화 방법, 소액결제 이용방법, 소액결제 현금화 절차, 고릴라티켓 이용방법"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
@@ -382,7 +388,7 @@ const HowToUse: React.FC = () => {
         {/* General Tips */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            💡 매입 서비스 이용 꿀팁
+            💡 현금화 서비스 이용 꿀팁
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-lg">

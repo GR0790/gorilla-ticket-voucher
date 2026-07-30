@@ -1,9 +1,15 @@
 import type React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="상담센터 - 24시간 1:1 문의"
+        description="고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 3분 즉시입금, 미납·정책 99.9% 승인 상담 안내."
+        keywords="고릴라티켓 상담, 소액결제현금화 상담, 소액결제 문의, 24시간 상담센터"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-50 to-yellow-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
@@ -11,7 +17,7 @@ const Contact: React.FC = () => {
             고릴라티켓 1:1 상담센터
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            상품권, 문화상품권, 해피머니, 상품권, 콘텐츠이용료 매입 등 모든
+            소액결제, 정보이용료, 신용카드, 상품권, 콘텐츠이용료 현금화 등 모든
             <br />
             서비스 관련 문의를 24시간 365일 1:1로 신속하고 친절하게
             상담해드립니다.
@@ -152,7 +158,7 @@ const Contact: React.FC = () => {
               🦕 급한 비상금, 지금 바로 해결하세요!
             </h2>
             <p className="text-lg md:text-xl mb-8 opacity-90">
-              상품권, 문화상품권, 해피머니, 상품권 매입를 전문으로 하는
+              소액결제, 정보이용료, 신용카드, 상품권 현금화를 전문으로 하는
               고릴라티켓.
               <br />
               1:1 상담으로 안전하고 신속한 서비스를 받아보세요!

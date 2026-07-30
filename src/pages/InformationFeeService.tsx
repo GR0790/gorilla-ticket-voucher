@@ -5,11 +5,11 @@ import SEO from "../components/SEO"; // [추가됨] SEO 컴포넌트 불러오�
 const InformationFeeService: React.FC = () => {
   return (
     <>
-      {/* [추가됨] 문화상품권 페이지 전용 SEO 설정 */}
+      {/* [추가됨] 정보이용료 페이지 전용 SEO 설정 */}
       <SEO 
-        title="상품권 매입 콘텐츠이용료 매입 수수료 싼곳"
-        description="상품권 매입, 콘텐츠이용료 매입 전문! 구글 문화상품권 모바일 한도 100% 매입 가능. 컬쳐랜드 해피머니 백화점상품권 수수료 최저가, 3분 즉시 입금 고릴라티켓입니다."
-        keywords="상품권매입, 콘텐츠이용료매입, 구글문화상품권, 상품권 매입 방법, 문화상품권 매입"
+        title="정보이용료 현금화 콘텐츠이용료 현금화 수수료 싼곳"
+        description="정보이용료 현금화, 콘텐츠이용료 현금화 전문! 구글 정보이용료 미납 한도 100% 현금화 가능. SKT KT LGU+ 수수료 최저가, 3분 즉시 입금 고릴라티켓입니다."
+        keywords="정보이용료현금화, 콘텐츠이용료현금화, 구글정보이용료, 정보이용료 현금화 방법, 정보이용료 매입"
       />
 
       <div className="min-h-screen bg-gray-50">
@@ -18,23 +18,23 @@ const InformationFeeService: React.FC = () => {
           <div className="container mx-auto px-4 text-center">
             {/* H1 태그에 핵심 키워드 유지 */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              상품권 매입: 상품권 문화상품권 한도로 즉시 매입 | 고릴라티켓
+              정보이용료 현금화: 통신사 정보이용료 한도로 즉시 현금화 | 고릴라티켓
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              컬쳐랜드, 해피머니, 백화점상품권 상품권 문화상품권 한도를 100% 활용! 복잡한 절차 없이
-              3분 안에 신속하게 매입 해드립니다. 월 한도 최대 100만원까지 이용
+              SKT, KT, LGU+ 통신사 정보이용료 한도를 100% 활용! 복잡한 절차 없이
+              3분 안에 신속하게 현금화 해드립니다. 월 한도 최대 100만원까지 이용
               가능합니다.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <img
+              <img loading="lazy"
                 src="https://ext.same-assets.com/1945597335/1008708004.svg"
                 alt=""
                 className="mr-2 w-5 md:w-6 h-5 md:h-6"
               />
-              문화상품권 즉시 상담
+              정보이용료 즉시 상담
             </Link>
           </div>
         </section>
@@ -43,13 +43,13 @@ const InformationFeeService: React.FC = () => {
           {/* What is Information Fee */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🦕 상품권 매입란 무엇인가요?
+              🦕 정보이용료 현금화란 무엇인가요?
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    문화상품권는{" "}
+                    정보이용료는{" "}
                     <strong>
                       휴대폰을 통해 각종 정보 서비스를 이용할 때 부과되는 요금
                     </strong>
@@ -61,35 +61,35 @@ const InformationFeeService: React.FC = () => {
                     >
                       고릴라티켓
                     </Link>
-                    의 상품권 매입 서비스입니다. 상품권별로 월 최대
-                    100만원까지 이용 가능하며, 빠르고 안전하게 매입 해드립니다.
+                    의 정보이용료 현금화 서비스입니다. 통신사별로 월 최대
+                    100만원까지 이용 가능하며, 빠르고 안전하게 현금화 해드립니다.
                   </p>
 
                   <div className="space-y-3">
                     <div className="text-gray-600">
                       핵심 키워드:{" "}
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-                        문화상품권
+                        정보이용료
                       </span>
                       ,{" "}
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-                        상품권
+                        통신사
                       </span>
                       ,{" "}
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-                        매입
+                        현금화
                       </span>
                     </div>
 
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-center">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mr-3" />
-                        모든 상품권 지원: 컬쳐랜드, 해피머니, 백화점상품권 모든 상품권 문화상품권
+                        모든 통신사 지원: SKT, KT, LGU+ 모든 통신사 정보이용료
                         한도 활용 가능
                       </li>
                       <li className="flex items-center">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mr-3" />
-                        높은 한도: 월 최대 100만원까지 이용 가능 (상품권별 상이)
+                        높은 한도: 월 최대 100만원까지 이용 가능 (통신사별 상이)
                       </li>
                       <li className="flex items-center">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mr-3" />
@@ -100,7 +100,7 @@ const InformationFeeService: React.FC = () => {
                 </div>
                 <div className="bg-blue-50 rounded-xl p-6">
                   <h4 className="font-bold text-blue-800 mb-4 text-lg">
-                    📱 상품권 매입 3단계
+                    📱 정보이용료 현금화 3단계
                   </h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
@@ -116,7 +116,7 @@ const InformationFeeService: React.FC = () => {
                         2
                       </div>
                       <span className="text-blue-800 font-medium">
-                        🔐 상품권 본인 인증 진행
+                        🔐 통신사 본인 인증 진행
                       </span>
                     </div>
                     <div className="flex items-center">
@@ -133,7 +133,7 @@ const InformationFeeService: React.FC = () => {
                       to="/how-to-use"
                       className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
                     >
-                      상품권 매입 상세 가이드 보기 →
+                      정보이용료 현금화 상세 가이드 보기 →
                     </Link>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const InformationFeeService: React.FC = () => {
           {/* Service Features */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🚀 고릴라티켓 상품권 매입 핵심 장점
+              🚀 고릴라티켓 정보이용료 현금화 핵심 장점
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
@@ -155,7 +155,7 @@ const InformationFeeService: React.FC = () => {
                   💰 투명한 지급률 60~70%
                 </h3>
                 <p className="text-gray-600">
-                  상품권 매입{" "}
+                  정보이용료 현금화{" "}
                   <strong className="text-blue-600">지급률 60~70%</strong>로
                   투명하고 정직한 수수료 정책을 제공합니다.
                 </p>
@@ -179,11 +179,11 @@ const InformationFeeService: React.FC = () => {
                   <span className="text-2xl">📱</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  📶 모든 상품권 지원
+                  📶 모든 통신사 지원
                 </h3>
                 <p className="text-gray-600">
-                  컬쳐랜드, 해피머니, 백화점상품권 모든 상품권 지원. 상품권 상관없이 문화상품권
-                  매입 가능합니다.
+                  SKT, KT, LGU+ 모든 통신사 지원. 통신사 상관없이 정보이용료
+                  현금화 가능합니다.
                 </p>
               </div>
 
@@ -211,27 +211,27 @@ const InformationFeeService: React.FC = () => {
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              ❓ 상품권 매입 자주묻는질문 FAQ 💡
+              ❓ 정보이용료 현금화 자주묻는질문 FAQ 💡
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="space-y-6">
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 문화상품권와 상품권의 차이점은 무엇인가요?
+                    • 정보이용료와 소액결제의 차이점은 무엇인가요?
                   </h4>
                   <p className="text-gray-700">
-                    문화상품권는 정보 서비스 이용 시 부과되는 요금이고, 상품권는
-                    콘텐츠 구매 시 사용됩니다. 문화상품권가 일반적으로 더 높은
+                    정보이용료는 정보 서비스 이용 시 부과되는 요금이고, 소액결제는
+                    콘텐츠 구매 시 사용됩니다. 정보이용료가 일반적으로 더 높은
                     한도를 제공합니다.
                   </p>
                 </div>
 
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 상품권 매입는 안전한가요?
+                    • 정보이용료 현금화는 안전한가요?
                   </h4>
                   <p className="text-gray-700">
-                    네, 정식 등록된 업체를 통한 상품권 매입는 100%
+                    네, 정식 등록된 업체를 통한 정보이용료 현금화는 100%
                     합법적이며 안전합니다. 개인정보 보호 및 거래 안전을 최우선으로
                     보장해드립니다.
                   </p>
@@ -239,7 +239,7 @@ const InformationFeeService: React.FC = () => {
 
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 문화상품권 한도가 부족한 경우에도 이용 가능한가요?
+                    • 정보이용료 한도가 부족한 경우에도 이용 가능한가요?
                   </h4>
                   <p className="text-gray-700">
                     한도 상황에 따라 달라질 수 있습니다. 정확한 이용 가능 여부는
@@ -249,17 +249,17 @@ const InformationFeeService: React.FC = () => {
 
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 문화상품권 요금은 언제 청구되나요?
+                    • 정보이용료 요금은 언제 청구되나요?
                   </h4>
                   <p className="text-gray-700">
-                    문화상품권는 다음 달 휴대폰 요금과 함께 자동으로 청구됩니다.
-                    정확한 청구일은 각 상품권 요금 청구일과 동일합니다.
+                    정보이용료는 다음 달 휴대폰 요금과 함께 자동으로 청구됩니다.
+                    정확한 청구일은 각 통신사 요금 청구일과 동일합니다.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 여러 상품권 문화상품권를 동시에 이용할 수 있나요?
+                    • 여러 통신사 정보이용료를 동시에 이용할 수 있나요?
                   </h4>
                   <p className="text-gray-700">
                     본인 명의의 여러 번호가 있다면 각각의 한도를 활용해 이용
@@ -291,10 +291,10 @@ const InformationFeeService: React.FC = () => {
           <section className="text-center">
             <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                🦕 지금 바로, 상품권 매입 상담받아보세요!
+                🦕 지금 바로, 정보이용료 현금화 상담받아보세요!
               </h2>
               <p className="text-lg md:text-xl mb-8 opacity-90">
-                컬쳐랜드, 해피머니, 백화점상품권 문화상품권 한도를 100% 활용해 급한 자금 문제를
+                SKT, KT, LGU+ 정보이용료 한도를 100% 활용해 급한 자금 문제를
                 해결하세요. 복잡한 절차 없이 3분 만에 계좌로 입금 완료! 24시간
                 전문 상담진이 대기중입니다.
               </p>
@@ -302,7 +302,7 @@ const InformationFeeService: React.FC = () => {
                 to="/contact"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mr-4"
               >
-                상품권 매입 즉시 상담
+                정보이용료 현금화 즉시 상담
               </Link>
             </div>
           </section>

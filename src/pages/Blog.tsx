@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import contentfulClient from "../services/contentful";
+import SEO from "../components/SEO";
+import { blogPosts as localBlogPosts } from "../data/blogPosts";
 
 const Blog: React.FC = () => {
-  const [blogPosts, setBlogPosts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      try {
-        const response = await contentfulClient.getEntries({
-          content_type: "blogPost",
-          order: ["-fields.id"],
-        });
-        setBlogPosts(response.items);
-      } catch (error) {
-        console.error("Error fetching contentful entries:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPosts();
-  }, []);
+  const [blogPosts] = useState<any[]>(localBlogPosts);
+  const loading = false;
 
   const categories = [
-    "전체", "상품권", "문화상품권", "해피머니", "상품권",
+    "전체", "소액결제", "정보이용료", "신용카드", "상품권",
     "안전가이드", "업계분석", "금융정보", "한도관리", "총정리 가이드"
   ];
 
@@ -65,13 +48,18 @@ const Blog: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="정보 블로그 - 소액결제현금화 최신 정보"
+        description="소액결제현금화, 정보이용료·신용카드·상품권 현금화 최신 정보와 한도·수수료·안전 이용 가이드를 고릴라티켓 블로그에서 확인하세요."
+        keywords="소액결제현금화 정보, 소액결제 팁, 소액결제 블로그, 소액결제 한도, 고릴라티켓 블로그"
+      />
       <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             고릴라티켓 정보 블로그
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            매입 서비스에 대한 유용한 정보와 안전한 거래 가이드,
+            현금화 서비스에 대한 유용한 정보와 안전한 거래 가이드,
             <br />
             업계 동향까지 모든 정보를 한눈에 확인하세요.
           </p>

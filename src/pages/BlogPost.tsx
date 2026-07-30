@@ -1,39 +1,23 @@
 import type React from "react";
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import contentfulClient from "../services/contentful";
+
+import { blogPosts as localBlogPosts } from "../data/blogPosts";
 import SEO from "../components/SEO";
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const post = localBlogPosts.find((p) => String(p.fields.id) === String(id)) || null;
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      if (!id) return;
-      setLoading(true);
-      try {
-        const response = await contentfulClient.getEntries({
-          content_type: "blogPost",
-          "fields.id": parseInt(id, 10),
-          limit: 1,
-        });
-        if (response.items.length > 0) {
-          setPost(response.items[0]);
-        }
-      } catch (error) {
-        console.error("Error fetching Contentful entry:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPost();
-  }, [id]);
-
-  if (loading) {
-    return <div className="text-center py-20">로딩 중...</div>;
-  }
+  const relatedPosts = post
+    ? [...localBlogPosts]
+        .filter((p) => p.fields.id !== post.fields.id)
+        .sort((a, b) => {
+          const aScore = a.fields.category === post.fields.category ? 1 : 0;
+          const bScore = b.fields.category === post.fields.category ? 1 : 0;
+          return bScore - aScore;
+        })
+        .slice(0, 3)
+    : [];
 
   if (!post) {
     return (
@@ -57,7 +41,7 @@ const BlogPost: React.FC = () => {
   }
 
   const postDescription = post.fields.summary ||
-    `고릴라티켓 블로그 - ${post.fields.title}. 상품권매입, 상품권매입 관련 정보를 제공합니다.`;
+    `고릴라티켓 블로그 - ${post.fields.title}. 소액결제현금화, 정보이용료현금화 관련 정보를 제공합니다.`;
 
   return (
     <>
@@ -66,6 +50,24 @@ const BlogPost: React.FC = () => {
         description={postDescription}
         keywords={post.fields.tags ? post.fields.tags.join(", ") : undefined}
       />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.fields.title,
+          "description": postDescription,
+          "keywords": post.fields.tags ? post.fields.tags.join(", ") : undefined,
+          "datePublished": post.fields.date,
+          "dateModified": post.fields.date,
+          "author": { "@type": "Organization", "name": "고릴라티켓" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "고릴라티켓",
+            "logo": { "@type": "ImageObject", "url": "https://xn--299a64rxvbk71bjne.net/gorilla-mascot.webp" }
+          },
+          "mainEntityOfPage": typeof window !== "undefined" ? window.location.href : undefined,
+        })}
+      </script>
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
           <div className="container mx-auto px-4">
@@ -130,6 +132,29 @@ const BlogPost: React.FC = () => {
                   </div>
                 </div>
               </article>
+
+              {relatedPosts.length > 0 && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">관련 글</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {relatedPosts.map((rp) => (
+                      <Link
+                        key={rp.fields.id}
+                        to={`/blog/${rp.fields.id}`}
+                        className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col"
+                      >
+                        <span className="text-3xl mb-3">{rp.fields.image}</span>
+                        <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold self-start mb-3">
+                          {rp.fields.category}
+                        </span>
+                        <h3 className="text-base font-bold text-gray-900 leading-snug hover:text-purple-600 transition-colors">
+                          {rp.fields.title}
+                        </h3>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>

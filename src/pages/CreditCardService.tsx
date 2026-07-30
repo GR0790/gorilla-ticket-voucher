@@ -5,11 +5,11 @@ import SEO from "../components/SEO"; // [추가됨] SEO 컴포넌트 불러오�
 const CreditCardService: React.FC = () => {
   return (
     <>
-      {/* [추가됨] 해피머니 페이지 전용 SEO 설정 */}
+      {/* [추가됨] 신용카드 페이지 전용 SEO 설정 */}
       <SEO 
-        title="상품권 매입 카드깡 아님 수수료 싼곳 88% 보장"
-        description="상품권 매입, 카드깡 절대 아님! 합법적인 결제 한도 매입 서비스. 수수료 싼곳, 지급률 88% 보장. 삼성/신한/현대 등 전 카드사 3분 즉시 입금 고릴라티켓."
-        keywords="상품권매입, 카드깡아님, 카드한도매입, 상품권매입수수료, 카드결제매입, 비상금대출"
+        title="신용카드 현금화 카드깡 아님 수수료 싼곳 88% 보장"
+        description="신용카드 현금화, 카드깡 절대 아님! 합법적인 결제 한도 현금화 서비스. 수수료 싼곳, 지급률 88% 보장. 삼성/신한/현대 등 전 카드사 3분 즉시 입금 고릴라티켓."
+        keywords="신용카드현금화, 카드깡아님, 카드한도현금화, 신용카드현금화수수료, 카드결제현금화, 비상금대출"
       />
 
       <div className="min-h-screen bg-gray-50">
@@ -17,10 +17,10 @@ const CreditCardService: React.FC = () => {
         <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              상품권 매입: 해피머니 한도로 여유자금 마련 | 고릴라티켓
+              신용카드 현금화: 신용카드 한도로 급전 마련 | 고릴라티켓
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              해피머니 결제 한도를 활용한 안전하고 빠른 매입 서비스! 복잡한 절차
+              신용카드 결제 한도를 활용한 안전하고 빠른 현금화 서비스! 복잡한 절차
               없이 3분 안에 신속하게 현금을 마련하세요. 전 카드사 지원, 최대
               1000만원까지, 지급률 82~88% 보장!
             </p>
@@ -28,12 +28,12 @@ const CreditCardService: React.FC = () => {
               to="/contact"
               className="inline-flex items-center bg-purple-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <img
+              <img loading="lazy"
                 src="https://ext.same-assets.com/1945597335/1008708004.svg"
                 alt=""
                 className="mr-2 w-5 md:w-6 h-5 md:h-6"
               />
-              상품권 매입 즉시 상담
+              신용카드 현금화 즉시 상담
             </Link>
           </div>
         </section>
@@ -42,15 +42,15 @@ const CreditCardService: React.FC = () => {
           {/* What is Credit Card Cashout */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🦕 상품권 매입란 무엇인가요?
+              🦕 신용카드 현금화란 무엇인가요?
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    상품권 매입는{" "}
+                    신용카드 현금화는{" "}
                     <strong>
-                      보유하신 해피머니의 결제 한도를 활용해 필요한 현금을
+                      보유하신 신용카드의 결제 한도를 활용해 필요한 현금을
                       마련하는 서비스
                     </strong>
                     입니다. 급하게 현금이 필요한 상황에서 복잡한 대출 절차 없이,
@@ -72,15 +72,15 @@ const CreditCardService: React.FC = () => {
                     <div className="text-gray-600">
                       핵심 키워드:{" "}
                       <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        해피머니
+                        신용카드
                       </span>
                       ,{" "}
                       <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        매입
+                        현금화
                       </span>
                       ,{" "}
                       <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        여유자금
+                        급전
                       </span>
                     </div>
 
@@ -103,7 +103,7 @@ const CreditCardService: React.FC = () => {
                 </div>
                 <div className="bg-purple-50 rounded-xl p-6">
                   <h4 className="font-bold text-purple-800 mb-4 text-lg">
-                    💳 상품권 매입 3단계
+                    💳 신용카드 현금화 3단계
                   </h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
@@ -136,7 +136,7 @@ const CreditCardService: React.FC = () => {
                       to="/how-to-use"
                       className="text-purple-600 hover:text-purple-700 font-semibold text-sm"
                     >
-                      상품권 매입 상세 가이드 보기 →
+                      신용카드 현금화 상세 가이드 보기 →
                     </Link>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const CreditCardService: React.FC = () => {
           {/* Service Features */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🚀 고릴라티켓 상품권 매입 핵심 장점
+              🚀 고릴라티켓 신용카드 현금화 핵심 장점
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
@@ -158,7 +158,7 @@ const CreditCardService: React.FC = () => {
                   💰 투명한 지급률 82~88%
                 </h3>
                 <p className="text-gray-600">
-                  상품권 매입{" "}
+                  신용카드 현금화{" "}
                   <strong className="text-purple-600">지급률 82~88%</strong>로
                   고객님의 소중한 카드 한도를 최대한 활용해드립니다.
                 </p>
@@ -211,10 +211,10 @@ const CreditCardService: React.FC = () => {
             </div>
           </section>
 
-          {/* 카드사별 매입 가능 정보 */}
+          {/* 카드사별 현금화 가능 정보 */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              💳 카드사별 매입 지원 안내
+              💳 카드사별 현금화 지원 안내
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -300,23 +300,23 @@ const CreditCardService: React.FC = () => {
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              ❓ 상품권 매입 자주묻는질문 FAQ 💡
+              ❓ 신용카드 현금화 자주묻는질문 FAQ 💡
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="space-y-6">
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 상품권 매입는 합법적인 서비스인가요?
+                    • 신용카드 현금화는 합법적인 서비스인가요?
                   </h4>
                   <p className="text-gray-700">
-                    정식 등록된 업체를 통한 상품권 매입는 합법적인
+                    정식 등록된 업체를 통한 신용카드 현금화는 합법적인
                     서비스입니다. 다만, 개인의 신용도 관리에는 주의가 필요합니다.
                   </p>
                 </div>
 
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 해피머니 결제 후 언제 청구되나요?
+                    • 신용카드 결제 후 언제 청구되나요?
                   </h4>
                   <p className="text-gray-700">
                     일반적으로 다음 달 카드 결제일에 청구됩니다. 정확한 결제일은
@@ -326,7 +326,7 @@ const CreditCardService: React.FC = () => {
 
                 <div className="border-b border-gray-200 pb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 해피머니 한도가 부족한 경우에도 이용 가능한가요?
+                    • 신용카드 한도가 부족한 경우에도 이용 가능한가요?
                   </h4>
                   <p className="text-gray-700">
                     사용 가능한 한도 내에서만 이용 가능합니다. 정확한 이용 가능
@@ -350,7 +350,7 @@ const CreditCardService: React.FC = () => {
                     • 여러 장의 카드를 동시에 이용할 수 있나요?
                   </h4>
                   <p className="text-gray-700">
-                    본인 명의의 여러 카드를 활용해 더 큰 금액의 매입가
+                    본인 명의의 여러 카드를 활용해 더 큰 금액의 현금화가
                     가능합니다. 자세한 내용은{" "}
                     <Link
                       to="/contact"
@@ -379,10 +379,10 @@ const CreditCardService: React.FC = () => {
           <section className="text-center">
             <div className="bg-purple-600 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                🦕 지금 바로, 상품권 매입 상담받아보세요!
+                🦕 지금 바로, 신용카드 현금화 상담받아보세요!
               </h2>
               <p className="text-lg md:text-xl mb-8 opacity-90">
-                보유하신 해피머니로 급한 자금 문제를 즉시 해결하세요! 전 카드사
+                보유하신 신용카드로 급한 자금 문제를 즉시 해결하세요! 전 카드사
                 지원, 업계 최고 지급률, 3분 내 입금 완료! 24시간 전문 상담진이
                 대기중입니다.
               </p>
@@ -390,7 +390,7 @@ const CreditCardService: React.FC = () => {
                 to="/contact"
                 className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mr-4"
               >
-                상품권 매입 즉시 상담
+                신용카드 현금화 즉시 상담
               </Link>
             </div>
           </section>

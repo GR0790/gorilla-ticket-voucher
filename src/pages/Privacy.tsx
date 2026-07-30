@@ -1,9 +1,15 @@
 import type React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Privacy: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="개인정보처리방침"
+        description="고릴라티켓 개인정보처리방침. 고객님의 개인정보 수집·이용·보관·파기에 관한 안내입니다."
+        keywords="고릴라티켓 개인정보처리방침, 개인정보 보호정책"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-100 to-gray-200 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
@@ -152,12 +158,12 @@ const Privacy: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-sky-50 rounded-lg p-6">
                 <h3 className="text-lg font-bold text-sky-800 mb-4">
-                  가. 매입 서비스 제공
+                  가. 현금화 서비스 제공
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    상품권, 문화상품권, 해피머니, 상품권 매입 서비스 제공
+                    소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 제공
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3 mt-2 flex-shrink-0" />

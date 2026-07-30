@@ -1,9 +1,15 @@
 import type React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Terms: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="이용약관"
+        description="고릴라티켓 소액결제현금화 서비스 이용약관 안내입니다."
+        keywords="고릴라티켓 이용약관, 소액결제현금화 약관"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-100 to-blue-200 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
@@ -124,8 +130,8 @@ const Terms: React.FC = () => {
               제1조 (목적)
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              이 약관은 고릴라티켓(이하 "회사")가 제공하는 상품권, 문화상품권,
-              해피머니, 상품권 매입 서비스(이하 "서비스")의 이용조건 및 절차,
+              이 약관은 고릴라티켓(이하 "회사")가 제공하는 소액결제, 정보이용료,
+              신용카드, 상품권 현금화 서비스(이하 "서비스")의 이용조건 및 절차,
               회사와 이용자간의 권리, 의무, 책임사항과 기타 필요한 사항을
               규정함을 목적으로 합니다.
             </p>
@@ -143,7 +149,7 @@ const Terms: React.FC = () => {
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">1. "회사"</h3>
                 <p className="text-gray-700">
-                  매입 서비스를 제공하는 고릴라티켓을 의미합니다.
+                  현금화 서비스를 제공하는 고릴라티켓을 의미합니다.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
@@ -154,17 +160,17 @@ const Terms: React.FC = () => {
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">
-                  3. "매입 서비스"
+                  3. "현금화 서비스"
                 </h3>
                 <p className="text-gray-700">
-                  상품권, 문화상품권, 해피머니, 상품권 등을 현금으로
+                  소액결제, 정보이용료, 신용카드, 상품권 등을 현금으로
                   전환해주는 서비스를 의미합니다.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-bold text-gray-800 mb-2">4. "거래"</h3>
                 <p className="text-gray-700">
-                  이용자가 회사를 통해 매입 서비스를 이용하는 모든 행위를
+                  이용자가 회사를 통해 현금화 서비스를 이용하는 모든 행위를
                   의미합니다.
                 </p>
               </div>
@@ -222,31 +228,31 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-sky-50 rounded-lg p-4">
                     <h4 className="font-semibold text-sky-800 mb-2">
-                      상품권 매입
+                      소액결제 현금화
                     </h4>
                     <p className="text-sky-700 text-sm">
-                      상품권 한도를 현금으로 전환
+                      휴대폰 소액결제 한도를 현금으로 전환
                     </p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-800 mb-2">
-                      상품권 매입
+                      정보이용료 현금화
                     </h4>
                     <p className="text-blue-700 text-sm">
-                      구글, 애플 등 문화상품권를 현금으로 전환
+                      구글, 애플 등 정보이용료를 현금으로 전환
                     </p>
                   </div>
                   <div className="bg-purple-50 rounded-lg p-4">
                     <h4 className="font-semibold text-purple-800 mb-2">
-                      상품권 매입
+                      신용카드 현금화
                     </h4>
                     <p className="text-purple-700 text-sm">
-                      해피머니 한도를 활용한 현금 마련
+                      신용카드 한도를 활용한 현금 마련
                     </p>
                   </div>
                   <div className="bg-orange-50 rounded-lg p-4">
                     <h4 className="font-semibold text-orange-800 mb-2">
-                      상품권 매입
+                      상품권 현금화
                     </h4>
                     <p className="text-orange-700 text-sm">
                       각종 상품권을 현금으로 교환
