@@ -126,7 +126,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 to="/how-to-use"
                 className="text-gray-700 hover:text-sky-600 transition-colors"
               >
-                이용 방법
+                이용 전 체크리스트
               </Link>
               
               {/* 고객 지원 메뉴 */}
@@ -152,7 +152,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/reviews"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                   >
-                    고객 후기
+                    후기 검증법
                   </Link>
                   <Link
                     to="/faq"
@@ -164,7 +164,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/safety"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                   >
-                    안전 거래 안내
+                    개인정보 보호수칙
                   </Link>
                   <Link
                     to="/blog"
@@ -262,7 +262,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   to="/how-to-use"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                 >
-                  이용 방법
+                  이용 전 체크리스트
                 </Link>
                 <div className="px-4 py-2">
                   <p className="text-gray-500 text-sm font-medium mb-2">
@@ -273,7 +273,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       to="/reviews"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      고객 후기
+                      후기 검증법
                     </Link>
                     <Link
                       to="/faq"
@@ -285,7 +285,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       to="/safety"
                       className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
                     >
-                      안전 거래 안내
+                      개인정보 보호수칙
                     </Link>
                     <Link
                       to="/blog"
@@ -373,7 +373,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/how-to-use"
                     className="hover:text-white transition-colors"
                   >
-                    이용 방법
+                    이용 전 체크리스트
                   </Link>
                 </li>
                 <li>
@@ -389,7 +389,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to="/safety"
                     className="hover:text-white transition-colors"
                   >
-                    안전 거래 안내
+                    개인정보 보호수칙
                   </Link>
                 </li>
                 <li>
