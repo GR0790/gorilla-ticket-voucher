@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- .net은 고릴라티켓.com의 이용가이드 허브로 운영됩니다.
-       아래 페이지는 .net 고유 콘텐츠로 자기 자신을 canonical로 지정하고 있어
-       사이트맵에 포함합니다(홈/서비스 가이드 4종/FAQ/블로그 6편 = 신규 안전·법률
-       중심 콘텐츠로, .com 블로그와 주제가 겹치지 않습니다).
-       그 외 페이지(후기, 이용방법, 안전, 상담, 약관 등)는 .com과 동일한 콘텐츠이므로
-       canonical이 .com을 가리키며, 중복콘텐츠 평가를 피하기 위해 이 사이트맵에서
-       의도적으로 제외했습니다. -->
+  <!-- 고릴라티켓.net은 .com의 독립적인 이용가이드 허브로 운영됩니다.
+       아래 페이지는 모두 .net 고유 콘텐츠로 자기 자신을 canonical로 지정하고 있어
+       사이트맵에 포함합니다. 남은 중복 콘텐츠 페이지는 /contact, /privacy, /terms
+       뿐이며(약관/정책/상담 안내 성격상 .com과 canonical 통합 유지), 나머지 모든
+       페이지는 .net만의 고유 콘텐츠입니다. -->
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/</loc>
     <lastmod>2026-07-31</lastmod>
@@ -39,6 +37,24 @@
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/faq</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn--299a64rxvbk71bjne.net/how-to-use</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn--299a64rxvbk71bjne.net/reviews</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn--299a64rxvbk71bjne.net/safety</loc>
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
