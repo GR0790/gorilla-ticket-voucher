@@ -9,8 +9,8 @@ const SITE = 'https://xn--299a64rxvbk71bjne.net';
 
 const ROUTE_META = {
   "/services/micropayment": {
-    "title": "소액결제 현금화 - 3분 즉시입금, 업계 최저 수수료 | 고릴라티켓",
-    "description": "소액결제 현금화 전문 고릴라티켓. SKT·KT·LGU+ 소액결제 현금화 방법 안내, 지급률 70~80%, 미납·정책 99.9% 승인, 3분 즉시입금. 소액결제현금화 디시 커뮤니티 1위 추천 업체.",
+    "title": "소액결제 현금화란? 개념·한도 확인·이용 절차 총정리 | 고릴라티켓 이용가이드",
+    "description": "소액결제 현금화가 무엇인지부터 SKT·KT·LGU+ 한도 확인 방법, 일반적인 이용 절차, 안전하게 이용하기 위한 체크포인트까지 정리한 이용가이드입니다.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -23,8 +23,8 @@ const ROUTE_META = {
     ]
   },
   "/services/information-fee": {
-    "title": "정보이용료 현금화 콘텐츠이용료 현금화 수수료 싼곳 | 고릴라티켓",
-    "description": "정보이용료 현금화, 콘텐츠이용료 현금화 전문! 구글 정보이용료 미납 한도 100% 현금화 가능. SKT KT LGU+ 수수료 최저가, 3분 즉시 입금 고릴라티켓입니다.",
+    "title": "정보이용료(콘텐츠이용료) 현금화란? 소액결제와의 차이 정리 | 고릴라티켓 이용가이드",
+    "description": "정보이용료·콘텐츠이용료 현금화가 무엇인지, 소액결제와 어떻게 다른지, 한도 확인 방법과 이용 시 유의사항까지 정리한 이용가이드입니다.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -37,8 +37,8 @@ const ROUTE_META = {
     ]
   },
   "/services/credit-card": {
-    "title": "신용카드 현금화 카드깡 아님 수수료 싼곳 88% 보장 | 고릴라티켓",
-    "description": "신용카드 현금화, 카드깡 절대 아님! 합법적인 결제 한도 현금화 서비스. 수수료 싼곳, 지급률 88% 보장. 삼성/신한/현대 등 전 카드사 3분 즉시 입금 고릴라티켓.",
+    "title": "신용카드 현금화란? 카드깡과의 차이, 확인해야 할 사항 | 고릴라티켓 이용가이드",
+    "description": "신용카드 현금화가 무엇인지, 불법 카드깡과 어떻게 다른지, 이용 전 반드시 확인해야 할 사항을 정리한 정보 가이드입니다.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -51,8 +51,8 @@ const ROUTE_META = {
     ]
   },
   "/services/gift-card": {
-    "title": "상품권 현금화 문화상품권 해피머니 85% 보장 수수료 싼곳 | 고릴라티켓",
-    "description": "상품권 현금화 업계 최고가 매입! 문화상품권, 해피머니, 신세계상품권, 도서문화상품권 현금화. 24시간 5분 즉시 입금, 수수료 싼곳 고릴라티켓입니다.",
+    "title": "상품권 현금화란? 종류별 매입 안내 및 확인사항 | 고릴라티켓 이용가이드",
+    "description": "문화상품권, 해피머니, 구글 기프트카드 등 상품권 현금화가 무엇인지, 매입 가능한 상품권 종류와 이용 전 확인해야 할 사항을 정리했습니다.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -65,6 +65,7 @@ const ROUTE_META = {
     ]
   },
   "/how-to-use": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/how-to-use/",
     "title": "이용 방법 - 소액결제현금화 4단계 안내 | 고릴라티켓",
     "description": "고릴라티켓 소액결제현금화 이용 방법. 상담 신청부터 3분 즉시입금까지 간단 4단계. 소액결제·정보이용료·신용카드·상품권 현금화 이용 가이드.",
     "crumbs": [
@@ -79,6 +80,7 @@ const ROUTE_META = {
     ]
   },
   "/reviews": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/reviews/",
     "title": "고객 후기 | 고릴라티켓",
     "description": "고릴라티켓 실제 고객 후기 1,247건. 소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화 서비스 평균 평점 4.8점. 3분 입금, 24시간 상담 만족 후기를 확인하세요.",
     "crumbs": [
@@ -93,8 +95,8 @@ const ROUTE_META = {
     ]
   },
   "/faq": {
-    "title": "자주묻는질문 (FAQ) | 고릴라티켓",
-    "description": "소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에 대한 자주묻는질문. 미납 99.9% 승인, 3분 입금, 지급률, 이용방법, 안전성 등 고릴라티켓의 모든 궁금증을 해결해드립니다.",
+    "title": "소액결제·정보이용료·신용카드·상품권 현금화 FAQ 총정리 | 고릴라티켓 이용가이드",
+    "description": "소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에 대해 자주 묻는 질문과 답변을 정리한 이용가이드 FAQ입니다.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -107,6 +109,7 @@ const ROUTE_META = {
     ]
   },
   "/safety": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/safety/",
     "title": "안전 거래 시스템 - 100% 안전보장 | 고릴라티켓",
     "description": "고릴라티켓 안전 거래 시스템. 정식 사업자 등록, 개인정보 보호, 100% 안전거래 보장으로 소액결제현금화를 안심하고 이용하세요.",
     "crumbs": [
@@ -121,6 +124,7 @@ const ROUTE_META = {
     ]
   },
   "/blog": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/",
     "title": "정보 블로그 - 소액결제현금화 최신 정보 | 고릴라티켓",
     "description": "소액결제현금화, 정보이용료·신용카드·상품권 현금화 최신 정보와 한도·수수료·안전 이용 가이드를 고릴라티켓 블로그에서 확인하세요.",
     "crumbs": [
@@ -135,6 +139,7 @@ const ROUTE_META = {
     ]
   },
   "/contact": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/contact/",
     "title": "상담센터 - 24시간 1:1 문의 | 고릴라티켓",
     "description": "고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 3분 즉시입금, 미납·정책 99.9% 승인 상담 안내.",
     "crumbs": [
@@ -149,6 +154,7 @@ const ROUTE_META = {
     ]
   },
   "/privacy": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/privacy/",
     "title": "개인정보처리방침 | 고릴라티켓",
     "description": "고릴라티켓 개인정보처리방침. 고객님의 개인정보 수집·이용·보관·파기에 관한 안내입니다.",
     "crumbs": [
@@ -163,6 +169,7 @@ const ROUTE_META = {
     ]
   },
   "/terms": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/terms/",
     "title": "이용약관 | 고릴라티켓",
     "description": "고릴라티켓 소액결제현금화 서비스 이용약관 안내입니다.",
     "crumbs": [
@@ -177,6 +184,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/1": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/1/",
     "title": "소액결제로 컬쳐랜드·문화상품권 구매하는 방법 완벽 가이드 | 고릴라티켓",
     "description": "휴대폰 소액결제로 컬쳐랜드·문화상품권을 안전하게 구매하는 방법. 통신사(SKT·KT·LG U+)별 절차, 한도 확인·관리, 안전 이용 팁과 FAQ까지 한 번에 정리했습니다.",
     "crumbs": [
@@ -195,6 +203,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/2": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/2/",
     "title": "정보이용료로 게임 아이템·재화 구매하는 방법과 한도 관리 | 고릴라티켓",
     "description": "정보이용료로 게임 아이템·재화를 구매하는 방법. 소액결제와의 차이, 구글플레이·원스토어 결제 절차, 한도 확인·관리, 안전 이용 팁과 FAQ를 정리했습니다.",
     "crumbs": [
@@ -213,6 +222,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/3": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/3/",
     "title": "휴대폰 소액결제·정보이용료 한도 확인 및 관리 방법 총정리 | 고릴라티켓",
     "description": "휴대폰 소액결제·정보이용료 한도 확인 방법과 상향·하향·차단 설정, 결제 실패 시 점검 포인트를 통신사별로 총정리했습니다.",
     "crumbs": [
@@ -231,6 +241,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/4": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/4/",
     "title": "문화상품권 핀번호 등록·잔액 조회·유효기간 총정리 | 고릴라티켓",
     "description": "문화상품권 핀번호 등록 방법, 잔액 조회, 유효기간·환불 규정과 핀번호 안전 보관 5계명까지 정리한 상품권 관리 가이드입니다.",
     "crumbs": [
@@ -249,6 +260,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/5": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/5/",
     "title": "휴대폰 요금 청구서 읽는 법 — 소액결제·정보이용료 확인하기 | 고릴라티켓",
     "description": "휴대폰 청구서의 통신요금·소액결제·정보이용료 구분법, 결제 내역 확인 방법, 모르는 결제 이의신청과 요금 절약 팁을 정리했습니다.",
     "crumbs": [
@@ -267,6 +279,7 @@ const ROUTE_META = {
     ]
   },
   "/blog/6": {
+    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/blog/6/",
     "title": "휴대폰 소액결제 완전 정복 — 원리·한도·수수료·안전관리 총정리 | 고릴라티켓",
     "description": "휴대폰 소액결제의 작동 원리, 정보이용료와의 차이, 한도 확인·상향·하향, 수수료·청구 구조, 안전 수칙 7가지, 문제 상황별 대처법과 FAQ까지 담은 완전 가이드입니다.",
     "crumbs": [
@@ -301,7 +314,7 @@ function breadcrumbLd(crumbs) {
 function inject(html, route, m) {
   const title = esc(m.title);
   const desc = esc(m.description);
-  const url = SITE + route + '/';
+  const url = m.canonicalOverride || (SITE + route + '/');
   let out = html;
   out = out.replace(/<title>[\s\S]*?<\/title>/, '<title>' + title + '</title>');
   out = out.replace(/(<meta name="description" content=")[^"]*(")/, '$1' + desc + '$2');
