@@ -49,20 +49,19 @@ const Blog: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="정보 블로그 - 소액결제현금화 최신 정보"
-        description="소액결제현금화, 정보이용료·신용카드·상품권 현금화 최신 정보와 한도·수수료·안전 이용 가이드를 고릴라티켓 블로그에서 확인하세요."
-        keywords="소액결제현금화 정보, 소액결제 팁, 소액결제 블로그, 소액결제 한도, 고릴라티켓 블로그"
-        canonicalOverride="https://xn--299a64rxvbk71bjne.com/blog"
+        title="현금화 안전가이드 블로그 - 사기예방·법률정보·분쟁대처"
+        description="안전한 현금화 업체 구별법, 신용카드현금화와 카드깡의 법적 차이, 사기 피해 대처법, 통신사 정책 비교 등 소비자 보호 중심의 이용가이드 블로그입니다."
+        keywords="현금화 사기예방, 신용카드현금화 카드깡 차이, 현금화 분쟁 대처법, 소액결제 통신사 비교, 상품권 매입 시세"
       />
       <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            고릴라티켓 정보 블로그
+            현금화 안전가이드 블로그
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            현금화 서비스에 대한 유용한 정보와 안전한 거래 가이드,
+            안전한 업체 구별법, 법률 정보, 분쟁 대처법, 통신사 정책 비교까지
             <br />
-            업계 동향까지 모든 정보를 한눈에 확인하세요.
+            소비자 보호 관점에서 정리한 이용가이드입니다.
           </p>
         </div>
       </section>
