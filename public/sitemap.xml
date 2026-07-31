@@ -1,148 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- .net은 고릴라티켓.com의 이용가이드 허브로 운영됩니다.
+       아래 6개 페이지만 .net 고유 콘텐츠로 자기 자신을 canonical로 지정하고 있어
+       사이트맵에 포함합니다. 그 외 페이지(블로그, 후기, 이용방법, 안전, 상담, 약관 등)는
+       .com과 동일한 콘텐츠이므로 canonical이 .com을 가리키며, 중복콘텐츠 평가를
+       피하기 위해 이 사이트맵에서 의도적으로 제외했습니다. -->
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/services/micropayment</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/services/information-fee</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/services/credit-card</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/services/gift-card</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/how-to-use</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/reviews</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/faq</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/safety</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- 블로그 포스트 -->
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/11</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/10</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/9</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/8</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/7</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/6</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/5</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/4</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/3</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/2</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/1</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/contact</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/privacy</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/terms</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>
