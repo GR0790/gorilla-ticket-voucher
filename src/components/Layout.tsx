@@ -25,6 +25,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white relative">
+      {/* [.net 전용] 이용가이드 허브 안내 배너 - .com과 구분되는 상단 고지 영역 */}
+      <div className="bg-emerald-800 text-emerald-50 text-xs md:text-sm">
+        <div className="container mx-auto px-4 py-2 flex flex-wrap items-center justify-center gap-1 text-center">
+          <span>📚 이 사이트는 정보 제공용 이용가이드입니다. 실제 서비스 신청은</span>
+          <a
+            href="https://xn--299a64rxvbk71bjne.com"
+            target="_blank"
+            rel="noopener"
+            className="font-bold underline hover:text-white"
+          >
+            고릴라티켓.com
+          </a>
+          <span>에서 진행해 주세요.</span>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <nav className="container mx-auto px-4 py-4">
@@ -32,8 +48,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center">
               <Link
                 to="/"
-                className="text-2xl font-bold text-sky-600 hover:text-sky-700 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded"
-                aria-label="고릴라티켓 홈페이지로 이동"
+                className="text-2xl font-bold text-emerald-700 hover:text-emerald-800 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
+                aria-label="고릴라티켓 이용가이드 홈페이지로 이동"
               >
                 고릴라티켓
               </Link>
@@ -52,9 +68,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   className="text-gray-700 hover:text-sky-600 flex items-center transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  aria-label="서비스 소개 메뉴 열기"
+                  aria-label="서비스 가이드 메뉴 열기"
                 >
-                  서비스 소개
+                  서비스 가이드
                   <svg
                     className="w-4 h-4 ml-1"
                     fill="none"
@@ -73,7 +89,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div
                   className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10"
                   role="menu"
-                  aria-label="서비스 소개 하위 메뉴"
+                  aria-label="서비스 가이드 하위 메뉴"
                 >
                   <Link
                     to="/services/micropayment"
@@ -159,13 +175,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
               </div>
 
-              {/* [수정됨] 24시간 빠른상담 -> /contact 페이지로 이동 (원상복구) */}
-              <Link
-                to="/contact"
-                className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
+              {/* [.net 전용] 실제 서비스 신청은 .com으로 아웃바운드 */}
+              <a
+                href="https://xn--299a64rxvbk71bjne.com"
+                target="_blank"
+                rel="noopener"
+                className="bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors"
               >
-                24시간 빠른상담
-              </Link>
+                실제 서비스 신청 (.com)
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -211,7 +229,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </Link>
                 <div className="px-4 py-2">
                   <p className="text-gray-500 text-sm font-medium mb-2">
-                    서비스 소개
+                    서비스 가이드
                   </p>
                   <div className="pl-4 space-y-1">
                     <Link
@@ -278,13 +296,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   </div>
                 </div>
                 
-                {/* [수정됨] 모바일 메뉴 버튼 -> /contact 페이지로 이동 */}
-                <Link
-                  to="/contact"
-                  className="block mx-4 mt-4 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors text-center"
+                {/* [.net 전용] 모바일 메뉴 버튼 -> 실제 서비스는 .com으로 아웃바운드 */}
+                <a
+                  href="https://xn--299a64rxvbk71bjne.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="block mx-4 mt-4 bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors text-center"
                 >
-                  24시간 빠른상담
-                </Link>
+                  실제 서비스 신청 (.com)
+                </a>
               </div>
             </nav>
           )}
@@ -419,6 +439,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
             <p className="text-sm md:text-base">
+              📚 본 사이트(고릴라티켓.net)는 정보 제공용 이용가이드입니다.
+              실제 서비스 신청은{" "}
+              <a
+                href="https://xn--299a64rxvbk71bjne.com"
+                target="_blank"
+                rel="noopener"
+                className="underline hover:text-white"
+              >
+                고릴라티켓.com
+              </a>
+              에서 진행해 주세요.
+            </p>
+            <p className="text-sm md:text-base mt-2">
               © 2025 고릴라티켓. 모든 권리 보유.
             </p>
             <p className="mt-2 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto">
