@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
         title="상담센터 - 24시간 1:1 문의"
         description="고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 3분 즉시입금, 미납·정책 99.9% 승인 상담 안내."
         keywords="고릴라티켓 상담, 소액결제현금화 상담, 소액결제 문의, 24시간 상담센터"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/contact"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-50 to-yellow-100 py-12 md:py-20">

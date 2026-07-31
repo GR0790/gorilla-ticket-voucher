@@ -9,6 +9,7 @@ const Safety: React.FC = () => {
         title="안전 거래 시스템 - 100% 안전보장"
         description="고릴라티켓 안전 거래 시스템. 정식 사업자 등록, 개인정보 보호, 100% 안전거래 보장으로 소액결제현금화를 안심하고 이용하세요."
         keywords="소액결제현금화 안전, 안전거래 보장, 고릴라티켓 안전, 소액결제 사기 예방"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/safety"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-12 md:py-20">

@@ -14,6 +14,21 @@ const FAQ: React.FC = () => {
 
   const faqData = [
     {
+      category: "이 사이트(.net) 이용 안내",
+      questions: [
+        {
+          question: "이 사이트(고릴라티켓.net)는 무엇인가요?",
+          answer:
+            "고릴라티켓.net은 소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화의 개념과 이용 방법, 안전 수칙을 정리해 드리는 정보 제공용 이용가이드 사이트입니다.",
+        },
+        {
+          question: "여기서 바로 상담 신청·거래가 가능한가요?",
+          answer:
+            "이 사이트는 정보 제공을 목적으로 하며, 실제 상담 신청과 거래는 <a href='https://xn--299a64rxvbk71bjne.com' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>고릴라티켓.com</a>에서 진행하실 수 있습니다.",
+        },
+      ],
+    },
+    {
       category: "소액결제현금화 기본정보",
       questions: [
         {
@@ -133,9 +148,9 @@ const FAQ: React.FC = () => {
   return (
     <>
       <SEO
-        title="자주묻는질문 (FAQ)"
-        description="소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에 대한 자주묻는질문. 미납 99.9% 승인, 3분 입금, 지급률, 이용방법, 안전성 등 고릴라티켓의 모든 궁금증을 해결해드립니다."
-        keywords="소액결제현금화 질문, 정보이용료현금화 방법, 소액결제 지급률, 미납 소액결제, 고릴라티켓 FAQ"
+        title="소액결제·정보이용료·신용카드·상품권 현금화 FAQ 총정리"
+        description="소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에 대해 자주 묻는 질문과 답변을 정리한 이용가이드 FAQ입니다. 개념, 한도, 절차, 안전성 관련 궁금증을 확인하세요."
+        keywords="소액결제현금화 질문, 정보이용료현금화 방법, 현금화 FAQ, 소액결제 한도 확인, 고릴라티켓 이용가이드"
       />
       <script type="application/ld+json">
         {JSON.stringify({
@@ -167,13 +182,17 @@ const FAQ: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              소액결제현금화 고릴라티켓{" "}
-              <span className="text-sky-600">자주묻는질문</span>
+              현금화 이용가이드{" "}
+              <span className="text-sky-600">자주묻는질문 총정리</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-              소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에
-              대한 궁금한 점들을 자세히 알아보세요. 더 궁금한 사항이 있으시면
-              24시간 고객센터로 연락주세요.
+              소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화의
+              개념과 이용 방법, 안전성에 대한 궁금증을 정리했습니다. 실제
+              상담·신청은{" "}
+              <a href="https://xn--299a64rxvbk71bjne.com" target="_blank" rel="noopener" className="text-sky-600 font-semibold underline">
+                고릴라티켓.com
+              </a>
+              에서 진행하실 수 있습니다.
             </p>
           </div>
 

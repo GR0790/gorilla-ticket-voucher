@@ -9,6 +9,7 @@ const Terms: React.FC = () => {
         title="이용약관"
         description="고릴라티켓 소액결제현금화 서비스 이용약관 안내입니다."
         keywords="고릴라티켓 이용약관, 소액결제현금화 약관"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/terms"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-100 to-blue-200 py-12 md:py-20">

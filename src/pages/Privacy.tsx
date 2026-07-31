@@ -9,6 +9,7 @@ const Privacy: React.FC = () => {
         title="개인정보처리방침"
         description="고릴라티켓 개인정보처리방침. 고객님의 개인정보 수집·이용·보관·파기에 관한 안내입니다."
         keywords="고릴라티켓 개인정보처리방침, 개인정보 보호정책"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/privacy"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-100 to-gray-200 py-12 md:py-20">

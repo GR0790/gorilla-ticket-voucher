@@ -1,397 +1,126 @@
 import type React from "react";
 import { Link } from "react-router-dom";
-import SEO from "../components/SEO"; // [추가됨] SEO 컴포넌트 불러오기
+import SEO from "../components/SEO";
 
-const CreditCardService: React.FC = () => {
+const COM_URL = "https://xn--299a64rxvbk71bjne.com/services/credit-card";
+
+const faqData = [
+  {
+    question: "신용카드 현금화란 무엇인가요?",
+    answer: "신용카드의 결제(할부) 한도를 활용해 현금을 마련하는 방식을 말합니다. 흔히 '카드깡'과 혼동되지만, 정식 가맹점을 통한 정상적인 상품·서비스 결제 방식과, 위장 가맹점을 통한 불법적인 현금 융통(카드깡)은 법적으로 명확히 다릅니다."
+  },
+  {
+    question: "신용카드 현금화와 '카드깡'은 어떻게 다른가요?",
+    answer: "카드깡은 실제 상품·서비스 거래 없이 가짜 매출을 일으켜 현금을 받는 여신전문금융업법 위반 행위입니다. 반드시 실제 재화·용역 거래가 수반되는 정식 절차인지 확인해야 하며, 위장 거래는 형사처벌 대상이 될 수 있습니다."
+  },
+  {
+    question: "어떤 카드사 카드를 이용할 수 있나요?",
+    answer: "삼성·현대·롯데·국민·신한·우리카드 등 국내 주요 카드사 대부분이 대상이 될 수 있으나, 카드 상태(한도, 연체 여부 등)에 따라 이용 가능 여부가 달라질 수 있습니다."
+  },
+  {
+    question: "신용카드 현금화 이용 시 무엇을 꼭 확인해야 하나요?",
+    answer: "① 실제 재화·용역 거래가 수반되는 정식 매입 방식인지, ② 업체의 사업자등록 여부, ③ 수수료율이 사전에 명확히 안내되는지를 반드시 확인해야 합니다."
+  }
+];
+
+const CreditCardGuide: React.FC = () => {
   return (
     <>
-      {/* [추가됨] 신용카드 페이지 전용 SEO 설정 */}
-      <SEO 
-        title="신용카드 현금화 카드깡 아님 수수료 싼곳 88% 보장"
-        description="신용카드 현금화, 카드깡 절대 아님! 합법적인 결제 한도 현금화 서비스. 수수료 싼곳, 지급률 88% 보장. 삼성/신한/현대 등 전 카드사 3분 즉시 입금 고릴라티켓."
-        keywords="신용카드현금화, 카드깡아님, 카드한도현금화, 신용카드현금화수수료, 카드결제현금화, 비상금대출"
+      <SEO
+        title="신용카드 현금화란? 카드깡과의 차이, 확인해야 할 사항"
+        description="신용카드 현금화가 무엇인지, 불법 카드깡과 어떻게 다른지, 이용 전 반드시 확인해야 할 사항을 정리한 정보 가이드입니다."
+        keywords="신용카드현금화란,카드깡 차이,신용카드 현금화 주의사항,카드 한도 현금화"
+        faqItems={faqData}
+        pageType="service"
       />
 
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
+        <section className="bg-gradient-to-br from-purple-50 to-violet-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
+            <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
+              💳 신용카드 현금화 이용가이드
+            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              신용카드 현금화: 신용카드 한도로 급전 마련 | 고릴라티켓
+              신용카드 현금화란?<br />
+              <span className="text-purple-700">'카드깡'과 무엇이 다를까요</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              신용카드 결제 한도를 활용한 안전하고 빠른 현금화 서비스! 복잡한 절차
-              없이 3분 안에 신속하게 현금을 마련하세요. 전 카드사 지원, 최대
-              1000만원까지, 지급률 82~88% 보장!
+              신용카드 결제 한도 현금화의 개념과 불법 카드깡과의 차이, 이용 전
+              꼭 확인해야 할 사항을 정리했습니다.
             </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-purple-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              <img loading="lazy"
-                src="https://ext.same-assets.com/1945597335/1008708004.svg"
-                alt=""
-                className="mr-2 w-5 md:w-6 h-5 md:h-6"
-              />
-              신용카드 현금화 즉시 상담
-            </Link>
+            <div className="bg-white border-2 border-purple-200 rounded-xl p-5 max-w-xl mx-auto text-left">
+              <p className="text-gray-700 text-sm">
+                💡 이 페이지는 정보 제공을 위한 이용가이드입니다. 실제 상담·신청은{" "}
+                <a href={COM_URL} target="_blank" rel="noopener" className="text-purple-700 font-semibold underline">
+                  고릴라티켓.com
+                </a>
+                에서 진행하실 수 있습니다.
+              </p>
+            </div>
           </div>
         </section>
 
         <div className="container mx-auto px-4 py-12 md:py-16">
-          {/* What is Credit Card Cashout */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🦕 신용카드 현금화란 무엇인가요?
+              신용카드 현금화, 정확히 알아야 하는 이유
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    신용카드 현금화는{" "}
-                    <strong>
-                      보유하신 신용카드의 결제 한도를 활용해 필요한 현금을
-                      마련하는 서비스
-                    </strong>
-                    입니다. 급하게 현금이 필요한 상황에서 복잡한 대출 절차 없이,
-                    간단하고 빠르게 현금을 조달할 수 있습니다.{" "}
-                    <Link
-                      to="/"
-                      className="text-purple-600 hover:text-purple-700 font-semibold"
-                    >
-                      고릴라티켓
-                    </Link>
-                    에서는 모든 카드사를 지원하며,{" "}
-                    <strong className="text-purple-600">
-                      최대 1000만원까지, 지급률 82~88%
-                    </strong>
-                    로 안전하고 합법적인 거래를 보장해드립니다.
-                  </p>
-
-                  <div className="space-y-3">
-                    <div className="text-gray-600">
-                      핵심 키워드:{" "}
-                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        신용카드
-                      </span>
-                      ,{" "}
-                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        현금화
-                      </span>
-                      ,{" "}
-                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">
-                        급전
-                      </span>
-                    </div>
-
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mr-3" />
-                        전 카드사 지원: 삼성, 신한, 현대, KB국민, 롯데, 우리,
-                        하나, BC카드 등 모든 카드 이용 가능
-                      </li>
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mr-3" />
-                        높은 지급률: 지급률 82~88%로 고객님의 손실을 최소화
-                      </li>
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mr-3" />
-                        신속 처리: 상담부터 입금까지 평균 3분 내 완료
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="bg-purple-50 rounded-xl p-6">
-                  <h4 className="font-bold text-purple-800 mb-4 text-lg">
-                    💳 신용카드 현금화 3단계
-                  </h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                        1
-                      </div>
-                      <span className="text-purple-800 font-medium">
-                        📞 상담 신청 및 카드 한도 확인
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                        2
-                      </div>
-                      <span className="text-purple-800 font-medium">
-                        🔐 본인 확인 및 결제 진행
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                        3
-                      </div>
-                      <span className="text-purple-800 font-medium">
-                        💸 3분 내 계좌 입금 완료
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mt-6 text-center">
-                    <Link
-                      to="/how-to-use"
-                      className="text-purple-600 hover:text-purple-700 font-semibold text-sm"
-                    >
-                      신용카드 현금화 상세 가이드 보기 →
-                    </Link>
-                  </div>
-                </div>
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                신용카드 현금화는 카드 결제 한도를 활용해 현금을 마련하는
+                방식을 통칭하는 표현입니다. 다만 이 용어가 <strong>불법 카드깡</strong>과
+                혼용되어 쓰이는 경우가 많아 주의가 필요합니다.
+              </p>
+              <div className="bg-red-50 border border-red-200 rounded-xl p-5 mb-4">
+                <p className="text-red-800 font-semibold mb-2">⚠️ 불법 카드깡이란?</p>
+                <p className="text-red-700 text-sm leading-relaxed">
+                  실제 상품·서비스 거래 없이 가짜 매출 전표만 발생시켜 현금을
+                  받는 행위로, 여신전문금융업법에 따라 처벌 대상이 됩니다.
+                  카드사 이용정지·강제해지 및 형사처벌로 이어질 수 있습니다.
+                </p>
               </div>
+              <p className="text-gray-700 leading-relaxed">
+                반드시 실제 재화·용역 거래가 수반되는 정식 매입 절차를 거치는
+                업체인지, 사업자등록이 되어 있는지 확인 후 이용해야 합니다.
+              </p>
             </div>
           </section>
 
-          {/* Service Features */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              🚀 고릴라티켓 신용카드 현금화 핵심 장점
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💯</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  💰 투명한 지급률 82~88%
-                </h3>
-                <p className="text-gray-600">
-                  신용카드 현금화{" "}
-                  <strong className="text-purple-600">지급률 82~88%</strong>로
-                  고객님의 소중한 카드 한도를 최대한 활용해드립니다.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  🚀 초고속 처리
-                </h3>
-                <p className="text-gray-600">
-                  상담부터 입금까지 평균 3분! 급한 자금이 필요한 상황에서 즉시
-                  해결해드립니다.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💳</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  🏪 전 카드사 지원
-                </h3>
-                <p className="text-gray-600">
-                  삼성, 신한, 현대, KB국민, 롯데, 우리, 하나, BC카드 등 모든
-                  카드사 지원. 카드 종류 상관없이 이용 가능합니다.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  🛡️ 안전 보장 거래
-                </h3>
-                <p className="text-gray-600">
-                  정식 등록 업체로 개인정보 보호 및 안전한 거래를 보장합니다. (
-                  <Link
-                    to="/safety"
-                    className="text-purple-600 hover:text-purple-700"
-                  >
-                    안전 거래 안내
-                  </Link>
-                  )
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* 카드사별 현금화 가능 정보 */}
-          <section className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              💳 카드사별 현금화 지원 안내
-            </h2>
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-blue-600">삼성</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">삼성카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-sky-50 rounded-lg">
-                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-sky-600">신한</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">신한카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-yellow-50 rounded-lg">
-                  <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-yellow-600">KB</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">KB국민카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-red-50 rounded-lg">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-red-600">롯데</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">롯데카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-indigo-50 rounded-lg">
-                  <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-indigo-600">
-                      현대
-                    </span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">현대카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-sky-50 rounded-lg">
-                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-sky-600">우리</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">우리카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-pink-50 rounded-lg">
-                  <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-pink-600">하나</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">하나카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-sm font-bold text-gray-600">BC</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">BC카드</h4>
-                  <p className="text-sm text-gray-600">전 상품 지원</p>
-                </div>
-              </div>
-
-              <div className="mt-8 p-4 bg-purple-50 rounded-lg">
-                <p className="text-purple-800 text-center">
-                  💡 위에 없는 카드사라도 걱정하지 마세요!
-                  <Link to="/contact" className="font-semibold ml-1">
-                    상담을 통해 이용 가능 여부를 확인
-                  </Link>
-                  해드립니다.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              ❓ 신용카드 현금화 자주묻는질문 FAQ 💡
+              자주 묻는 질문 (FAQ)
             </h2>
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
               <div className="space-y-6">
-                <div className="border-b border-gray-200 pb-4">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 신용카드 현금화는 합법적인 서비스인가요?
-                  </h4>
-                  <p className="text-gray-700">
-                    정식 등록된 업체를 통한 신용카드 현금화는 합법적인
-                    서비스입니다. 다만, 개인의 신용도 관리에는 주의가 필요합니다.
-                  </p>
-                </div>
-
-                <div className="border-b border-gray-200 pb-4">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 신용카드 결제 후 언제 청구되나요?
-                  </h4>
-                  <p className="text-gray-700">
-                    일반적으로 다음 달 카드 결제일에 청구됩니다. 정확한 결제일은
-                    각 카드사 및 개인별 결제일에 따라 다릅니다.
-                  </p>
-                </div>
-
-                <div className="border-b border-gray-200 pb-4">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 신용카드 한도가 부족한 경우에도 이용 가능한가요?
-                  </h4>
-                  <p className="text-gray-700">
-                    사용 가능한 한도 내에서만 이용 가능합니다. 정확한 이용 가능
-                    금액은 상담을 통해 실시간으로 확인해드립니다.
-                  </p>
-                </div>
-
-                <div className="border-b border-gray-200 pb-4">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 신용점수에 영향을 주나요?
-                  </h4>
-                  <p className="text-gray-700">
-                    정상적인 카드 결제로 처리되므로 일반적으로 신용점수에 부정적
-                    영향을 주지 않습니다. 다만, 연체 시에는 신용점수에 영향을 줄
-                    수 있습니다.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    • 여러 장의 카드를 동시에 이용할 수 있나요?
-                  </h4>
-                  <p className="text-gray-700">
-                    본인 명의의 여러 카드를 활용해 더 큰 금액의 현금화가
-                    가능합니다. 자세한 내용은{" "}
-                    <Link
-                      to="/contact"
-                      className="text-purple-600 hover:text-purple-700"
-                    >
-                      상담을 통해 안내
-                    </Link>
-                    받으실 수 있습니다.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 text-center bg-purple-50 p-4 rounded-lg">
-                <p className="text-purple-800">
-                  더 많은 질문이 있으시다면{" "}
-                  <Link to="/faq" className="font-semibold">
-                    자주 묻는 질문 (FAQ) 페이지
-                  </Link>
-                  를 확인해보세요.
-                </p>
+                {faqData.map((item, index) => (
+                  <div key={index} className={index < faqData.length - 1 ? "border-b border-gray-200 pb-5" : ""}>
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">Q. {item.question}</h3>
+                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">{item.answer}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="text-center">
-            <div className="bg-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                🦕 지금 바로, 신용카드 현금화 상담받아보세요!
-              </h2>
-              <p className="text-lg md:text-xl mb-8 opacity-90">
-                보유하신 신용카드로 급한 자금 문제를 즉시 해결하세요! 전 카드사
-                지원, 업계 최고 지급률, 3분 내 입금 완료! 24시간 전문 상담진이
-                대기중입니다.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mr-4"
-              >
-                신용카드 현금화 즉시 상담
+          <section className="mb-16">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">함께 보면 좋은 가이드</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/services/gift-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
+                상품권 현금화 안내 →
               </Link>
+              <Link to="/faq" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
+                전체 FAQ 보기 →
+              </Link>
+            </div>
+          </section>
+
+          <section className="text-center">
+            <div className="bg-purple-700 rounded-2xl p-8 md:p-12 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">실제 신용카드 현금화 상담이 필요하신가요?</h2>
+              <p className="text-lg mb-6 opacity-90">이 페이지는 정보 제공용 가이드입니다. 실제 상담·신청은 고릴라티켓 공식 서비스 사이트에서 진행해 주세요.</p>
+              <a href={COM_URL} target="_blank" rel="noopener" className="inline-block bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                🔗 고릴라티켓.com에서 상담 신청
+              </a>
             </div>
           </section>
         </div>
@@ -400,4 +129,4 @@ const CreditCardService: React.FC = () => {
   );
 };
 
-export default CreditCardService;
+export default CreditCardGuide;

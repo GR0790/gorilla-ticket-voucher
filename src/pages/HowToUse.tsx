@@ -263,6 +263,7 @@ const HowToUse: React.FC = () => {
         title="이용 방법 - 소액결제현금화 4단계 안내"
         description="고릴라티켓 소액결제현금화 이용 방법. 상담 신청부터 3분 즉시입금까지 간단 4단계. 소액결제·정보이용료·신용카드·상품권 현금화 이용 가이드."
         keywords="소액결제현금화 방법, 소액결제 이용방법, 소액결제 현금화 절차, 고릴라티켓 이용방법"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/how-to-use"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">

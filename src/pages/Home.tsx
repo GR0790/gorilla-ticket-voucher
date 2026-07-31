@@ -2,271 +2,179 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO"; // [추가됨]
 
-const HeroSection: React.FC = () => (
-  <section className="bg-gradient-to-br from-sky-50 to-sky-100 py-12 md:py-20">
+const COM_URL = "https://xn--299a64rxvbk71bjne.com";
+
+const GuideHeroSection: React.FC = () => (
+  <section className="bg-gradient-to-br from-emerald-50 to-teal-100 py-12 md:py-20">
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-        <div className="flex-shrink-0 lg:w-1/3">
-          <div className="w-64 h-64 lg:w-80 lg:h-80 mx-auto">
+        <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+          <div className="mb-4 flex justify-center lg:justify-start">
+            <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-bold mb-2">
+              📚 소액결제·정보이용료 현금화 정보 가이드 허브
+            </div>
+          </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <span className="text-emerald-700">소액결제현금화</span>,
+            <span className="text-blue-700"> 정보이용료현금화</span>
+            <br />
+            무엇이고 어떻게 이용하나요?
+          </h1>
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            고릴라티켓 이용가이드는 소액결제·정보이용료·신용카드·상품권 현금화의
+            <strong> 개념, 한도 확인 방법, 절차, 주의사항</strong>을 정리해 드리는
+            정보 사이트입니다. 실제 서비스 신청은{" "}
+            <a
+              href={COM_URL}
+              target="_blank"
+              rel="noopener"
+              className="text-emerald-700 font-semibold underline hover:text-emerald-800"
+            >
+              고릴라티켓.com
+            </a>
+            에서 진행하실 수 있습니다.
+          </p>
+
+          <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
+            <Link
+              to="/faq"
+              className="inline-flex items-center bg-white border-2 border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+            >
+              ❓ 자주 묻는 질문 보기
+            </Link>
+            <Link
+              to="/blog"
+              className="inline-flex items-center bg-white border-2 border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+            >
+              📖 가이드 블로그 보기
+            </Link>
+            <a
+              href={COM_URL}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            >
+              🔗 실제 서비스 신청하기 (.com)
+            </a>
+          </div>
+
+          <p className="text-sm text-gray-500">
+            ※ 본 사이트(.net)는 정보 제공을 목적으로 하는 이용가이드이며, 실제
+            상담·거래는 고릴라티켓.com에서 진행됩니다.
+          </p>
+        </div>
+
+        <div className="flex-shrink-0 lg:w-1/3 order-1 lg:order-2">
+          <div className="w-56 h-56 lg:w-72 lg:h-72 mx-auto">
             <img
               src="/gorilla-mascot.webp"
-              alt="소액결제현금화 고릴라티켓 마스코트"
-              className="w-full h-full object-cover rounded-full drop-shadow-2xl animate-bounce-subtle border-4 border-white shadow-lg"
-              width="320"
-              height="320"
+              alt="고릴라티켓 이용가이드 마스코트"
+              className="w-full h-full object-cover rounded-2xl drop-shadow-2xl border-4 border-white shadow-lg"
+              width="288"
+              height="288"
               loading="eager"
             />
           </div>
-        </div>
-
-        <div className="flex-1 text-center">
-          <div className="mb-4">
-            <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-2">
-              🔥 2026년 소액결제현금화 업계 1위! 고릴라티켓
-            </div>
-          </div>
-          {/* [수정됨] 고릴라티켓 텍스트 추가 (SEO용) */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="sr-only">고릴라티켓</span>
-            <span className="text-red-600">
-              소액결제현금화 미납·정책 99.9% 승인!
-            </span>
-            <br />
-            <span className="text-blue-600">정보이용료현금화</span> No.1
-            <br />
-            <span className="text-sky-600">3분 초스피드 입금 완료</span>
-          </h1>
-
-          <div className="flex justify-center mb-6">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                (window as any).startConsult();
-              }}
-              aria-label="1:1 상담하기"
-              className="inline-flex items-center bg-yellow-400 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-300 cursor-pointer"
-            >
-              💬 소액결제현금화 1:1 상담
-              <svg
-                className="ml-2 w-5 md:w-6 h-5 md:h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M12 3c5.799 0 10.5 3.664 10.5 8.185 0 4.52-4.701 8.184-10.5 8.184a13.5 13.5 0 0 1-1.727-.11l-4.408 2.883c-.501.265-.678.236-.472-.413l.892-3.678c-2.88-1.46-4.785-3.99-4.785-6.866C1.5 6.665 6.201 3 12 3z" />
-              </svg>
-            </a>
-          </div>
-          {/* HeroSection 나머지 내용은 기존과 동일하므로 생략하지 않고 아래에 이어집니다... */}
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            <strong>갑자기 급전이 필요할 땐? 고릴라티켓이 해결사!</strong>
-            <br />
-            다양한{" "}
-            <Link
-              to="/services/micropayment"
-              className="text-sky-600 hover:underline font-semibold"
-            >
-              소액결제 현금화 방법
-            </Link>
-            부터{" "}
-            <Link
-              to="/services/information-fee"
-              className="text-sky-600 hover:underline font-semibold"
-            >
-              정보이용료(콘텐츠이용료) 현금화
-            </Link>
-            ,{" "}
-            <Link
-              to="/services/credit-card"
-              className="text-sky-600 hover:underline font-semibold"
-            >
-              신용카드 현금화
-            </Link>
-            까지,
-            <br />
-            <span className="text-red-600 font-bold">
-              미납/정책도 99.9% 승인, 5분이면 거래완료!
-            </span>
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-              ✅ 정식사업자등록
-            </div>
-            <div className="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-semibold">
-              ⚡ 누적 3만건+ 거래실적
-            </div>
-            <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-              🛡️ 100% 안전거래 보장
-            </div>
-            <div className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
-              🕐 24시간 실시간 승인
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 max-w-lg mx-auto border-2 border-sky-200">
-            <div className="text-center">
-              <div className="text-sm text-red-600 font-bold mb-3">
-                🔥 소액결제현금화 실시간 거래 현황 (LIVE)
-              </div>
-              <div className="grid grid-cols-3 gap-4">
-                <div>
-                  <div className="text-xl font-bold text-sky-600">100건+</div>
-                  <div className="text-xs text-gray-500">오늘 거래완료</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-blue-600">70~80%</div>
-                  <div className="text-xs text-gray-500">소액결제 지급률</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-purple-600">99.9%</div>
-                  <div className="text-xs text-gray-500">승인 성공률</div>
-                </div>
-              </div>
-              <div className="text-xs text-gray-400 mt-3 border-t pt-2">
-                ⚡ 평균 2분 47초 입금완료 | 💯 고객만족도 99.9% | 🏆 누적 거래량 3만건+
-              </div>
-            </div>
-          </div>
-
-          <p className="text-sm text-gray-500 mt-4">
-            정식 사업자 등록 업체 고릴라티켓, 소액결제현금화 100% 안전거래 보장!
-          </p>
         </div>
       </div>
     </div>
   </section>
 );
 
-// ServicesSection, WhyChooseUsSection, ReviewsSection, FinalCTASection은 변경 없음 (기존 코드 유지)
-const ServicesSection: React.FC = () => (
+const GuideTopicsSection: React.FC = () => (
   <section className="py-12 md:py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          고릴라티켓 소액결제현금화 핵심 서비스 안내
+          주제별 이용가이드
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-          2026년 업계 최고 지급률!{" "}
-          <Link
-            to="/services/micropayment"
-            className="text-sky-600 hover:underline"
-          >
-            소액결제현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/information-fee"
-            className="text-sky-600 hover:underline"
-          >
-            정보이용료현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/credit-card"
-            className="text-sky-600 hover:underline"
-          >
-            신용카드현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/gift-card"
-            className="text-sky-600 hover:underline"
-          >
-            상품권현금화
-          </Link>{" "}
-          서비스를 빠르고 안전하게 제공합니다.
+          각 결제 수단이 무엇이고, 한도는 어떻게 확인하며, 현금화 절차와 유의점은
+          무엇인지 항목별로 정리했습니다.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         <Link
           to="/services/micropayment"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
-            <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📱</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              소액결제 현금화
+              소액결제 현금화 가이드
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              휴대폰 소액결제 한도 즉시 현금으로! 평균 3분 이내,{" "}
-              <strong className="text-sky-600">지급률 70~80%</strong>로
-              신속하게 비상금을 마련하세요.
+              휴대폰 소액결제 한도란 무엇이고 어떻게 확인·이용하는지 개념부터
+              절차까지 정리했습니다.
             </p>
-            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              소액결제현금화 방법 보기 →
+            <span className="text-emerald-700 font-semibold hover:text-emerald-800 transition-colors">
+              가이드 읽기 →
             </span>
           </div>
         </Link>
 
         <Link
           to="/services/information-fee"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">💻</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              정보이용료 현금화
-              <br />
-              <span className="text-lg">(콘텐츠이용료 현금화)</span>
+              정보이용료 현금화 가이드
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              구글 정보이용료(콘텐츠이용료) 등 남은 한도를 현금으로!{" "}
-              <strong className="text-blue-600">지급률 60~70%</strong>, 빠르고
-              안전한 입금을 보장합니다.
+              구글·앱마켓 정보이용료(콘텐츠이용료)와 소액결제의 차이, 한도 관리
+              방법을 안내합니다.
             </p>
-            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              정보이용료 방법 보기 →
+            <span className="text-emerald-700 font-semibold hover:text-emerald-800 transition-colors">
+              가이드 읽기 →
             </span>
           </div>
         </Link>
 
         <Link
           to="/services/credit-card"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">💳</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              신용카드 현금화
+              신용카드 현금화 정보
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              신용카드 한도를 활용한 비상금 마련!{" "}
-              <strong className="text-purple-600">지급률 82~88%</strong>, 정식
-              등록 업체에서 안전하고 빠르게 진행됩니다.
+              신용카드 결제 한도 현금화가 무엇인지, 카드깡과의 차이, 확인해야 할
+              사항을 정리했습니다.
             </p>
-            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              신용카드 방법 보기 →
+            <span className="text-emerald-700 font-semibold hover:text-emerald-800 transition-colors">
+              가이드 읽기 →
             </span>
           </div>
         </Link>
 
         <Link
           to="/services/gift-card"
-          className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 block"
+          className="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 block"
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🎫</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              상품권 현금화
+              상품권 현금화 안내
             </h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
-              모바일 문화상품권, 해피머니 등 각종 상품권을{" "}
-              <strong className="text-orange-600">지급률 75~85%</strong>로
-              신속하게 현금으로 교환해 드립니다.
+              문화상품권·해피머니 등 모바일 상품권 매입 시 확인할 사항을 정리한
+              안내 페이지입니다.
             </p>
-            <span className="text-sky-600 font-semibold hover:text-sky-700 transition-colors">
-              상품권 현금화 방법 보기 →
+            <span className="text-emerald-700 font-semibold hover:text-emerald-800 transition-colors">
+              가이드 읽기 →
             </span>
           </div>
         </Link>
@@ -275,337 +183,83 @@ const ServicesSection: React.FC = () => (
   </section>
 );
 
-const WhyChooseUsSection: React.FC = () => (
+const BlogHighlightSection: React.FC = () => (
   <section className="py-12 md:py-20 bg-gray-50">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-12">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          왜 고릴라티켓 소액결제현금화일까요? 업계 1위!
+          이용가이드 블로그
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-          풍부한 거래실적과 고객 만족도 99.9%로 증명된 신뢰!{" "}
-          <Link
-            to="/services/micropayment"
-            className="text-sky-600 hover:underline"
-          >
-            소액결제현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/information-fee"
-            className="text-sky-600 hover:underline"
-          >
-            정보이용료현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/credit-card"
-            className="text-sky-600 hover:underline"
-          >
-            신용카드현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/gift-card"
-            className="text-sky-600 hover:underline"
-          >
-            상품권현금화
-          </Link>{" "}
-          모든 서비스에서 업계 최고를 자부합니다.
+          한도 확인, 청구서 읽는 법, 안전 이용 수칙 등 실용적인 정보를 꾸준히
+          업데이트합니다.
         </p>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="text-center group">
-          <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 group-hover:scale-110 transition-all duration-300">
-            <span className="text-white text-3xl">🔥</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            미납·정책 99.9% 승인
-          </h3>
-          <p className="text-gray-600">
-            다른 업체에서 거절당했나요? 고릴라티켓은{" "}
-            <strong className="text-red-600">미납·정책 99.9% 승인</strong>!
-            포기하지 마시고 상담받아보세요.
-          </p>
-        </div>
-
-        <div className="text-center group">
-          <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sky-700 group-hover:scale-110 transition-all duration-300">
-            <span className="text-white text-3xl">⚡</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            3분 초고속 입금
-          </h3>
-          <p className="text-gray-600">
-            신청부터 입금까지 평균 3분! 기다림 없이 신속하게 현금화 문제를
-            해결하세요.{" "}
-            <strong className="text-sky-600">5분이면 거래완료</strong>
-          </p>
-        </div>
-
-        <div className="text-center group">
-          <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-700 group-hover:scale-110 transition-all duration-300">
-            <span className="text-white text-3xl">💰</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            투명한 지급률 시스템
-          </h3>
-          <p className="text-gray-600">
-            정직하고 투명한 수수료 정책! 소액결제현금화{" "}
-            <strong className="text-blue-600">70~80%</strong>, 정보이용료
-            60~70%, 신용카드 82~88% 투명한 지급률!
-          </p>
-        </div>
-
-        <div className="text-center group">
-          <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-700 group-hover:scale-110 transition-all duration-300">
-            <span className="text-white text-3xl">🏆</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            풍부한 거래실적
-          </h3>
-          <p className="text-gray-600">
-            <strong className="text-purple-600">안정적인 거래규모 달성</strong>
-            ! 정식 사업자 등록으로 100% 안전거래를 보장합니다.
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-16">
-        <div className="bg-white rounded-3xl shadow-xl p-8">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            📊 고릴라티켓 실시간 통계
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">
-                누적 3만건+
-              </div>
-              <div className="text-sm text-gray-600">누적 거래건수</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-sky-600 mb-2">
-                99.9%
-              </div>
-              <div className="text-sm text-gray-600">승인 성공률</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-red-600 mb-2">
-                2분 47초
-              </div>
-              <div className="text-sm text-gray-600">평균 입금시간</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">
-                24시간
-              </div>
-              <div className="text-sm text-gray-600">연중무휴 상담</div>
-            </div>
-          </div>
-          <div className="text-center mt-6">
-            <p className="text-gray-500 text-sm">
-              📈 실시간 업데이트 | ✅ 정식 사업자 등록 업체 |  신뢰할 수 있는
-              고릴라티켓
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-center mt-12">
+      <div className="text-center">
         <Link
-          to="/safety"
-          className="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors"
+          to="/blog"
+          className="inline-flex items-center bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
         >
-          고릴라티켓의 안전 거래 시스템 더 알아보기 →
+          📖 블로그 글 전체 보기 →
         </Link>
       </div>
     </div>
   </section>
 );
 
-const ReviewsSection: React.FC = () => (
+const FAQTeaserSection: React.FC = () => (
   <section className="py-12 md:py-20 bg-white">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-12 md:mb-16">
+    <div className="container mx-auto px-4 max-w-3xl">
+      <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          실제 고객님들의 생생한 후기
+          자주 묻는 질문
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-          고릴라티켓을 통해{" "}
-          <Link
-            to="/services/micropayment"
-            className="text-sky-600 hover:underline"
-          >
-            소액결제현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/information-fee"
-            className="text-sky-600 hover:underline"
-          >
-            정보이용료현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/credit-card"
-            className="text-sky-600 hover:underline"
-          >
-            신용카드현금화
-          </Link>
-          ,{" "}
-          <Link
-            to="/services/gift-card"
-            className="text-sky-600 hover:underline"
-          >
-            상품권현금화
-          </Link>{" "}
-          서비스를 경험한 고객님들의 솔직한 목소리입니다.
-        </p>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
-          <div className="mb-4">
-            <div className="flex items-center mb-2">
-              <img loading="lazy"
-                src="https://ext.same-assets.com/1945597335/2141273364.svg"
-                alt="고객 프로필 아이콘"
-                className="w-8 h-8 mr-2"
-              />
-              <span className="font-bold text-gray-900 text-sm md:text-base">
-                김*석 고객님 (소액결제현금화)
-              </span>
-            </div>
-            <div className="flex items-center">
-              <div className="flex text-yellow-400">
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-              </div>
-              <span className="ml-2 text-gray-600 text-sm font-semibold">
-                (5.0)
-              </span>
-            </div>
-          </div>
-          <p className="text-gray-700 text-sm md:text-base">
-            "정말 급했는데 3분도 안되서 입금됐어요! 상담도 친절하시고
-            소액결제현금화 최고입니다. 고릴라티켓 덕분에 잘 해결했어요."
+      <div className="space-y-4">
+        <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
+          <p className="font-semibold text-gray-900 mb-1">Q. 소액결제현금화는 합법인가요?</p>
+          <p className="text-gray-600 text-sm">
+            정식 사업자 등록 업체를 통한 소액결제 한도 활용은 불법이 아닙니다. 다만
+            미등록·과대광고 업체는 피해로 이어질 수 있어 주의가 필요합니다.
           </p>
         </div>
-
-        <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
-          <div className="mb-4">
-            <div className="flex items-center mb-2">
-              <img loading="lazy"
-                src="https://ext.same-assets.com/1945597335/3717694739.svg"
-                alt="고객 프로필 아이콘"
-                className="w-8 h-8 mr-2"
-              />
-              <span className="font-bold text-gray-900 text-sm md:text-base">
-                이*희 고객님 (정보이용료현금화)
-              </span>
-            </div>
-            <div className="flex items-center">
-              <div className="flex text-yellow-400">
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-              </div>
-              <span className="ml-2 text-gray-600 text-sm font-semibold">
-                (5.0)
-              </span>
-            </div>
-          </div>
-          <p className="text-gray-700 text-sm md:text-base">
-            "타업체보다 정보이용료현금화 수수료도 저렴하고 입금도 빨라서
-            좋았어요. 다음에도 이용할게요! 안전한 고릴라티켓 찾아서 다행이에요."
-          </p>
-        </div>
-
-        <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
-          <div className="mb-4">
-            <div className="flex items-center mb-2">
-              <img loading="lazy"
-                src="https://ext.same-assets.com/1945597335/3286015583.svg"
-                alt="고객 프로필 아이콘"
-                className="w-8 h-8 mr-2"
-              />
-              <span className="font-bold text-gray-900 text-sm md:text-base">
-                박*영 고객님 (신용카드현금화)
-              </span>
-            </div>
-            <div className="flex items-center">
-              <div className="flex text-yellow-400">
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl">⭐</span>
-                <span className="text-lg md:text-xl text-gray-300">⭐</span>
-              </div>
-              <span className="ml-2 text-gray-600 text-sm font-semibold">
-                (4.5)
-              </span>
-            </div>
-          </div>
-          <p className="text-gray-700 text-sm md:text-base">
-            "신용카드현금화 절차가 복잡할 줄 알았는데 고릴라티켓은 생각보다 간편하고
-            안전하게 처리해주셔서 감사합니다. 믿고 맡길 수 있겠어요."
+        <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
+          <p className="font-semibold text-gray-900 mb-1">Q. 이 사이트(.net)에서 바로 신청할 수 있나요?</p>
+          <p className="text-gray-600 text-sm">
+            이 사이트는 정보 제공용 가이드입니다. 실제 상담 신청은{" "}
+            <a href={COM_URL} target="_blank" rel="noopener" className="text-emerald-700 underline">
+              고릴라티켓.com
+            </a>
+            에서 진행해 주세요.
           </p>
         </div>
       </div>
-
-      <div className="text-center mt-12">
-        <Link
-          to="/reviews"
-          className="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors"
-        >
-          더 많은 고객 후기 보기 →
+      <div className="text-center mt-8">
+        <Link to="/faq" className="text-emerald-700 font-semibold hover:underline">
+          FAQ 전체 보기 →
         </Link>
       </div>
     </div>
   </section>
 );
 
-const FinalCTASection: React.FC = () => (
-  <section className="py-12 md:py-20 bg-sky-600">
+const NextStepSection: React.FC = () => (
+  <section className="py-12 md:py-20 bg-emerald-700">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-        지금 바로 고릴라티켓에 문의하세요!
+        가이드를 다 읽으셨다면, 다음 단계
       </h2>
-      <p className="text-lg md:text-xl text-sky-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-        <Link to="/services/micropayment" className="hover:underline">
-          소액결제현금화
-        </Link>
-        ,{" "}
-        <Link to="/services/information-fee" className="hover:underline">
-          정보이용료현금화
-        </Link>
-        ,{" "}
-        <Link to="/services/credit-card" className="hover:underline">
-          신용카드현금화
-        </Link>
-        ,{" "}
-        <Link to="/services/gift-card" className="hover:underline">
-          상품권현금화
-        </Link>{" "}
-        등 24시간 언제나 신속하고 친절하게 상담해드립니다. 궁금한 점이 있다면
-        망설이지 말고 고릴라티켓에 연락주세요!
+      <p className="text-lg md:text-xl text-emerald-50 mb-8 max-w-3xl mx-auto leading-relaxed">
+        실제 소액결제·정보이용료·신용카드·상품권 현금화 상담 및 신청은
+        고릴라티켓 공식 서비스 사이트에서 진행하실 수 있습니다.
       </p>
-      
       <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          (window as any).startConsult();
-        }}
-        className="inline-flex items-center bg-white text-sky-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+        href={COM_URL}
+        target="_blank"
+        rel="noopener"
+        className="inline-flex items-center bg-white text-emerald-700 px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
       >
-        💬 내 한도 확인 & 24시간 상담
+        🔗 고릴라티켓.com 방문하기
       </a>
     </div>
   </section>
@@ -614,17 +268,17 @@ const FinalCTASection: React.FC = () => (
 const Home: React.FC = () => {
   return (
     <>
-      <SEO 
-        title="소액결제현금화 업계 1위, 3분 즉시입금"
-        description="고릴라티켓 소액결제현금화 업계 1위! SKT·KT·LGU+ 소액결제 현금화, 미납·정책 99.9% 승인, 3분 칼입금 보장. 소액결제 방법·수수료·후기 확인. 24시간 365일 상담 가능."
-        keywords="소액결제현금화,소액결제 현금화,소액결제 현금화 업체 추천,소액결제 현금화 즉시입금,미납 소액결제 현금화,소액결제 현금화 안전,휴대폰 소액결제 현금화"
+      <SEO
+        title="소액결제현금화·정보이용료현금화 이용가이드 총정리"
+        description="소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화가 무엇인지부터 한도 확인 방법, 이용 절차, 안전 이용 수칙까지 정리한 고릴라티켓 이용가이드입니다."
+        keywords="소액결제현금화 가이드,정보이용료현금화란,소액결제 한도 확인 방법,현금화 안전하게 이용하는법,고릴라티켓 이용가이드"
         pageType="home"
       />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <ReviewsSection />
-      <FinalCTASection />
+      <GuideHeroSection />
+      <GuideTopicsSection />
+      <BlogHighlightSection />
+      <FAQTeaserSection />
+      <NextStepSection />
     </>
   );
 };

@@ -49,6 +49,7 @@ const BlogPost: React.FC = () => {
         title={post.fields.title}
         description={postDescription}
         keywords={post.fields.tags ? post.fields.tags.join(", ") : undefined}
+        canonicalOverride={`https://xn--299a64rxvbk71bjne.com/blog/${post.fields.id}`}
       />
       <script type="application/ld+json">
         {JSON.stringify({

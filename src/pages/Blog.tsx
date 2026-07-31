@@ -52,6 +52,7 @@ const Blog: React.FC = () => {
         title="정보 블로그 - 소액결제현금화 최신 정보"
         description="소액결제현금화, 정보이용료·신용카드·상품권 현금화 최신 정보와 한도·수수료·안전 이용 가이드를 고릴라티켓 블로그에서 확인하세요."
         keywords="소액결제현금화 정보, 소액결제 팁, 소액결제 블로그, 소액결제 한도, 고릴라티켓 블로그"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/blog"
       />
       <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">

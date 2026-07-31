@@ -106,6 +106,7 @@ const Reviews: React.FC = () => {
         title="고객 후기"
         description="고릴라티켓 실제 고객 후기 1,247건. 소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화 서비스 평균 평점 4.8점. 3분 입금, 24시간 상담 만족 후기를 확인하세요."
         keywords="고릴라티켓 후기, 소액결제현금화 후기, 정보이용료현금화 후기, 신용카드현금화 후기, 상품권현금화 후기"
+        canonicalOverride="https://xn--299a64rxvbk71bjne.com/reviews"
       />
       <script type="application/ld+json">
         {JSON.stringify({
