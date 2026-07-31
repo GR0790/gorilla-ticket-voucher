@@ -78,6 +78,13 @@ const InformationFeeGuide: React.FC = () => {
                 <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0" />소액결제와 별도 한도로 운영됨</li>
                 <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0" />연체 시 통신 요금 미납과 동일하게 취급됨</li>
               </ul>
+              <p className="text-gray-700 leading-relaxed mt-4">
+                소액결제 한도와 함께 활용하는 방법은{" "}
+                <Link to="/services/micropayment" className="text-blue-700 underline font-semibold">
+                  소액결제 현금화 가이드
+                </Link>
+                에서 확인하실 수 있습니다.
+              </p>
             </div>
           </section>
 
@@ -115,6 +122,12 @@ const InformationFeeGuide: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/services/micropayment" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-blue-300 hover:text-blue-700 transition-colors">
                 소액결제 현금화 가이드 →
+              </Link>
+              <Link to="/services/gift-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-blue-300 hover:text-blue-700 transition-colors">
+                상품권 현금화 안내 →
+              </Link>
+              <Link to="/services/credit-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-blue-300 hover:text-blue-700 transition-colors">
+                신용카드 현금화 정보 →
               </Link>
               <Link to="/faq" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-blue-300 hover:text-blue-700 transition-colors">
                 전체 FAQ 보기 →

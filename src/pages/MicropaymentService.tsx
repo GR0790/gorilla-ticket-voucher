@@ -100,6 +100,13 @@ const MicropaymentGuide: React.FC = () => {
                     수수료율, 후기 등을 비교해 확인하는 것이 안전한 이용의
                     핵심입니다.
                   </p>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    소액결제로 구매한 상품권을 다시 매입하는 방식이 궁금하다면{" "}
+                    <Link to="/services/gift-card" className="text-emerald-700 underline font-semibold">
+                      상품권 현금화 안내
+                    </Link>
+                    도 함께 참고해 보세요.
+                  </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center"><span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 flex-shrink-0" />통신사 무관 이용 가능: SKT, KT, LGU+</li>
                     <li className="flex items-center"><span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 flex-shrink-0" />업체별로 처리 속도·수수료율이 상이함</li>
@@ -234,6 +241,9 @@ const MicropaymentGuide: React.FC = () => {
               </Link>
               <Link to="/services/credit-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">
                 신용카드 현금화 정보 →
+              </Link>
+              <Link to="/services/gift-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">
+                상품권 현금화 안내 →
               </Link>
               <Link to="/blog" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">
                 한도 확인 방법 블로그 →

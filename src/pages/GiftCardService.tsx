@@ -84,6 +84,13 @@ const GiftCardGuide: React.FC = () => {
             <p className="text-center text-gray-500 text-sm mt-6">
               ※ 실제 매입 가능 여부와 매입률은 상품권 종류·상태에 따라 다르며, 업체에 직접 문의해 확인해야 합니다.
             </p>
+            <p className="text-center text-gray-600 text-sm mt-4">
+              상품권을 소액결제로 구매하는 방법이 궁금하다면{" "}
+              <Link to="/services/micropayment" className="text-orange-700 underline font-semibold">
+                소액결제 현금화 가이드
+              </Link>
+              를 확인해 보세요.
+            </p>
           </section>
 
           <section className="mb-16">
@@ -121,6 +128,12 @@ const GiftCardGuide: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/services/micropayment" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
                 소액결제 현금화 가이드 →
+              </Link>
+              <Link to="/services/information-fee" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+                정보이용료 현금화 가이드 →
+              </Link>
+              <Link to="/services/credit-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+                신용카드 현금화 정보 →
               </Link>
               <Link to="/blog/4" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
                 문화상품권 핀번호 관리 블로그 →

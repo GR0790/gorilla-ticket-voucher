@@ -83,6 +83,13 @@ const CreditCardGuide: React.FC = () => {
                 반드시 실제 재화·용역 거래가 수반되는 정식 매입 절차를 거치는
                 업체인지, 사업자등록이 되어 있는지 확인 후 이용해야 합니다.
               </p>
+              <p className="text-gray-700 leading-relaxed mt-4">
+                실제 재화 거래가 수반되는 대표적인 예시로는{" "}
+                <Link to="/services/gift-card" className="text-purple-700 underline font-semibold">
+                  상품권 매입 방식
+                </Link>
+                이 있습니다.
+              </p>
             </div>
           </section>
 
@@ -107,6 +114,12 @@ const CreditCardGuide: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/services/gift-card" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
                 상품권 현금화 안내 →
+              </Link>
+              <Link to="/services/micropayment" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
+                소액결제 현금화 가이드 →
+              </Link>
+              <Link to="/services/information-fee" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
+                정보이용료 현금화 가이드 →
               </Link>
               <Link to="/faq" className="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 hover:border-purple-300 hover:text-purple-700 transition-colors">
                 전체 FAQ 보기 →
