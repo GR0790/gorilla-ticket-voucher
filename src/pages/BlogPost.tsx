@@ -59,7 +59,7 @@ const BlogPost: React.FC = () => {
           "description": postDescription,
           "keywords": post.fields.tags ? post.fields.tags.join(", ") : undefined,
           "datePublished": post.fields.date,
-          "dateModified": post.fields.date,
+          "dateModified": post.fields.dateModified || post.fields.date,
           "author": { "@type": "Organization", "name": "고릴라티켓" },
           "publisher": {
             "@type": "Organization",
