@@ -28,7 +28,7 @@ const CreditCardGuide: React.FC = () => {
   return (
     <>
       <SEO
-        title="신용카드 현금화란? 카드깡과의 차이, 확인해야 할 사항"
+        title="신용카드 현금화란? 카드깡과의 차이 정리"
         description="신용카드 현금화가 무엇인지, 불법 카드깡과 어떻게 다른지, 이용 전 반드시 확인해야 할 사항을 정리한 정보 가이드입니다."
         keywords="신용카드현금화란,카드깡 차이,신용카드 현금화 주의사항,카드 한도 현금화"
         faqItems={faqData}

@@ -44,7 +44,7 @@ const MicropaymentGuide: React.FC = () => {
   return (
     <>
       <SEO
-        title="소액결제 현금화란? 개념·한도 확인·이용 절차 총정리"
+        title="소액결제 현금화란? 개념과 한도 확인 방법"
         description="소액결제 현금화가 무엇인지부터 SKT·KT·LGU+ 한도 확인 방법, 일반적인 이용 절차, 안전하게 이용하기 위한 체크포인트까지 정리한 이용가이드입니다."
         keywords="소액결제 현금화란,소액결제 한도 확인 방법,소액결제 현금화 절차,소액결제 현금화 안전하게 이용하는법,SKT 소액결제 한도,KT 소액결제 한도,LGU+ 소액결제 한도"
         faqItems={faqData}
