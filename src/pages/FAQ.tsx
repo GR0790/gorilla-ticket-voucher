@@ -2,6 +2,7 @@ import type React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const FAQ: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);
@@ -180,6 +181,7 @@ const FAQ: React.FC = () => {
 
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4">
+          <Breadcrumb items={[{ label: "고릴라티켓", path: "/" }, { label: "자주묻는질문" }]} />
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               현금화 이용가이드{" "}

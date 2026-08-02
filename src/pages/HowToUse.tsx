@@ -1,6 +1,7 @@
 import type React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const COM_URL = "https://xn--299a64rxvbk71bjne.com";
 
@@ -28,10 +29,41 @@ const HowToUse: React.FC = () => {
         keywords="현금화 이용전 준비사항,상담 체크리스트,거래기록 남기기,현금화 준비물"
         faqItems={faqData}
       />
+      {/* 본문의 1~4단계 체크리스트와 1:1로 매칭되는 HowTo 스키마 */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "현금화 서비스 이용 전 준비사항 체크리스트",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "1단계 — 상담 전에 준비할 것",
+              "text": "본인의 결제 한도를 미리 확인하고, 희망 금액과 목적을 정리한 뒤, 업체의 사업자등록 여부와 후기를 검증합니다.",
+            },
+            {
+              "@type": "HowToStep",
+              "name": "2단계 — 상담 중 반드시 확인할 것",
+              "text": "정확한 수수료율과 실지급액을 문서로 안내받고, 처리 예상 시간을 확인하며, 선입금·보증금 요구가 없는지 확인합니다.",
+            },
+            {
+              "@type": "HowToStep",
+              "name": "3단계 — 거래 중 기록을 남기세요",
+              "text": "상담 대화 내용, 안내받은 수수료·금액, 계좌 정보를 캡처하고 결제 승인 문자 등 모든 거래 기록을 보관합니다.",
+            },
+            {
+              "@type": "HowToStep",
+              "name": "4단계 — 거래 후 확인할 것",
+              "text": "실제 입금액이 안내받은 금액과 일치하는지, 다음 달 청구서에 결제 내역이 정확히 반영되었는지 확인합니다.",
+            },
+          ],
+        })}
+      </script>
 
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-emerald-50 to-teal-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
+            <Breadcrumb items={[{ label: "고릴라티켓", path: "/" }, { label: "이용 전 준비사항" }]} />
             <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
               ✅ 이용 전 준비 이용가이드
             </div>

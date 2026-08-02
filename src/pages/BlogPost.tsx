@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { blogPosts as localBlogPosts } from "../data/blogPosts";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -68,9 +69,45 @@ const BlogPost: React.FC = () => {
           "mainEntityOfPage": typeof window !== "undefined" ? window.location.href : undefined,
         })}
       </script>
+      {/* 글 본문에 실제로 노출되는 FAQ 섹션과 1:1로 매칭되는 FAQPage 스키마 */}
+      {post.fields.faqItems && post.fields.faqItems.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": post.fields.faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": { "@type": "Answer", "text": item.answer },
+            })),
+          })}
+        </script>
+      )}
+      {/* 본문의 단계별(N단계) 절차와 1:1로 매칭되는 HowTo 스키마 */}
+      {post.fields.howToSteps && post.fields.howToSteps.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": post.fields.howToTitle || post.fields.title,
+            "step": post.fields.howToSteps.map((s) => ({
+              "@type": "HowToStep",
+              "name": s.name,
+              "text": s.text,
+            })),
+          })}
+        </script>
+      )}
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-12 md:py-20">
           <div className="container mx-auto px-4">
+            <Breadcrumb
+              items={[
+                { label: "고릴라티켓", path: "/" },
+                { label: "정보 블로그", path: "/blog" },
+                { label: post.fields.title },
+              ]}
+            />
             <nav className="mb-8">
               <Link
                 to="/blog"

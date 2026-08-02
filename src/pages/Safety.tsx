@@ -1,6 +1,7 @@
 import type React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const COM_URL = "https://xn--299a64rxvbk71bjne.com";
 
@@ -39,6 +40,7 @@ const Safety: React.FC = () => {
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-emerald-50 to-teal-100 py-12 md:py-20">
           <div className="container mx-auto px-4 text-center">
+            <Breadcrumb items={[{ label: "고릴라티켓", path: "/" }, { label: "개인정보 보호 수칙" }]} />
             <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
               🔒 개인정보 보호 이용가이드
             </div>
