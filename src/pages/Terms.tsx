@@ -10,7 +10,7 @@ const articles: Article[] = [
     id: "purpose",
     title: "제1조 (목적)",
     body: [
-      "이 약관은 고릴라티켓(이하 \"사이트\")이 제공하는 티켓·상품권·바우처 관련 상담 및 안내 서비스의 이용 조건과 절차, 이용자와 사이트의 권리와 의무를 정하는 것을 목적으로 합니다.",
+      "이 약관은 고릴라티켓(이하 \"사이트\")이 제공하는 상품권·디지털 이용권 관련 상담 및 안내 서비스의 이용 조건과 절차, 이용자와 사이트의 권리와 의무를 정하는 것을 목적으로 합니다.",
     ],
   },
   {
@@ -20,14 +20,14 @@ const articles: Article[] = [
       "\"사이트\"란 고릴라티켓이 운영하는 웹사이트를 말합니다.",
       "\"상담\"이란 채널톡 또는 전화를 통해 문의 내용을 접수하고 조건을 확인해 안내하는 일련의 과정을 말합니다.",
       "\"이용자\"란 사이트를 방문하거나 상담을 요청한 사람을 말합니다.",
-      "\"판매처\"란 공연·전시의 예매를 처리하거나 상품권·바우처를 발행·판매하는 주체를 말합니다.",
+      "\"판매처\"란 상품권·디지털 이용권을 발행·판매하거나 결제를 처리하는 주체를 말합니다.",
     ],
   },
   {
     id: "nature",
     title: "제3조 (서비스의 성격)",
     body: [
-      "사이트는 티켓과 상품권·바우처에 관한 정보를 안내하고, 상담을 통해 조건을 확인하는 서비스를 제공합니다. 실제 예매·발권·구매 계약은 이용자와 해당 판매처 사이에 성립하며, 계약 조건은 판매처의 약관과 정책을 따릅니다.",
+      "사이트는 상품권 매입과 모바일 상품권 구매, 결제 절차에 관한 정보를 안내하고, 상담을 통해 조건을 확인하는 서비스를 제공합니다. 실제 결제·정산 계약은 이용자와 해당 판매처 사이에 성립하며, 계약 조건은 판매처와 통신사·카드사의 약관과 정책을 따릅니다.",
       "사이트는 판매처가 공지한 조건을 기준으로 안내하며, 확인되지 않은 내용을 확정된 것으로 안내하지 않습니다.",
     ],
   },
@@ -71,7 +71,7 @@ const articles: Article[] = [
       "사이트는 상담 과정에서 확인한 정보와 판매처가 공지한 조건을 기준으로 안내합니다. 다음 사항에 대해서는 책임을 지지 않습니다.",
     ],
     list: [
-      "판매처의 정책 변경, 공연·행사의 취소 또는 연기로 인한 손해",
+      "판매처와 통신사·카드사의 정책 변경으로 인한 손해",
       "이용자가 제공한 정보의 오류로 인해 발생한 문제",
       "좌석·수량 등 실시간으로 변동되는 조건의 변경",
       "사이트의 통제를 벗어난 사유로 인한 서비스 중단",
@@ -81,7 +81,7 @@ const articles: Article[] = [
     id: "ip",
     title: "제8조 (지식재산권)",
     body: [
-      "사이트가 작성한 글, 이미지, 디자인 등의 저작권은 사이트에 있습니다. 사전 동의 없이 복제, 배포, 수정하여 사용할 수 없습니다. 공연·전시의 명칭과 이미지는 해당 권리자에게 권리가 있습니다.",
+      "사이트가 작성한 글, 이미지, 디자인 등의 저작권은 사이트에 있습니다. 사전 동의 없이 복제, 배포, 수정하여 사용할 수 없습니다. 상품권과 게임의 명칭·이미지는 해당 권리자에게 권리가 있습니다.",
     ],
   },
   {
@@ -111,7 +111,7 @@ const Terms: React.FC = () => (
       lead="사이트가 제공하는 안내와 상담의 범위, 그리고 이용자와 사이트가 지켜야 할 내용을 정리했습니다."
     />
 
-    <section className="bg-ivory">
+    <section className="bg-frost">
       <div className="wrap grid gap-12 py-16 md:py-24 lg:grid-cols-[220px_1fr] lg:gap-20">
         <nav aria-label="목차" className="hidden lg:block">
           <div className="sticky top-28 space-y-2.5 border-l border-line pl-6">
@@ -119,7 +119,7 @@ const Terms: React.FC = () => (
               <a
                 key={a.id}
                 href={`#${a.id}`}
-                className="block text-[12px] leading-relaxed text-ink-muted transition-colors hover:text-forest"
+                className="block text-[12px] leading-relaxed text-ink-muted transition-colors hover:text-azure"
               >
                 {a.title}
               </a>
@@ -147,7 +147,7 @@ const Terms: React.FC = () => (
                         key={li}
                         className="flex items-start gap-3 text-[13.5px] leading-[1.95] text-ink-soft"
                       >
-                        <span aria-hidden="true" className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-brass" />
+                        <span aria-hidden="true" className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-azure" />
                         {li}
                       </li>
                     ))}

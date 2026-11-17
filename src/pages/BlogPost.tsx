@@ -21,7 +21,7 @@ const BlogPost: React.FC = () => {
 
   if (!post) {
     return (
-      <div className="bg-ivory">
+      <div className="bg-frost">
         <div className="wrap flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
           <p className="eyebrow">404</p>
           <h1 className="display-section mt-5 text-ink">글을 찾을 수 없습니다</h1>
@@ -61,15 +61,15 @@ const BlogPost: React.FC = () => {
         })}
       </script>
 
-      <article className="bg-ivory">
+      <article className="bg-frost">
         <header className="border-b border-line">
           <div className="wrap pb-12 pt-10 md:pb-16 md:pt-14">
             <nav aria-label="현재 위치" className="flex flex-wrap items-center gap-2 text-[12px] text-ink-muted">
-              <Link to="/" className="hover:text-forest">
+              <Link to="/" className="hover:text-azure">
                 홈
               </Link>
               <span className="text-line">/</span>
-              <Link to="/blog" className="hover:text-forest">
+              <Link to="/blog" className="hover:text-azure">
                 이야기
               </Link>
               <span className="text-line">/</span>
@@ -111,14 +111,14 @@ const BlogPost: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-14 rounded-[14px] border border-line bg-ivory-light p-8 md:p-10">
+            <div className="mt-14 rounded-xl border border-line bg-frost-light p-8 md:p-10">
               <p className="eyebrow">Consultation</p>
               <p className="mt-4 font-display text-[1.25rem] leading-[1.6] text-ink">
                 이 글에서 정리되지 않은 부분은
                 <br className="hidden sm:block" /> 상담으로 확인하세요.
               </p>
               <p className="mt-3 text-[13px] leading-[1.9] text-ink-soft">
-                공연명과 날짜, 인원만 알려주시면 가능한 조건을 확인해 안내드립니다.
+                상품권 종류나 결제 방법만 알려주시면 가능한 조건을 확인해 안내드립니다.
               </p>
               <div className="mt-6">
                 <ConsultButton />
@@ -129,14 +129,14 @@ const BlogPost: React.FC = () => {
           <aside className="hidden lg:block">
             <div className="sticky top-28 space-y-8 border-l border-line pl-8">
               <div>
-                <p className="text-[10.5px] uppercase tracking-[0.18em] text-brass">Written by</p>
+                <p className="text-[10.5px] uppercase tracking-[0.18em] text-azure">Written by</p>
                 <p className="mt-3 font-display text-[1rem] text-ink">{site.name} 에디터</p>
                 <p className="mt-2 text-[12px] leading-[1.9] text-ink-soft">
-                  티켓과 상품권을 준비하는 사람들이 실제로 자주 묻는 것들을 정리합니다.
+                  상품권과 결제 절차를 준비하는 분들이 자주 묻는 것들을 정리합니다.
                 </p>
               </div>
               <div>
-                <p className="text-[10.5px] uppercase tracking-[0.18em] text-brass">Tags</p>
+                <p className="text-[10.5px] uppercase tracking-[0.18em] text-azure">Tags</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {post.fields.tags.map((t) => (
                     <span key={t} className="rounded-full border border-line px-2.5 py-1 text-[10.5px] text-ink-muted">
@@ -146,8 +146,8 @@ const BlogPost: React.FC = () => {
                 </div>
               </div>
               <div>
-                <p className="text-[10.5px] uppercase tracking-[0.18em] text-brass">Contact</p>
-                <a href={site.phoneHref} className="mt-3 block text-[13px] text-ink-soft hover:text-forest">
+                <p className="text-[10.5px] uppercase tracking-[0.18em] text-azure">Contact</p>
+                <a href={site.phoneHref} className="mt-3 block text-[13px] text-ink-soft hover:text-azure">
                   {site.phone}
                 </a>
                 <p className="mt-1 text-[12px] text-ink-muted">{site.hours}</p>
@@ -157,19 +157,19 @@ const BlogPost: React.FC = () => {
         </div>
       </article>
 
-      <section className="border-t border-line bg-ivory-light">
+      <section className="border-t border-line bg-frost-light">
         <div className="wrap py-16 md:py-20">
           <div className="flex items-end justify-between">
             <h2 className="font-display text-[1.35rem] text-ink">이어서 읽기</h2>
-            <Link to="/blog" className="text-[12.5px] text-forest hover:text-brass">
+            <Link to="/blog" className="text-[12.5px] text-azure hover:text-azure">
               전체 보기 →
             </Link>
           </div>
-          <div className="mt-8 grid gap-px overflow-hidden rounded-[14px] border border-line bg-line md:grid-cols-3">
+          <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-3">
             {related.map((r) => (
-              <Link key={r.fields.id} to={`/blog/${r.fields.id}`} className="group bg-ivory p-7 transition-colors hover:bg-ivory-light">
-                <p className="text-[10.5px] uppercase tracking-[0.16em] text-brass">{r.fields.category}</p>
-                <h3 className="mt-3 font-display text-[1.05rem] leading-[1.55] text-ink transition-colors group-hover:text-forest">
+              <Link key={r.fields.id} to={`/blog/${r.fields.id}`} className="group bg-frost p-7 transition-colors hover:bg-frost-light">
+                <p className="text-[10.5px] uppercase tracking-[0.16em] text-azure">{r.fields.category}</p>
+                <h3 className="mt-3 font-display text-[1.05rem] leading-[1.55] text-ink transition-colors group-hover:text-azure">
                   {r.fields.title}
                 </h3>
                 <p className="mt-2 text-[11.5px] text-ink-muted">{r.fields.readTime}</p>

@@ -14,7 +14,7 @@ const sections: Section[] = [
     ],
     list: [
       "채널톡 1:1 상담 접수 및 답변",
-      "티켓·상품권·바우처 준비를 위한 조건 확인과 진행 안내",
+      "상품권 매입·구매 절차를 위한 조건 확인과 진행 안내",
       "진행 상황 공유와 사후 문의 대응",
       "사이트 운영에 필요한 최소한의 이용 기록 관리",
     ],
@@ -28,7 +28,7 @@ const sections: Section[] = [
     list: [
       "필수: 상담 채널에서 사용하는 이름 또는 닉네임, 문의 내용",
       "선택: 휴대폰 번호, 이메일 주소 (회신이 필요한 경우)",
-      "진행 확정 시: 티켓·상품권 전달에 필요한 최소한의 정보 (예매자 이름, 수령 방법)",
+      "진행 확정 시: 상품권 전달과 확인에 필요한 최소한의 정보 (이름, 연락처, 전달 방법)",
       "자동 수집: 접속 기록, 브라우저 정보, 쿠키 (사이트 이용 통계 목적)",
     ],
     note: "주민등록번호, 계좌 비밀번호, 카드 비밀번호 등은 요구하지 않습니다. 이러한 정보를 요청받았다면 즉시 알려주세요.",
@@ -49,7 +49,7 @@ const sections: Section[] = [
     id: "third-party",
     title: "제4조 (제3자 제공)",
     body: [
-      "사이트는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만 예매·구매를 진행하는 과정에서 판매처가 요구하는 정보가 있는 경우, 진행 전에 그 내용을 안내하고 동의를 받은 뒤 전달합니다.",
+      "사이트는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만 결제·정산을 진행하는 과정에서 판매처가 요구하는 정보가 있는 경우, 진행 전에 그 내용을 안내하고 동의를 받은 뒤 전달합니다.",
     ],
   },
   {
@@ -112,7 +112,7 @@ const Privacy: React.FC = () => (
       lead="상담에 필요한 정보만 확인하고, 목적이 끝나면 남기지 않는 것을 원칙으로 합니다."
     />
 
-    <section className="bg-ivory">
+    <section className="bg-frost">
       <div className="wrap grid gap-12 py-16 md:py-24 lg:grid-cols-[220px_1fr] lg:gap-20">
         <nav aria-label="목차" className="hidden lg:block">
           <div className="sticky top-28 space-y-2.5 border-l border-line pl-6">
@@ -120,7 +120,7 @@ const Privacy: React.FC = () => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="block text-[12px] leading-relaxed text-ink-muted transition-colors hover:text-forest"
+                className="block text-[12px] leading-relaxed text-ink-muted transition-colors hover:text-azure"
               >
                 {s.title}
               </a>
@@ -148,7 +148,7 @@ const Privacy: React.FC = () => (
                         key={li}
                         className="flex items-start gap-3 text-[13.5px] leading-[1.95] text-ink-soft"
                       >
-                        <span aria-hidden="true" className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-brass" />
+                        <span aria-hidden="true" className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-azure" />
                         {li}
                       </li>
                     ))}

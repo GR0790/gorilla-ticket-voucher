@@ -8,9 +8,10 @@ const BASE_URL = 'https://xn--299a64rxvbk71bjne.net';
 // 블로그 외 고정 페이지 목록
 const STATIC_PAGES = [
   '/',
-  '/services/ticket',
-  '/services/voucher',
-  '/services/business',
+  '/services/gift-card',
+  '/services/micropayment',
+  '/services/credit-card',
+  '/services/information-fee',
   '/how-to-use',
   '/faq',
   '/blog',

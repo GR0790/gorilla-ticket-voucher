@@ -21,34 +21,34 @@ const Blog: React.FC = () => {
   return (
     <>
       <SEO
-        title="이야기 — 티켓·상품권을 고르는 기준"
-        description="좌석 등급 읽는 법, 상품권 유효기간, 단체 관람 준비, 전시 시간 지정제까지. 고릴라티켓이 정리한 티켓과 상품권에 관한 이야기입니다."
-        keywords="좌석 등급,상품권 유효기간,단체 관람 준비,전시 관람권,티켓 가이드"
+        title="이야기 — 상품권과 결제 절차 정리"
+        description="상품권 매입 전 확인 사항, 휴대폰 결제 한도, 카드 할부, 정보이용료 게임 재화까지. 상담 전에 알아두면 좋은 내용을 정리했습니다."
+        keywords="상품권 매입,휴대폰 소액결제 한도,카드 할부,정보이용료,게임 재화,이용 안내"
       />
       <PageHero
         eyebrow="Journal"
         crumbs={[{ label: "이야기" }]}
         title={
           <>
-            고르는 기준을
+            확인할 것을
             <br />
-            조금 더 정확하게.
+            먼저 정리했습니다.
           </>
         }
-        lead="티켓과 상품권을 준비할 때 실제로 부딪히는 문제들을 정리했습니다. 상담 전에 읽어두면 도움이 됩니다."
+        lead="상품권과 결제 절차에서 실제로 부딪히는 문제들을 정리했습니다. 상담 전에 읽어두면 도움이 됩니다."
       />
 
       {/* 대표 글 */}
-      <section className="border-b border-line bg-ivory">
+      <section className="border-b border-line bg-frost">
         <div className="wrap py-16 md:py-20">
           <Link to={`/blog/${featured.fields.id}`} className="group grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="flex flex-col justify-between border-line lg:border-r lg:pr-16">
               <div>
                 <div className="flex items-center gap-3 text-[10.5px] uppercase tracking-[0.18em] text-ink-muted">
-                  <span className="rounded-full border border-brass/40 px-3 py-1 text-brass">Featured</span>
+                  <span className="rounded-full border border-azure/40 px-3 py-1 text-azure">Featured</span>
                   <span>{featured.fields.category}</span>
                 </div>
-                <h2 className="mt-7 font-display text-[1.7rem] leading-[1.45] text-ink transition-colors group-hover:text-forest md:text-[2.1rem]">
+                <h2 className="mt-7 font-display text-[1.7rem] leading-[1.45] text-ink transition-colors group-hover:text-azure md:text-[2.1rem]">
                   {featured.fields.title}
                 </h2>
               </div>
@@ -60,7 +60,7 @@ const Blog: React.FC = () => {
             </div>
             <div className="flex flex-col justify-center">
               <p className="text-[14px] leading-[2] text-ink-soft">{featured.fields.excerpt}</p>
-              <span className="mt-8 inline-flex items-center gap-2 text-[13px] text-forest">
+              <span className="mt-8 inline-flex items-center gap-2 text-[13px] text-azure">
                 글 읽기
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </span>
@@ -70,7 +70,7 @@ const Blog: React.FC = () => {
       </section>
 
       {/* 목록 */}
-      <section className="border-b border-line bg-ivory-light">
+      <section className="border-b border-line bg-frost-light">
         <div className="wrap py-16 md:py-24">
           <div className="flex flex-wrap items-center gap-2">
             {categories.map((c) => (
@@ -80,8 +80,8 @@ const Blog: React.FC = () => {
                 onClick={() => setActive(c)}
                 className={`rounded-full border px-4 py-2 text-[12.5px] transition-colors ${
                   active === c
-                    ? "border-forest bg-forest text-ivory"
-                    : "border-line text-ink-soft hover:border-brass hover:text-forest"
+                    ? "border-azure bg-azure text-frost"
+                    : "border-line text-ink-soft hover:border-azure hover:text-azure"
                 }`}
               >
                 {c}
@@ -94,14 +94,14 @@ const Blog: React.FC = () => {
               <Link
                 key={p.fields.id}
                 to={`/blog/${p.fields.id}`}
-                className="group grid gap-3 border-b border-line py-8 transition-colors hover:bg-ivory md:grid-cols-[70px_1fr_260px] md:items-baseline md:gap-8"
+                className="group grid gap-3 border-b border-line py-8 transition-colors hover:bg-frost md:grid-cols-[70px_1fr_260px] md:items-baseline md:gap-8"
               >
                 <span className="font-display text-[11px] tracking-[0.18em] text-ink-muted">
                   {String(i + 2).padStart(2, "0")}
                 </span>
                 <div>
-                  <p className="text-[10.5px] uppercase tracking-[0.16em] text-brass">{p.fields.category}</p>
-                  <h3 className="mt-2 font-display text-[1.2rem] leading-[1.5] text-ink transition-colors group-hover:text-forest">
+                  <p className="text-[10.5px] uppercase tracking-[0.16em] text-azure">{p.fields.category}</p>
+                  <h3 className="mt-2 font-display text-[1.2rem] leading-[1.5] text-ink transition-colors group-hover:text-azure">
                     {p.fields.title}
                   </h3>
                   <p className="mt-2 max-w-xl text-[13px] leading-[1.85] text-ink-soft md:hidden">

@@ -14,12 +14,13 @@ export const SectionHead: React.FC<{
 }> = ({ eyebrow, title, lead, align = "left", light = false }) => (
   <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-3xl"}>
     {eyebrow && (
-      <p className={`eyebrow mb-4 ${light ? "text-brass-light" : ""}`}>{eyebrow}</p>
+      <p className={`eyebrow mb-4 inline-flex items-center gap-2.5 ${light ? "text-sky-light" : ""}`}>
+        <span aria-hidden="true" className={`h-px w-6 ${light ? "bg-sky-light/60" : "bg-azure/50"}`} />
+        {eyebrow}
+      </p>
     )}
-    <h2 className={`display-section ${light ? "text-ivory" : "text-ink"}`}>{title}</h2>
-    {lead && (
-      <p className={`lead mt-5 ${light ? "text-ivory/70" : ""}`}>{lead}</p>
-    )}
+    <h2 className={`display-section ${light ? "text-white" : "text-ink"}`}>{title}</h2>
+    {lead && <p className={`lead mt-5 ${light ? "text-white/65" : ""}`}>{lead}</p>}
   </div>
 );
 
@@ -31,7 +32,7 @@ export const ArrowLink: React.FC<{
 }> = ({ to, children, className = "" }) => (
   <Link
     to={to}
-    className={`group inline-flex items-center gap-2 text-sm font-medium text-forest transition-colors hover:text-brass ${className}`}
+    className={`group inline-flex items-center gap-2 text-sm font-semibold text-azure transition-colors hover:text-azure-deep ${className}`}
   >
     {children}
     <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
@@ -41,38 +42,40 @@ export const ArrowLink: React.FC<{
 );
 
 /* ─────────── 채널톡 버튼 ─────────── */
+export const ChatGlyph: React.FC<{ className?: string }> = ({ className = "h-4 w-4" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M20.5 11.6c0 4.2-3.8 7.6-8.5 7.6-.9 0-1.8-.1-2.6-.4L5 20.5l1.1-3.3C4.8 15.9 3.5 13.9 3.5 11.6c0-4.2 3.8-7.6 8.5-7.6s8.5 3.4 8.5 7.6Z"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinejoin="round"
+    />
+    <circle cx="8.8" cy="11.6" r="0.95" fill="currentColor" />
+    <circle cx="12" cy="11.6" r="0.95" fill="currentColor" />
+    <circle cx="15.2" cy="11.6" r="0.95" fill="currentColor" />
+  </svg>
+);
+
 export const ConsultButton: React.FC<{
   label?: string;
   variant?: "primary" | "outline" | "light" | "ghostLight";
+  size?: "md" | "lg";
   className?: string;
-}> = ({ label = "채널톡 1:1 상담", variant = "primary", className = "" }) => {
+}> = ({ label = "채널톡 1:1 상담", variant = "primary", size = "md", className = "" }) => {
   const styles = {
     primary: "btn-primary",
     outline: "btn-outline",
     light: "btn-light",
     ghostLight: "btn-ghost-light",
   }[variant];
+  const sizing = size === "lg" ? "min-h-[56px] px-8 text-[15px]" : "";
   return (
-    <button type="button" onClick={openConsult} className={`${styles} ${className}`}>
-      <ChatGlyph />
+    <button type="button" onClick={() => openConsult()} className={`${styles} ${sizing} ${className}`}>
+      <ChatGlyph className={size === "lg" ? "h-[18px] w-[18px]" : "h-4 w-4"} />
       {label}
     </button>
   );
 };
-
-export const ChatGlyph: React.FC<{ className?: string }> = ({ className = "h-4 w-4" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M20.5 11.6c0 4.2-3.8 7.6-8.5 7.6-.9 0-1.8-.1-2.6-.4L5 20.5l1.1-3.3C4.8 15.9 3.5 13.9 3.5 11.6c0-4.2 3.8-7.6 8.5-7.6s8.5 3.4 8.5 7.6Z"
-      stroke="currentColor"
-      strokeWidth="1.3"
-      strokeLinejoin="round"
-    />
-    <circle cx="8.8" cy="11.6" r="0.9" fill="currentColor" />
-    <circle cx="12" cy="11.6" r="0.9" fill="currentColor" />
-    <circle cx="15.2" cy="11.6" r="0.9" fill="currentColor" />
-  </svg>
-);
 
 /* ─────────── 내부 페이지 히어로 ─────────── */
 export const PageHero: React.FC<{
@@ -81,18 +84,24 @@ export const PageHero: React.FC<{
   lead?: React.ReactNode;
   crumbs?: { label: string; to?: string }[];
 }> = ({ eyebrow, title, lead, crumbs }) => (
-  <section className="border-b border-line bg-ivory-light">
-    <div className="wrap pb-14 pt-10 md:pb-20 md:pt-16">
+  <section className="relative overflow-hidden border-b border-line bg-white">
+    <div aria-hidden="true" className="grid-bg pointer-events-none absolute inset-0 opacity-60" />
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute -right-32 -top-40 h-[460px] w-[460px] rounded-full opacity-70"
+      style={{ background: "radial-gradient(circle, rgba(56,189,248,0.18) 0%, rgba(255,255,255,0) 68%)" }}
+    />
+    <div className="wrap relative pb-14 pt-10 md:pb-20 md:pt-16">
       {crumbs && (
         <nav aria-label="현재 위치" className="mb-10 flex flex-wrap items-center gap-2 text-[12px] text-ink-muted">
-          <Link to="/" className="hover:text-forest">
+          <Link to="/" className="hover:text-azure">
             홈
           </Link>
           {crumbs.map((c) => (
             <span key={c.label} className="flex items-center gap-2">
-              <span className="text-line">/</span>
+              <span className="text-steel">/</span>
               {c.to ? (
-                <Link to={c.to} className="hover:text-forest">
+                <Link to={c.to} className="hover:text-azure">
                   {c.label}
                 </Link>
               ) : (
@@ -125,20 +134,20 @@ export const Accordion: React.FC<{
               type="button"
               onClick={() => setOpen(isOpen ? -1 : i)}
               aria-expanded={isOpen}
-              className="flex w-full items-start justify-between gap-6 py-6 text-left transition-colors hover:text-forest"
+              className="flex w-full items-start justify-between gap-6 py-6 text-left transition-colors hover:text-azure"
             >
               <span className="flex gap-4">
-                <span className="mt-1 font-display text-xs text-brass">Q</span>
-                <span className="font-display text-[1.02rem] leading-relaxed text-ink md:text-[1.1rem]">
+                <span className="num mt-1 text-[11px] font-semibold text-azure">Q</span>
+                <span className="text-[1rem] font-semibold leading-relaxed text-ink md:text-[1.06rem]">
                   {item.q}
                 </span>
               </span>
               <span
                 aria-hidden="true"
-                className={`mt-1 shrink-0 text-brass transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                className={`mt-1 shrink-0 text-azure transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.2" />
+                  <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.4" />
                 </svg>
               </span>
             </button>
@@ -148,9 +157,7 @@ export const Accordion: React.FC<{
               }`}
             >
               <div className="overflow-hidden">
-                <div className="pb-7 pl-8 pr-2 text-[0.95rem] leading-[1.9] text-ink-soft md:pl-9">
-                  {item.a}
-                </div>
+                <div className="pb-7 pl-8 pr-2 text-[0.94rem] leading-[1.9] text-ink-soft md:pl-9">{item.a}</div>
               </div>
             </div>
           </div>
@@ -166,37 +173,38 @@ export const CTABand: React.FC<{
   title?: React.ReactNode;
   body?: string;
 }> = ({
-  eyebrow = "Consultation",
+  eyebrow = "Channel talk",
   title = (
     <>
-      어떤 티켓인지, 몇 장인지
-      <br className="hidden sm:block" /> 알려주시면 나머지는 저희가 확인합니다.
+      성함과 연락처만 남기면
+      <br className="hidden sm:block" /> 바로 상담창으로 연결됩니다.
     </>
   ),
-  body = "채널톡으로 문의를 남겨주시면 담당자가 조건과 가능 여부를 확인해 안내드립니다. 상담은 무료입니다.",
+  body = "확인할 내용을 정리해 남겨주시면 담당자가 조건과 가능 여부를 확인해 안내드립니다. 상담은 무료입니다.",
 }) => (
-  <section className="relative overflow-hidden bg-forest-deep">
+  <section className="relative overflow-hidden bg-night">
+    <div aria-hidden="true" className="grid-bg-dark pointer-events-none absolute inset-0 opacity-70" />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full opacity-40"
-      style={{ background: "radial-gradient(circle, rgba(217,190,138,0.28) 0%, rgba(11,35,30,0) 68%)" }}
+      className="pointer-events-none absolute -right-24 -top-32 h-[460px] w-[460px] rounded-full opacity-50"
+      style={{ background: "radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(11,18,32,0) 68%)" }}
     />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brass/50 to-transparent"
+      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky/60 to-transparent"
     />
     <div className="wrap relative py-20 md:py-28">
       <div className="max-w-3xl">
-        <p className="eyebrow text-brass-light">{eyebrow}</p>
-        <h2 className="display-section mt-5 text-ivory">{title}</h2>
-        <p className="mt-6 max-w-xl text-[0.95rem] leading-[1.9] text-ivory/65">{body}</p>
+        <p className="eyebrow text-sky-light">{eyebrow}</p>
+        <h2 className="display-section mt-5 text-white">{title}</h2>
+        <p className="mt-6 max-w-xl text-[0.95rem] leading-[1.9] text-white/60">{body}</p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <ConsultButton variant="light" label="채널톡 1:1 상담 시작" />
-          <a href={site.phoneHref} className="btn-ghost-light">
+          <ConsultButton variant="light" size="lg" label="채널톡 1:1 상담 시작" />
+          <a href={site.phoneHref} className="btn-ghost-light min-h-[56px] px-8 text-[15px]">
             전화 {site.phone}
           </a>
         </div>
-        <p className="mt-6 text-xs tracking-wide text-ivory/40">
+        <p className="mt-6 text-xs tracking-wide text-white/40">
           {site.hoursNote} · {site.hours}
         </p>
       </div>

@@ -16,39 +16,47 @@ module.exports = {
           "sans-serif",
         ],
         display: [
-          "Noto Serif KR",
-          "Nanum Myeongjo",
-          "Batang",
+          "Pretendard Variable",
+          "Pretendard",
+          "-apple-system",
+          "BlinkMacSystemFont",
           "Apple SD Gothic Neo",
-          "serif",
+          "Noto Sans KR",
+          "sans-serif",
         ],
       },
       colors: {
         ink: {
-          DEFAULT: "#14181B",
-          soft: "#4A5257",
-          muted: "#7C858A",
+          DEFAULT: "#0B1220",
+          soft: "#475569",
+          muted: "#64748B",
         },
-        forest: {
-          DEFAULT: "#14352D",
-          deep: "#0B231E",
-          soft: "#2C5449",
+        night: {
+          DEFAULT: "#0B1220",
+          deep: "#060A12",
+          soft: "#16203A",
         },
-        sage: "#8CA294",
-        ivory: {
-          DEFAULT: "#F7F4ED",
-          light: "#FCFAF5",
-          deep: "#EFEAE0",
+        frost: {
+          DEFAULT: "#F8FAFC",
+          light: "#FFFFFF",
+          deep: "#F1F5F9",
         },
-        brass: {
-          DEFAULT: "#A9814F",
-          light: "#D9BE8A",
-          deep: "#8A6739",
+        azure: {
+          DEFAULT: "#2563EB",
+          light: "#60A5FA",
+          deep: "#1D4ED8",
+          soft: "#DBEAFE",
         },
-        line: "#E3DDD1",
+        sky: {
+          DEFAULT: "#38BDF8",
+          light: "#7DD3FC",
+          deep: "#0EA5E9",
+        },
+        steel: "#CBD5E1",
+        line: "#E2E8F0",
       },
       letterSpacing: {
-        widest2: "0.22em",
+        widest2: "0.24em",
       },
       maxWidth: {
         wrap: "1200px",
@@ -56,17 +64,21 @@ module.exports = {
       },
       keyframes: {
         rise: {
-          "0%": { opacity: "0", transform: "translateY(18px)" },
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         fade: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        sweep: {
+          "0%": { transform: "translateX(-120%)" },
+          "100%": { transform: "translateX(220%)" },
+        },
       },
       animation: {
-        rise: "rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
-        fade: "fade 1.2s ease both",
+        rise: "rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
+        fade: "fade 1.1s ease both",
       },
       transitionProperty: {
         border: "border-color",

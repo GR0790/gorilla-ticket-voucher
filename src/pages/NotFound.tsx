@@ -4,14 +4,14 @@ import SEO from "../components/SEO";
 import { ConsultButton } from "../components/ui";
 
 const NotFound: React.FC = () => (
-  <div className="bg-ivory">
+  <div className="bg-frost">
     <SEO
       title="페이지를 찾을 수 없습니다"
       description="요청하신 페이지를 찾을 수 없습니다. 고릴라티켓의 홈으로 돌아가 이용 절차와 상담 안내를 확인하세요."
     />
     <div className="wrap flex min-h-[70vh] flex-col items-center justify-center py-24 text-center">
       <p className="eyebrow">404 — Not found</p>
-      <p className="mt-8 font-display text-[clamp(3.5rem,12vw,7rem)] leading-none tracking-[-0.03em] text-forest/15">
+      <p className="mt-8 font-display text-[clamp(3.5rem,12vw,7rem)] leading-none tracking-[-0.03em] text-azure/15">
         404
       </p>
       <h1 className="display-section mt-4 text-ink">페이지를 찾을 수 없습니다</h1>
@@ -25,16 +25,16 @@ const NotFound: React.FC = () => (
         <ConsultButton />
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[12.5px] text-ink-muted">
-        <Link to="/how-to-use" className="hover:text-forest">
+        <Link to="/how-to-use" className="hover:text-azure">
           이용 절차
         </Link>
-        <Link to="/faq" className="hover:text-forest">
+        <Link to="/faq" className="hover:text-azure">
           자주 묻는 질문
         </Link>
-        <Link to="/blog" className="hover:text-forest">
+        <Link to="/blog" className="hover:text-azure">
           이야기
         </Link>
-        <Link to="/contact" className="hover:text-forest">
+        <Link to="/contact" className="hover:text-azure">
           상담
         </Link>
       </div>

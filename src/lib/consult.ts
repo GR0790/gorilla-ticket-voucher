@@ -1,11 +1,64 @@
 /**
- * 채널톡 1:1 상담 열기.
- * index.html의 window.openConsultChannel() 이 채널톡 부트와 메신저 표시를 담당합니다.
- * SDK 로드 전에 호출돼도 ChannelIO 스텁 큐에 쌓이므로 바로 이어집니다.
+ * 채널톡 1:1 상담 연결 + 고객 식별.
+ *
+ * 상담 버튼을 누르면 이름·휴대폰 번호를 한 번만 받아 저장하고,
+ * 그 값으로 채널톡 memberId / profile 을 만들어 부트합니다.
+ * (gorilla-ticket · gongryong-pay 와 동일한 키·포맷: grpay_name / grpay_phone,
+ *  memberId = 숫자만인 휴대폰 번호, profile = { name, mobileNumber })
  */
+export const CHANNEL_PLUGIN_KEY = "b065b9cc-1f27-4780-a688-7d3e28d21b67";
+const NAME_KEY = "grpay_name";
+const PHONE_KEY = "grpay_phone";
+
+export interface Customer {
+  name: string;
+  phone: string; // 숫자만 (예: 01012345678)
+}
+
+type Listener = (open: boolean) => void;
+let listener: Listener | null = null;
+
+export function getSavedCustomer(): Customer | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const name = window.localStorage.getItem(NAME_KEY);
+    const phone = window.localStorage.getItem(PHONE_KEY);
+    if (name && phone) return { name, phone };
+  } catch {
+    /* 저장소 접근이 막힌 환경에서는 매번 입력받습니다. */
+  }
+  return null;
+}
+
+export function saveCustomer(customer: Customer) {
+  try {
+    window.localStorage.setItem(NAME_KEY, customer.name);
+    window.localStorage.setItem(PHONE_KEY, customer.phone);
+  } catch {
+    /* 저장 실패는 상담 연결 자체를 막지 않습니다. */
+  }
+}
+
+export function onlyDigits(value: string) {
+  return value.replace(/[^0-9]/g, "");
+}
+
+/** 010-0000-0000 형태로 자동 하이픈 */
+export function formatPhone(value: string) {
+  const raw = onlyDigits(value).slice(0, 11);
+  if (raw.length < 4) return raw;
+  if (raw.length < 8) return `${raw.slice(0, 3)}-${raw.slice(3)}`;
+  if (raw.length < 11) return `${raw.slice(0, 3)}-${raw.slice(3, 7)}-${raw.slice(7)}`;
+  return `${raw.slice(0, 3)}-${raw.slice(3, 7)}-${raw.slice(7, 11)}`;
+}
+
+export function isValidPhone(value: string) {
+  return /^010-\d{4}-\d{4}$/.test(value);
+}
+
 declare global {
   interface Window {
-    openConsultChannel?: () => void;
+    bootChannelAndShow?: (name: string, phone: string) => void;
     ChannelIO?: {
       (command: string, payload?: unknown, callback?: (error: unknown, user: unknown) => void): void;
       q?: unknown[];
@@ -13,17 +66,69 @@ declare global {
   }
 }
 
-export function openConsult() {
+/** 이름·번호로 채널톡을 부트하고 메신저를 엽니다. */
+export function bootChannelAndShow(customer: Customer) {
   if (typeof window === "undefined") return;
-  if (typeof window.openConsultChannel === "function") {
-    window.openConsultChannel();
+  const phone = onlyDigits(customer.phone);
+  if (typeof window.bootChannelAndShow === "function") {
+    window.bootChannelAndShow(customer.name, phone);
     return;
   }
-  // 아직 index.html의 헬퍼가 없을 때를 대비한 최소 동작
   const ChannelIO = window.ChannelIO;
-  if (ChannelIO) {
-    ChannelIO("boot", { pluginKey: "b065b9cc-1f27-4780-a688-7d3e28d21b67", hideChannelButtonOnBoot: true }, () => {
+  if (!ChannelIO) return;
+  try {
+    ChannelIO("shutdown");
+  } catch {
+    /* 아직 부트되지 않은 경우 무시 */
+  }
+  ChannelIO(
+    "boot",
+    {
+      pluginKey: CHANNEL_PLUGIN_KEY,
+      hideChannelButtonOnBoot: true,
+      memberId: phone,
+      profile: { name: customer.name, mobileNumber: phone },
+    },
+    () => {
       ChannelIO("showMessenger");
+    },
+  );
+}
+
+export function subscribeConsultModal(fn: Listener) {
+  listener = fn;
+  return () => {
+    if (listener === fn) listener = null;
+  };
+}
+
+/**
+ * 상담 버튼의 단일 진입점.
+ * 저장된 고객 정보가 있으면 바로 연결, 없으면 이름·연락처 모달을 엽니다.
+ */
+export function openConsult() {
+  if (typeof window === "undefined") return;
+  const saved = getSavedCustomer();
+  if (saved) {
+    bootChannelAndShow(saved);
+    return;
+  }
+  if (listener) {
+    listener(true);
+    return;
+  }
+  // 모달이 아직 마운트되지 않은 예외 상황: 저장된 정보 없이 메신저만 엽니다.
+  if (typeof window.ChannelIO === "function") {
+    window.ChannelIO("boot", { pluginKey: CHANNEL_PLUGIN_KEY, hideChannelButtonOnBoot: true }, () => {
+      window.ChannelIO?.("showMessenger");
     });
   }
+}
+
+/** 모달에서 제출했을 때 */
+export function submitCustomer(input: { name: string; phone: string }) {
+  const customer: Customer = { name: input.name.trim(), phone: onlyDigits(input.phone) };
+  saveCustomer(customer);
+  listener?.(false);
+  bootChannelAndShow(customer);
 }

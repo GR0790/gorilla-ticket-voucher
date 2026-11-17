@@ -1,7 +1,9 @@
+import { services } from "./services";
+
 export const site = {
   name: "고릴라티켓",
   nameEn: "Gorilla Ticket",
-  tagline: "티켓 · 상품권 · 바우처 컨시어지",
+  tagline: "상품권 구매 · 매입 절차 안내",
   phone: "010-2138-0790",
   phoneHref: "tel:01021380790",
   hours: "24시간 연중무휴",
@@ -19,25 +21,13 @@ export interface NavItem {
 
 export const nav: NavItem[] = [
   {
-    label: "서비스",
-    to: "/services/ticket",
-    children: [
-      {
-        label: "티켓 컨시어지",
-        to: "/services/ticket",
-        desc: "공연·전시·스포츠 예매와 발권",
-      },
-      {
-        label: "상품권 · 바우처",
-        to: "/services/voucher",
-        desc: "선물용 상품권과 이용권 준비",
-      },
-      {
-        label: "기업 · 단체",
-        to: "/services/business",
-        desc: "임직원 선물, 단체 관람, 행사 응모권",
-      },
-    ],
+    label: "이용 안내",
+    to: "/services/gift-card",
+    children: services.map((s) => ({
+      label: s.nav,
+      to: s.slug,
+      desc: s.cardBody.split(".")[0],
+    })),
   },
   { label: "이용 절차", to: "/how-to-use" },
   { label: "이야기", to: "/blog" },

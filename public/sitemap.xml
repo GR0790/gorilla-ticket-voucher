@@ -7,19 +7,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/services/ticket</loc>
+    <loc>https://xn--299a64rxvbk71bjne.net/services/gift-card</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/services/voucher</loc>
+    <loc>https://xn--299a64rxvbk71bjne.net/services/micropayment</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/services/business</loc>
+    <loc>https://xn--299a64rxvbk71bjne.net/services/credit-card</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--299a64rxvbk71bjne.net/services/information-fee</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -62,43 +68,37 @@
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/1</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/2</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/3</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/4</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/5</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn--299a64rxvbk71bjne.net/blog/6</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://xn--299a64rxvbk71bjne.net/blog/7</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

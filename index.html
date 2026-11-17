@@ -17,7 +17,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#14352D" />
+    <meta name="theme-color" content="#0B1220" />
     <meta name="format-detection" content="telephone=yes" />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -26,25 +26,30 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://cdn.channel.io" />
     <link rel="preload" as="image" href="/gorilla-mascot.webp" />
 
-    <title>고릴라티켓 | 티켓·상품권·바우처 컨시어지</title>
+    <title>고릴라티켓 | 상품권 구매·매입 안내</title>
 
     <!-- 정적 SEO 메타태그 (JS 실행 전 크롤러용) -->
     <meta
       name="description"
-      content="공연·전시 티켓 예매부터 상품권과 바우처 준비, 기업·단체 의뢰까지. 고릴라티켓이 조건을 먼저 확인하고 채널톡 1:1 상담으로 안내합니다."
+      content="상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지. 확인 절차와 진행 조건을 채널톡 1:1 상담으로 안내합니다."
     />
     <meta
       name="keywords"
-      content="고릴라티켓,티켓 컨시어지,공연 예매 대행,전시 티켓,상품권,바우처,단체 관람,기업 선물,채널톡 상담"
+      content="고릴라티켓,상품권 매입,휴대폰 소액결제 상품권,신용카드 상품권 구매,정보이용료 게임재화,모바일 상품권,채널톡 상담"
     />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="naver-site-verification" content="dd762d73923fb18d2dac52a24ce3db0a8625e17b" />
@@ -54,10 +59,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="고릴라티켓" />
-    <meta property="og:title" content="고릴라티켓 | 티켓·상품권·바우처 컨시어지" />
+    <meta property="og:title" content="고릴라티켓 | 상품권 구매·매입 안내" />
     <meta
       property="og:description"
-      content="공연·전시 예매부터 상품권과 바우처 준비까지. 조건을 먼저 확인하고 안내하는 티켓 컨시어지입니다."
+      content="상품권 매입과 모바일 상품권 구매 절차를 확인해 안내합니다. 성함과 연락처를 남기면 채널톡 1:1 상담으로 바로 연결됩니다."
     />
     <meta property="og:image" content="https://xn--299a64rxvbk71bjne.net/gorilla-mascot.webp" />
     <meta property="og:image:width" content="1000" />
@@ -67,10 +72,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="고릴라티켓 | 티켓·상품권·바우처 컨시어지" />
+    <meta name="twitter:title" content="고릴라티켓 | 상품권 구매·매입 안내" />
     <meta
       name="twitter:description"
-      content="공연·전시 예매, 상품권과 바우처 준비를 채널톡 1:1 상담으로 안내합니다."
+      content="상품권 매입과 모바일 상품권 구매 절차를 확인해 안내합니다. 채널톡 1:1 상담으로 바로 연결됩니다."
     />
     <meta name="twitter:image" content="https://xn--299a64rxvbk71bjne.net/gorilla-mascot.webp" />
 
@@ -84,7 +89,7 @@
         "url": "https://xn--299a64rxvbk71bjne.net",
         "logo": "https://xn--299a64rxvbk71bjne.net/gorilla-mascot.webp",
         "image": "https://xn--299a64rxvbk71bjne.net/gorilla-mascot.webp",
-        "description": "공연·전시 티켓 예매, 상품권과 바우처 준비, 기업·단체 의뢰를 채널톡 1:1 상담으로 안내하는 티켓 컨시어지입니다.",
+        "description": "상품권 매입과 모바일 상품권 구매 절차를 확인해 안내하는 디지털 상품권 안내 사이트입니다.",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+82-10-2138-0790",
@@ -97,10 +102,10 @@
   <body>
     <div id="root"></div>
     <noscript>
-      <div style="max-width: 640px; margin: 80px auto; padding: 0 24px; font-family: sans-serif; color: #14181b">
+      <div style="max-width: 640px; margin: 80px auto; padding: 0 24px; font-family: sans-serif; color: #0b1220">
         <h1 style="font-size: 22px">고릴라티켓</h1>
-        <p style="line-height: 1.8; color: #4a5257">
-          공연·전시 티켓과 상품권·바우처 준비를 안내하는 티켓 컨시어지입니다.
+        <p style="line-height: 1.8; color: #475569">
+          상품권 매입과 모바일 상품권 구매 절차를 안내하는 사이트입니다.
           상담은 전화(010-2138-0790)로 문의해 주세요.
         </p>
       </div>
@@ -145,31 +150,34 @@
         }
       })();
 
-      /* 상담 버튼 → 채널톡 메신저 열기 (별도 정보 입력 없이 바로 상담) */
-      window.openConsultChannel = function () {
-        var opened = false;
-        function show() {
-          if (opened) return;
-          opened = true;
+      /* 고객 식별: 이름 + 휴대폰 번호로 memberId를 만들어 채널톡에 전달합니다.
+         gorilla-ticket / gongryong-pay 와 동일한 저장 키(grpay_name, grpay_phone)와
+         memberId(숫자만) · profile({name, mobileNumber}) 포맷을 사용합니다. */
+      window.bootChannelAndShow = function (name, phone) {
+        var digits = String(phone || "").replace(/[^0-9]/g, "");
+        if (!digits) {
           try {
             ChannelIO("showMessenger");
           } catch (e) {
             console.error(e);
           }
+          return;
         }
         try {
-          ChannelIO(
-            "boot",
-            { pluginKey: CHANNEL_PLUGIN_KEY, hideChannelButtonOnBoot: true },
-            function () {
-              show();
-            }
-          );
-        } catch (e) {
-          console.error(e);
-        }
-        /* SDK가 이미 부트된 경우 콜백이 오지 않을 수 있어 한 번 더 시도합니다. */
-        window.setTimeout(show, 700);
+          ChannelIO("shutdown");
+        } catch (e) {}
+        ChannelIO(
+          "boot",
+          {
+            pluginKey: CHANNEL_PLUGIN_KEY,
+            hideChannelButtonOnBoot: true,
+            memberId: digits,
+            profile: { name: name || undefined, mobileNumber: digits },
+          },
+          function () {
+            ChannelIO("showMessenger");
+          }
+        );
       };
     </script>
   </body>
