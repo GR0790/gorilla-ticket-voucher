@@ -1,31 +1,15 @@
 {
-  "name": "고릴라티켓 - 현금화 전문업체",
+  "name": "고릴라티켓 — 티켓·상품권 컨시어지",
   "short_name": "고릴라티켓",
-  "description": "소액결제, 정보이용료, 신용카드, 상품권 현금화 전문업체",
+  "description": "공연·전시 티켓 예매, 상품권과 바우처 준비를 안내하는 티켓 컨시어지",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#10b981",
+  "background_color": "#F7F4ED",
+  "theme_color": "#14352D",
   "icons": [
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon.ico",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.ico", "sizes": "512x512", "type": "image/png" }
   ]
 }

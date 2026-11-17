@@ -6,490 +6,57 @@ import path from 'path';
 const dist = path.resolve(process.cwd(), 'dist');
 const indexHtml = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8');
 const SITE = 'https://xn--299a64rxvbk71bjne.net';
+const BRAND = '고릴라티켓';
 
 const ROUTE_META = {
-  "/services/micropayment": {
-    "title": "소액결제 현금화란? 개념과 한도 확인 방법 | 고릴라티켓 이용가이드",
-    "description": "소액결제 현금화가 무엇인지부터 SKT·KT·LGU+ 한도 확인 방법, 일반적인 이용 절차, 안전하게 이용하기 위한 체크포인트까지 정리한 이용가이드입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "소액결제 현금화",
-        "/services/micropayment/"
-      ]
-    ]
+  '/services/ticket': {
+    title: '티켓 컨시어지 — 공연·전시 예매와 발권 | 고릴라티켓',
+    description: '공연·전시·스포츠 티켓의 회차와 좌석을 확인하고, 예매부터 모바일·실물 발권, 취소·변경 안내까지 함께합니다.',
+    crumbs: [['고릴라티켓', '/'], ['티켓 컨시어지', '/services/ticket/']],
   },
-  "/services/information-fee": {
-    "title": "정보이용료 현금화란? 소액결제와 차이 정리 | 고릴라티켓 이용가이드",
-    "description": "정보이용료·콘텐츠이용료 현금화가 무엇인지, 소액결제와 어떻게 다른지, 한도 확인 방법과 이용 시 유의사항까지 정리한 이용가이드입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보이용료 현금화",
-        "/services/information-fee/"
-      ]
-    ]
+  '/services/voucher': {
+    title: '상품권·바우처 — 선물과 사용처 확인 | 고릴라티켓',
+    description: '문화·도서 상품권, 기프트카드, 체험 이용권까지. 유효기간과 사용처를 확인해 용도에 맞는 상품권을 준비합니다.',
+    crumbs: [['고릴라티켓', '/'], ['상품권 · 바우처', '/services/voucher/']],
   },
-  "/services/credit-card": {
-    "title": "신용카드 현금화란? 카드깡과의 차이 정리 | 고릴라티켓 이용가이드",
-    "description": "신용카드 현금화가 무엇인지, 불법 카드깡과 어떻게 다른지, 이용 전 반드시 확인해야 할 사항을 정리한 정보 가이드입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "신용카드 현금화",
-        "/services/credit-card/"
-      ]
-    ]
+  '/services/business': {
+    title: '기업·단체 — 임직원 선물, 단체 관람, 행사 응모권 | 고릴라티켓',
+    description: '임직원 선물, 단체 관람, 행사 응모권, 워크숍 체험권까지. 수량과 일정이 정해진 준비를 단계적으로 진행합니다.',
+    crumbs: [['고릴라티켓', '/'], ['기업 · 단체', '/services/business/']],
   },
-  "/services/gift-card": {
-    "title": "상품권 현금화란? 종류별 매입 안내 및 확인사항 | 고릴라티켓 이용가이드",
-    "description": "문화상품권, 해피머니, 구글 기프트카드 등 상품권 현금화가 무엇인지, 매입 가능한 상품권 종류와 이용 전 확인해야 할 사항을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "상품권 현금화",
-        "/services/gift-card/"
-      ]
-    ]
+  '/how-to-use': {
+    title: '이용 절차 — 상담부터 수령까지 | 고릴라티켓',
+    description: '채널톡 상담 접수, 조건 확인, 진행, 전달, 수령 안내까지 다섯 단계로 정리한 이용 절차입니다.',
+    crumbs: [['고릴라티켓', '/'], ['이용 절차', '/how-to-use/']],
   },
-  "/how-to-use": {
-    "title": "처음 이용하기 전 준비사항 체크리스트 | 고릴라티켓 이용가이드",
-    "description": "현금화 서비스를 처음 이용하기 전 미리 확인해야 할 정보, 업체와 상담 시 점검할 사항, 거래 기록을 남기는 방법과 사후 확인 절차를 정리한 준비 가이드입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "이용 전 준비사항",
-        "/how-to-use/"
-      ]
-    ]
+  '/faq': {
+    title: '자주 묻는 질문 | 고릴라티켓',
+    description: '상담 비용, 티켓 수령 방법, 상품권 유효기간, 개인정보 처리까지 자주 묻는 질문을 주제별로 정리했습니다.',
+    crumbs: [['고릴라티켓', '/'], ['자주 묻는 질문', '/faq/']],
   },
-  "/reviews": {
-    "title": "후기, 어떻게 걸러서 봐야 할까? 가짜 후기 구별법 | 고릴라티켓 이용가이드",
-    "description": "현금화 업체를 알아볼 때 후기를 어떻게 검증해야 하는지, 조작된 후기의 5가지 특징과 신뢰할 수 있는 후기를 찾는 방법을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "후기 검증하는 법",
-        "/reviews/"
-      ]
-    ]
+  '/blog': {
+    title: '이야기 — 티켓·상품권을 고르는 기준 | 고릴라티켓',
+    description: '좌석 등급 읽는 법, 상품권 유효기간, 단체 관람 준비, 전시 시간 지정제까지. 준비 과정에서 실제로 부딪히는 문제를 정리했습니다.',
+    crumbs: [['고릴라티켓', '/'], ['이야기', '/blog/']],
   },
-  "/faq": {
-    "title": "현금화 서비스 자주묻는질문 총정리 | 고릴라티켓 이용가이드",
-    "description": "소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에 대해 자주 묻는 질문과 답변을 정리한 이용가이드 FAQ입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "자주묻는질문",
-        "/faq/"
-      ]
-    ]
+  '/contact': {
+    title: '상담 — 채널톡 1:1 문의 | 고릴라티켓',
+    description: '고릴라티켓 상담 안내. 채널톡 1:1 상담은 24시간 접수되며, 티켓·상품권·기업 단체 문의를 담당자가 확인해 안내합니다.',
+    crumbs: [['고릴라티켓', '/'], ['상담', '/contact/']],
   },
-  "/safety": {
-    "title": "개인정보·금융정보 보호 수칙 총정리 | 고릴라티켓 이용가이드",
-    "description": "현금화 서비스 이용 중 절대 알려주면 안 되는 정보, 피싱·스미싱 구별법, 정식 사이트 확인 방법 등 개인정보·금융정보를 지키는 안전 수칙을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "개인정보 보호 수칙",
-        "/safety/"
-      ]
-    ]
+  '/privacy': {
+    title: '개인정보처리방침 | 고릴라티켓',
+    description: '고릴라티켓 개인정보처리방침. 상담 과정에서 확인하는 정보의 항목과 목적, 보유 기간, 이용자의 권리를 안내합니다.',
+    crumbs: [['고릴라티켓', '/'], ['개인정보처리방침', '/privacy/']],
   },
-  "/blog": {
-    "title": "현금화 안전가이드 블로그 | 고릴라티켓 이용가이드",
-    "description": "안전한 현금화 업체 구별법, 신용카드현금화와 카드깡의 법적 차이, 사기 피해 대처법, 통신사 정책 비교 등 소비자 보호 중심의 이용가이드 블로그입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ]
-    ]
+  '/terms': {
+    title: '이용약관 | 고릴라티켓',
+    description: '고릴라티켓 이용약관. 상담 서비스의 성격과 이용 조건, 이용자의 의무, 책임의 범위를 안내합니다.',
+    crumbs: [['고릴라티켓', '/'], ['이용약관', '/terms/']],
   },
-  "/blog/1": {
-    "title": "안전한 현금화 업체 구별법 체크리스트 | 고릴라티켓 이용가이드",
-    "description": "소액결제·정보이용료·신용카드·상품권 현금화를 이용하기 전, 안전한 업체와 위험한 업체를 구별하는 8가지 체크포인트를 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "안전한 현금화 업체 구별법 체크리스트",
-        "/blog/1/"
-      ]
-    ]
-  },
-  "/blog/2": {
-    "title": "신용카드현금화와 카드깡, 법적으로 무엇이 다를까? | 고릴라티켓 이용가이드",
-    "description": "신용카드현금화라는 용어가 불법 카드깡과 자주 혼동됩니다. 여신전문금융업법을 기준으로 두 개념의 법적 차이를 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "신용카드현금화와 카드깡, 법적으로 무엇이 다를까?",
-        "/blog/2/"
-      ]
-    ]
-  },
-  "/blog/3": {
-    "title": "현금화 분쟁·사기 피해 대처법 총정리 | 고릴라티켓 이용가이드",
-    "description": "현금화 이용 중 업체와 분쟁이 생겼거나 사기 피해를 당했을 때 증거를 확보하고 신고하는 절차를 단계별로 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "현금화 분쟁·사기 피해 대처법 총정리",
-        "/blog/3/"
-      ]
-    ]
-  },
-  "/blog/4": {
-    "title": "SKT·KT·LGU+ 통신사별 소액결제 정책 완벽 비교 | 고릴라티켓 이용가이드",
-    "description": "SKT·KT·LGU+ 3대 통신사의 소액결제 한도 정책, 미성년자 이용 제한, 연체 시 처리 방식 등 정책 차이를 비교했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "SKT·KT·LGU+ 통신사별 소액결제 정책 완벽 비교",
-        "/blog/4/"
-      ]
-    ]
-  },
-  "/blog/5": {
-    "title": "정보이용료 연체·미납 시 발생하는 일과 해결 방법 | 고릴라티켓 이용가이드",
-    "description": "정보이용료(콘텐츠이용료)를 연체하면 어떤 일이 생기는지, 신용점수에 미치는 영향과 미납금을 해결하는 방법을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "정보이용료 연체·미납 시 발생하는 일과 해결 방법",
-        "/blog/5/"
-      ]
-    ]
-  },
-  "/blog/6": {
-    "title": "상품권 매입 시세는 어떻게 정해질까? | 고릴라티켓 이용가이드",
-    "description": "문화상품권·해피머니 등 상품권 매입률이 업체마다, 시기마다 다른 이유와 매입 시세를 이해하는 데 필요한 기본 개념을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "상품권 매입 시세는 어떻게 정해질까?",
-        "/blog/6/"
-      ]
-    ]
-  },
-  "/blog/7": {
-    "title": "소액결제 오류코드별 원인과 해결법 | 고릴라티켓 이용가이드",
-    "description": "소액결제 시도 시 자주 뜨는 한도초과·본인인증 실패·명의도용 차단 오류의 원인과 해결 방법을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "소액결제 오류코드별 원인과 해결법",
-        "/blog/7/"
-      ]
-    ]
-  },
-  "/blog/8": {
-    "title": "SKT·KT·LGU+ 한도 초기화 주기 비교 | 고릴라티켓 이용가이드",
-    "description": "통신 3사의 소액결제 한도 초기화 방식과 잔여 한도를 확인하는 방법을 비교 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "SKT·KT·LGU+ 한도 초기화 주기 비교",
-        "/blog/8/"
-      ]
-    ]
-  },
-  "/blog/9": {
-    "title": "현금화 수수료를 연이자율(APR)로 환산하는 방법 | 고릴라티켓 이용가이드",
-    "description": "짧은 기간에 부과되는 현금화 수수료를 연이자율(APR)로 환산해 법정 상한과 비교하는 계산법을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "현금화 수수료를 연이자율(APR)로 환산하는 방법",
-        "/blog/9/"
-      ]
-    ]
-  },
-  "/blog/10": {
-    "title": "명의도용·미성년자 무단결제 피해 대응 체크리스트 | 고릴라티켓 이용가이드",
-    "description": "본인 모르게 발생한 소액결제, 미성년 자녀의 무단결제를 발견했을 때 따라야 할 대응 절차 4단계를 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "명의도용·미성년자 무단결제 피해 대응 체크리스트",
-        "/blog/10/"
-      ]
-    ]
-  },
-  "/blog/11": {
-    "title": "소액결제 한도 상향·하향 신청 방법과 심사 기준 | 고릴라티켓 이용가이드",
-    "description": "소액결제 한도를 올리거나 낮추고 싶을 때의 공식 신청 절차와 통신사 심사 기준을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "소액결제 한도 상향·하향 신청 방법과 심사 기준",
-        "/blog/11/"
-      ]
-    ]
-  },
-  "/blog/12": {
-    "title": "통신사 소액결제 정책 변화와 대비법 | 고릴라티켓 이용가이드",
-    "description": "소액결제 정책이 왜, 어떤 방향으로 바뀌는지와 정책 변화에 미리 대비하는 방법을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "통신사 소액결제 정책 변화와 대비법",
-        "/blog/12/"
-      ]
-    ]
-  },
-  "/blog/13": {
-    "title": "스미싱·피싱으로부터 계정을 지키는 보안 수칙 | 고릴라티켓 이용가이드",
-    "description": "소액결제 계정을 노리는 스미싱·피싱·보이스피싱 수법과 이를 예방하는 디지털 보안 수칙을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "스미싱·피싱으로부터 계정을 지키는 보안 수칙",
-        "/blog/13/"
-      ]
-    ]
-  },
-  "/blog/14": {
-    "title": "가족·자녀 소액결제 한도 관리하기 | 고릴라티켓 이용가이드",
-    "description": "자녀 명의 회선의 소액결제 한도를 관리하는 방법과 가족 단위 결제 관리 옵션을 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "가족·자녀 소액결제 한도 관리하기",
-        "/blog/14/"
-      ]
-    ]
-  },
-  "/blog/15": {
-    "title": "소액결제 취소·환불이 막혔을 때 확인해야 할 5가지 | 고릴라티켓 이용가이드",
-    "description": "소액결제 취소·환불이 처리되지 않을 때 확인해야 할 5가지 이유와 대응 순서를 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "소액결제 취소·환불이 막혔을 때 확인해야 할 5가지",
-        "/blog/15/"
-      ]
-    ]
-  },
-  "/blog/16": {
-    "title": "수수료 고지 확인 체크리스트 | 고릴라티켓 이용가이드",
-    "description": "현금화 업체의 수수료 고지가 투명하게 이루어지고 있는지 확인하는 방법과 계약 조건 체크리스트를 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "수수료 고지 확인 체크리스트",
-        "/blog/16/"
-      ]
-    ]
-  },
-  "/blog/17": {
-    "title": "한국소비자원 분쟁조정 신청 방법 A to Z | 고릴라티켓 이용가이드",
-    "description": "업체와의 분쟁이 해결되지 않을 때 한국소비자원 분쟁조정을 신청하는 절차를 단계별로 정리했습니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "정보 블로그",
-        "/blog/"
-      ],
-      [
-        "한국소비자원 분쟁조정 신청 방법 A to Z",
-        "/blog/17/"
-      ]
-    ]
-  },
-  "/contact": {
-    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/contact/",
-    "title": "상담센터 - 24시간 1:1 문의 | 고릴라티켓",
-    "description": "고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 빠른 입금 안내, 미납·정책 상담 안내.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "상담센터",
-        "/contact/"
-      ]
-    ]
-  },
-  "/privacy": {
-    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/privacy/",
-    "title": "개인정보처리방침 | 고릴라티켓",
-    "description": "고릴라티켓 개인정보처리방침. 고객님의 개인정보 수집·이용·보관·파기에 관한 안내입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "개인정보처리방침",
-        "/privacy/"
-      ]
-    ]
-  },
-  "/terms": {
-    "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/terms/",
-    "title": "이용약관 | 고릴라티켓",
-    "description": "고릴라티켓 소액결제현금화 서비스 이용약관 안내입니다.",
-    "crumbs": [
-      [
-        "고릴라티켓",
-        "/"
-      ],
-      [
-        "이용약관",
-        "/terms/"
-      ]
-    ]
-  }
 };
 
-// blogPosts.ts에 있는 모든 글의 프리렌더 라우트를 자동으로 채웁니다.
-// (글을 추가할 때 ROUTE_META를 손으로 늘리지 않아도 마지막 글까지 404가 나지 않습니다.)
-const BLOG_BRAND = '고릴라티켓';
+// blogPosts.ts의 모든 글의 프리렌더 라우트를 자동으로 채웁니다.
 const postsFile = path.resolve(process.cwd(), 'src/data/blogPosts.ts');
 if (fs.existsSync(postsFile)) {
   const postsSource = fs.readFileSync(postsFile, 'utf-8');
@@ -502,15 +69,11 @@ if (fs.existsSync(postsFile)) {
     if (ROUTE_META[route]) continue;
     const titleMatch = block.match(/title:\s*"((?:[^"\\]|\\.)*)"/);
     const descMatch = block.match(/summary:\s*"((?:[^"\\]|\\.)*)"/) || block.match(/excerpt:\s*"((?:[^"\\]|\\.)*)"/);
-    const postTitle = titleMatch ? titleMatch[1] : '정보 블로그';
+    const postTitle = titleMatch ? titleMatch[1] : '이야기';
     ROUTE_META[route] = {
-      "title": postTitle + ' | ' + BLOG_BRAND,
-      "description": descMatch ? descMatch[1].slice(0, 150) : '',
-      "crumbs": [
-        [BLOG_BRAND, '/'],
-        ['정보 블로그', '/blog/'],
-        [postTitle, route + '/']
-      ]
+      title: postTitle + ' | ' + BRAND,
+      description: descMatch ? descMatch[1].slice(0, 150) : '',
+      crumbs: [[BRAND, '/'], ['이야기', '/blog/'], [postTitle, route + '/']],
     };
     added++;
   }
@@ -532,16 +95,17 @@ function breadcrumbLd(crumbs) {
 function inject(html, route, m) {
   const title = esc(m.title);
   const desc = esc(m.description);
-  const url = m.canonicalOverride || (SITE + route + '/');
+  const url = SITE + route + '/';
   let out = html;
   out = out.replace(/<title>[\s\S]*?<\/title>/, '<title>' + title + '</title>');
-  out = out.replace(/(<meta name="description" content=")[^"]*(")/, '$1' + desc + '$2');
-  out = out.replace(/(<link rel="canonical" href=")[^"]*(")/, '$1' + url + '$2');
-  out = out.replace(/(<meta property="og:title" content=")[^"]*(")/, '$1' + title + '$2');
-  out = out.replace(/(<meta property="og:description" content=")[^"]*(")/, '$1' + desc + '$2');
-  out = out.replace(/(<meta property="og:url" content=")[^"]*(")/, '$1' + url + '$2');
-  out = out.replace(/(<meta name="twitter:title" content=")[^"]*(")/, '$1' + title + '$2');
-  out = out.replace(/(<meta name="twitter:description" content=")[^"]*(")/, '$1' + desc + '$2');
+  // 메타 태그는 여러 줄로 쓰일 수 있어 속성 사이 공백을 허용합니다.
+  out = out.replace(/(<meta\s+name="description"\s+content=")[^"]*(")/, '$1' + desc + '$2');
+  out = out.replace(/(<link\s+rel="canonical"\s+href=")[^"]*(")/, '$1' + url + '$2');
+  out = out.replace(/(<meta\s+property="og:title"\s+content=")[^"]*(")/, '$1' + title + '$2');
+  out = out.replace(/(<meta\s+property="og:description"\s+content=")[^"]*(")/, '$1' + desc + '$2');
+  out = out.replace(/(<meta\s+property="og:url"\s+content=")[^"]*(")/, '$1' + url + '$2');
+  out = out.replace(/(<meta\s+name="twitter:title"\s+content=")[^"]*(")/, '$1' + title + '$2');
+  out = out.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*(")/, '$1' + desc + '$2');
   const bc = '<script type="application/ld+json">' + breadcrumbLd(m.crumbs) + '<\/script>';
   out = out.replace('</head>', bc + '</head>');
   return out;

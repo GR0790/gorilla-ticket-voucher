@@ -1,508 +1,340 @@
 import type React from "react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { nav, site } from "../data/site";
+import { openConsult } from "../lib/consult";
+import { ChatGlyph } from "./ui";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+const Wordmark: React.FC<{ light?: boolean }> = ({ light = false }) => (
+  <Link to="/" aria-label="고릴라티켓 홈으로" className="group flex items-center gap-3">
+    <span
+      className={`flex h-9 w-9 items-center justify-center rounded-full border transition-colors ${
+        light ? "border-ivory/30 text-ivory" : "border-forest/25 text-forest"
+      }`}
+      aria-hidden="true"
+    >
+      <svg width="17" height="17" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M2.6 6.4c0-1 .8-1.8 1.8-1.8h11.2c1 0 1.8.8 1.8 1.8v1.5a2.3 2.3 0 0 0 0 4.2v1.5c0 1-.8 1.8-1.8 1.8H4.4c-1 0-1.8-.8-1.8-1.8v-1.5a2.3 2.3 0 0 0 0-4.2V6.4Z"
+          stroke="currentColor"
+          strokeWidth="1.1"
+          strokeLinejoin="round"
+        />
+        <path d="M12.4 6.6v6.8" stroke="currentColor" strokeWidth="1.1" strokeDasharray="1.5 2" />
+      </svg>
+    </span>
+    <span className="leading-none">
+      <span
+        className={`block font-display text-[1.32rem] tracking-[-0.01em] ${
+          light ? "text-ivory" : "text-ink"
+        }`}
+      >
+        고릴라티켓
+      </span>
+      <span
+        className={`mt-1 block text-[9px] uppercase tracking-[0.26em] ${
+          light ? "text-ivory/45" : "text-ink-muted"
+        }`}
+      >
+        Gorilla Ticket
+      </span>
+    </span>
+  </Link>
+);
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(true); // 툴팁 표시 여부
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showTop, setShowTop] = useState(false);
   const location = useLocation();
 
-  // 페이지가 이동할 때마다 모바일 메뉴를 닫습니다.
   useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location]);
+    setMenuOpen(false);
+  }, [location.pathname]);
 
-  // 커스텀 상담 함수 실행 (Start Consult)
-  // 이 함수가 실행되면 index.html에 있는 로직(팝업 or 바로연결)이 작동합니다.
-  const handleConsultClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    (window as any).startConsult();
-  };
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12);
+      setShowTop(window.scrollY > 700);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const isActive = (to: string) =>
+    to === "/" ? location.pathname === "/" : location.pathname.startsWith(to.split("/").slice(0, 2).join("/"));
 
   return (
-    <div className="min-h-screen bg-white relative">
-      {/* [.net 전용] 이용가이드 허브 안내 배너 - .com과 구분되는 상단 고지 영역 */}
-      <div className="bg-emerald-800 text-emerald-50 text-xs md:text-sm">
-        <div className="container mx-auto px-4 py-2 flex flex-wrap items-center justify-center gap-1 text-center">
-          <span>📚 이 사이트는 정보 제공용 이용가이드입니다. 실제 서비스 신청은</span>
-          <a
-            href="https://xn--299a64rxvbk71bjne.com"
-            target="_blank"
-            rel="noopener"
-            className="font-bold underline hover:text-white"
-          >
-            고릴라티켓.com
-          </a>
-          <span>에서 진행해 주세요.</span>
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col bg-ivory">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-forest focus:px-4 focus:py-2 focus:text-sm focus:text-ivory"
+      >
+        본문으로 바로가기
+      </a>
 
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
-        <nav className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <Link
-                to="/"
-                className="text-2xl font-bold text-emerald-700 hover:text-emerald-800 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
-                aria-label="고릴라티켓 이용가이드 홈페이지로 이동"
-              >
-                고릴라티켓
-              </Link>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link
-                to="/"
-                className="text-gray-700 hover:text-sky-600 transition-colors"
-              >
-                홈
-              </Link>
-              
-              {/* 서비스 소개 메뉴 */}
-              <div className="relative group">
-                <button
-                  className="text-gray-700 hover:text-sky-600 flex items-center transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="서비스 가이드 메뉴 열기"
+      <header
+        className={`sticky top-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? "border-b border-line/90 bg-ivory/92 backdrop-blur-md"
+            : "border-b border-transparent bg-ivory"
+        }`}
+      >
+        <div className="wrap flex h-[74px] items-center justify-between">
+          <Wordmark />
+
+          <nav aria-label="주 메뉴" className="hidden items-center gap-9 lg:flex">
+            {nav.map((item) => (
+              <div key={item.label} className="group relative">
+                <Link
+                  to={item.to}
+                  className={`relative py-2 text-[13.5px] tracking-wide transition-colors ${
+                    isActive(item.to) ? "text-forest" : "text-ink-soft hover:text-forest"
+                  }`}
                 >
-                  서비스 가이드
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                  {item.label}
+                  <span
                     aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10"
-                  role="menu"
-                  aria-label="서비스 가이드 하위 메뉴"
-                >
-                  <Link
-                    to="/services/micropayment"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
-                    role="menuitem"
-                  >
-                    소액결제 현금화
-                  </Link>
-                  <Link
-                    to="/services/information-fee"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
-                    role="menuitem"
-                  >
-                    정보이용료 현금화
-                  </Link>
-                  <Link
-                    to="/services/credit-card"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
-                    role="menuitem"
-                  >
-                    신용카드 현금화
-                  </Link>
-                  <Link
-                    to="/services/gift-card"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
-                    role="menuitem"
-                  >
-                    상품권 현금화
-                  </Link>
-                </div>
+                    className={`absolute -bottom-0.5 left-0 h-px bg-brass transition-all duration-300 ${
+                      isActive(item.to) ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+                {item.children && (
+                  <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[300px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                    <div className="overflow-hidden rounded-xl border border-line bg-ivory-light shadow-[0_28px_60px_-40px_rgba(20,24,27,0.55)]">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.to}
+                          to={child.to}
+                          className="block border-b border-line/70 px-5 py-4 transition-colors last:border-b-0 hover:bg-ivory"
+                        >
+                          <span className="block text-[13.5px] font-medium text-ink">{child.label}</span>
+                          <span className="mt-1 block text-[11.5px] leading-relaxed text-ink-muted">
+                            {child.desc}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
+            ))}
+          </nav>
 
-              <Link
-                to="/how-to-use"
-                className="text-gray-700 hover:text-sky-600 transition-colors"
-              >
-                이용 전 체크리스트
-              </Link>
-              
-              {/* 고객 지원 메뉴 */}
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-sky-600 flex items-center transition-colors">
-                  고객 지원
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                  <Link
-                    to="/reviews"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    후기 검증법
-                  </Link>
-                  <Link
-                    to="/faq"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    자주묻는질문(FAQ)
-                  </Link>
-                  <Link
-                    to="/safety"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    개인정보 보호수칙
-                  </Link>
-                  <Link
-                    to="/blog"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    정보 블로그
-                  </Link>
-                </div>
-              </div>
-
-              {/* [.net 전용] 실제 서비스 신청은 .com으로 아웃바운드 */}
-              <a
-                href="https://xn--299a64rxvbk71bjne.com"
-                target="_blank"
-                rel="noopener"
-                className="bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors"
-              >
-                실제 서비스 신청 (.com)
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={
-                mobileMenuOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"
-              }
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
+          <div className="hidden items-center gap-5 lg:flex">
+            <a
+              href={site.phoneHref}
+              className="text-[13px] tracking-wide text-ink-muted transition-colors hover:text-forest"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {site.phone}
+            </a>
+            <button type="button" onClick={openConsult} className="btn-primary !px-5 !py-2.5 text-[13px]">
+              <ChatGlyph className="h-3.5 w-3.5" />
+              1:1 상담
             </button>
           </div>
 
-          {/* Mobile menu */}
-          {mobileMenuOpen && (
-            <nav
-              id="mobile-menu"
-              className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4"
-              aria-label="모바일 메뉴"
-            >
-              <div className="space-y-2">
-                <Link
-                  to="/"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-inset"
-                >
-                  홈
-                </Link>
-                <div className="px-4 py-2">
-                  <p className="text-gray-500 text-sm font-medium mb-2">
-                    서비스 가이드
-                  </p>
-                  <div className="pl-4 space-y-1">
-                    <Link
-                      to="/services/micropayment"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      소액결제 현금화
-                    </Link>
-                    <Link
-                      to="/services/information-fee"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      정보이용료 현금화
-                    </Link>
-                    <Link
-                      to="/services/credit-card"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      신용카드 현금화
-                    </Link>
-                    <Link
-                      to="/services/gift-card"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      상품권 현금화
-                    </Link>
-                  </div>
-                </div>
-                <Link
-                  to="/how-to-use"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                >
-                  이용 전 체크리스트
-                </Link>
-                <div className="px-4 py-2">
-                  <p className="text-gray-500 text-sm font-medium mb-2">
-                    고객 지원
-                  </p>
-                  <div className="pl-4 space-y-1">
-                    <Link
-                      to="/reviews"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      후기 검증법
-                    </Link>
-                    <Link
-                      to="/faq"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      자주묻는질문(FAQ)
-                    </Link>
-                    <Link
-                      to="/safety"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      개인정보 보호수칙
-                    </Link>
-                    <Link
-                      to="/blog"
-                      className="block py-1 text-sm text-gray-600 hover:text-sky-600 transition-colors"
-                    >
-                      정보 블로그
-                    </Link>
-                  </div>
-                </div>
-                
-                {/* [.net 전용] 모바일 메뉴 버튼 -> 실제 서비스는 .com으로 아웃바운드 */}
-                <a
-                  href="https://xn--299a64rxvbk71bjne.com"
-                  target="_blank"
-                  rel="noopener"
-                  className="block mx-4 mt-4 bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors text-center"
-                >
-                  실제 서비스 신청 (.com)
-                </a>
-              </div>
-            </nav>
-          )}
-        </nav>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink lg:hidden"
+            aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
+          >
+            <span className="sr-only">메뉴</span>
+            <span aria-hidden="true" className="flex w-[18px] flex-col gap-[5px]">
+              <span
+                className={`h-px w-full bg-current transition-transform duration-300 ${
+                  menuOpen ? "translate-y-[6px] rotate-45" : ""
+                }`}
+              />
+              <span className={`h-px w-full bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+              <span
+                className={`h-px w-full bg-current transition-transform duration-300 ${
+                  menuOpen ? "-translate-y-[6px] -rotate-45" : ""
+                }`}
+              />
+            </span>
+          </button>
+        </div>
       </header>
 
-      <main className="flex-grow">{children}</main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-1">
-              <div className="text-2xl font-bold text-white mb-4">고릴라티켓</div>
-              <p className="text-gray-400 mb-4 text-sm md:text-base leading-relaxed">
-                가장 빠르고 안전한 현금화 서비스. 고릴라티켓은 고객님의 긴급한
-                자금 문제를 신속하고 간편하게 해결해 드립니다.
+      {menuOpen && (
+        <div
+          id="mobile-nav"
+          className="fixed inset-x-0 bottom-0 top-[74px] z-30 overflow-y-auto border-t border-line bg-ivory lg:hidden"
+        >
+          <div className="wrap py-8">
+            {nav.map((item) => (
+              <div key={item.label} className="border-b border-line/80 py-1">
+                {item.children ? (
+                  <>
+                    <p className="pt-4 pb-2 font-display text-[1.05rem] text-ink">{item.label}</p>
+                    <div className="pb-3">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.to}
+                          to={child.to}
+                          className="block py-2.5 pl-1 text-[14px] text-ink-soft"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <Link to={item.to} className="block py-4 font-display text-[1.05rem] text-ink">
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <div className="mt-8 flex flex-col gap-3">
+              <button type="button" onClick={openConsult} className="btn-primary w-full">
+                <ChatGlyph />
+                채널톡 1:1 상담
+              </button>
+              <a href={site.phoneHref} className="btn-outline w-full">
+                전화 {site.phone}
+              </a>
+              <p className="mt-2 text-center text-xs text-ink-muted">
+                {site.hoursNote} · {site.hours}
               </p>
             </div>
+          </div>
+        </div>
+      )}
+
+      <main id="main" className="flex-1">
+        {children}
+      </main>
+
+      <footer className="bg-forest-deep text-ivory">
+        <div className="wrap py-16 md:py-20">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
             <div>
-              <h3 className="text-base md:text-lg font-bold mb-4">
-                주요 서비스
-              </h3>
-              <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+              <Wordmark light />
+              <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-ivory/55">
+                공연과 전시, 상품권과 바우처까지. 무엇을 준비해야 할지 막막할 때
+                가장 먼저 확인할 곳, 고릴라티켓입니다.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-[11px] uppercase tracking-[0.22em] text-brass-light">서비스</h3>
+              <ul className="mt-5 space-y-3 text-[13px] text-ivory/60">
                 <li>
-                  <Link
-                    to="/services/micropayment"
-                    className="hover:text-white transition-colors"
-                  >
-                    소액결제 현금화
+                  <Link to="/services/ticket" className="transition-colors hover:text-ivory">
+                    티켓 컨시어지
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services/information-fee"
-                    className="hover:text-white transition-colors"
-                  >
-                    정보이용료 현금화
+                  <Link to="/services/voucher" className="transition-colors hover:text-ivory">
+                    상품권 · 바우처
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services/credit-card"
-                    className="hover:text-white transition-colors"
-                  >
-                    신용카드 현금화
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/gift-card"
-                    className="hover:text-white transition-colors"
-                  >
-                    상품권 현금화
+                  <Link to="/services/business" className="transition-colors hover:text-ivory">
+                    기업 · 단체 의뢰
                   </Link>
                 </li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-base md:text-lg font-bold mb-4">
-                고객지원 및 정보
-              </h3>
-              <ul className="space-y-2 text-gray-400 text-sm md:text-base">
+              <h3 className="text-[11px] uppercase tracking-[0.22em] text-brass-light">안내</h3>
+              <ul className="mt-5 space-y-3 text-[13px] text-ivory/60">
                 <li>
-                  <Link
-                    to="/how-to-use"
-                    className="hover:text-white transition-colors"
-                  >
-                    이용 전 체크리스트
+                  <Link to="/how-to-use" className="transition-colors hover:text-ivory">
+                    이용 절차
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/faq"
-                    className="hover:text-white transition-colors"
-                  >
-                    자주 묻는 질문 (FAQ)
+                  <Link to="/faq" className="transition-colors hover:text-ivory">
+                    자주 묻는 질문
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/safety"
-                    className="hover:text-white transition-colors"
-                  >
-                    개인정보 보호수칙
+                  <Link to="/blog" className="transition-colors hover:text-ivory">
+                    이야기
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/blog"
-                    className="hover:text-white transition-colors"
-                  >
-                    유용한 정보 블로그
-                  </Link>
-                </li>
-                <li>
-                  {/* 푸터 링크는 팝업 유지 */}
-                  <a
-                    href="#"
-                    onClick={handleConsultClick}
-                    className="hover:text-white transition-colors"
-                  >
-                    24시 고객센터 문의
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    to="/privacy"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link to="/privacy" className="transition-colors hover:text-ivory">
                     개인정보처리방침
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/terms"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link to="/terms" className="transition-colors hover:text-ivory">
                     이용약관
                   </Link>
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h3 className="text-[11px] uppercase tracking-[0.22em] text-brass-light">상담</h3>
+              <div className="mt-5 space-y-3 text-[13px] text-ivory/60">
+                <p>
+                  <a href={site.phoneHref} className="transition-colors hover:text-ivory">
+                    {site.phone}
+                  </a>
+                </p>
+                <button
+                  type="button"
+                  onClick={openConsult}
+                  className="inline-flex items-center gap-2 text-left transition-colors hover:text-ivory"
+                >
+                  <ChatGlyph className="h-3.5 w-3.5" />
+                  채널톡 1:1 상담
+                </button>
+                <p className="text-ivory/40">{site.hours}</p>
+              </div>
+            </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 text-left text-gray-500 text-xs">
-            <p>고객센터: 010-2138-0790</p>
-            <p className="mt-1">사이트 내 1:1 상담(채널톡) 24시간 운영</p>
-          </div>
-          <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
-            <p className="text-sm md:text-base">
-              📚 본 사이트(고릴라티켓.net)는 정보 제공용 이용가이드입니다.
-              실제 서비스 신청은{" "}
-              <a
-                href="https://xn--299a64rxvbk71bjne.com"
-                target="_blank"
-                rel="noopener"
-                className="underline hover:text-white"
-              >
-                고릴라티켓.com
-              </a>
-              에서 진행해 주세요.
+          <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-[11.5px] leading-relaxed text-ivory/35 md:flex-row md:items-start md:justify-between">
+            <p className="max-w-2xl">
+              고릴라티켓은 티켓·상품권·바우처 준비를 돕는 안내 사이트입니다. 실제 예매,
+              발권, 구매 조건은 각 판매처의 약관과 정책을 따릅니다.
             </p>
-            <p className="text-sm md:text-base mt-2">
-              © 2025 고릴라티켓. 모든 권리 보유.
-            </p>
-            <p className="mt-2 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto">
-              본 웹사이트는 고릴라티켓에서 제공하는 소액결제, 정보이용료,
-              신용카드, 상품권 현금화 서비스에 대한 정보를 포함하고 있습니다.
-              서비스 이용 전 반드시 이용약관 및 개인정보처리방침을 확인하시기
-              바랍니다. 과도한 현금화 서비스 이용은 개인의 재정 상황에 부담을 줄
-              수 있으니 신중한 판단 후 이용해 주시기 바라며, 불법적인 목적으로
-              서비스를 이용하는 것을 엄격히 금지합니다. 고릴라티켓은 정식 등록된
-              안전한 업체이며, 고객님의 안전을 최우선으로 생각합니다.
-            </p>
+            <p className="shrink-0">© {site.year} {site.name}. All rights reserved.</p>
           </div>
         </div>
       </footer>
 
-      {/* 우측 하단 플로팅 버튼 (팝업 유지) */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 pointer-events-none">
-        {/* 1. 말풍선 툴팁 */}
-        {showTooltip && (
-          <div 
-            className="bg-white px-4 py-3 rounded-2xl shadow-xl border border-gray-100 mb-2 mr-2 relative max-w-[240px] animate-bounce pointer-events-auto" 
-            style={{ animationDuration: '3s' }}
+      {/* 우측 하단 상담 · 맨 위로 */}
+      <div className="fixed bottom-5 right-4 z-40 flex flex-col items-end gap-2.5 md:bottom-7 md:right-7">
+        {showTop && (
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-ivory-light/90 text-ink-soft shadow-sm backdrop-blur transition-colors hover:border-brass hover:text-forest"
+            aria-label="맨 위로"
           >
-             <button 
-               onClick={(e) => { e.stopPropagation(); setShowTooltip(false); }}
-               className="absolute top-2 right-2 text-gray-300 hover:text-gray-500"
-               aria-label="툴팁 닫기"
-             >
-               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
-               </svg>
-             </button>
-             <p className="font-bold text-gray-800 text-sm mb-1">궁금한 건 채팅으로 문의하세요</p>
-             <p className="text-xs text-gray-500 flex items-center">
-               <span className="text-sky-500 mr-1">⚡</span> 빠르게 답변 받으실 수 있어요
-             </p>
-             {/* 말풍선 꼬리 */}
-             <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 border-r border-b border-gray-100"></div>
-          </div>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 12V2M3 6l4-4 4 4" stroke="currentColor" strokeWidth="1.2" />
+            </svg>
+          </button>
         )}
-
-        {/* 2. 채널톡 스타일 둥근 버튼 */}
         <button
-          id="floating-consult-btn"
-          onClick={handleConsultClick}
-          className="w-16 h-16 bg-[#5C31D6] rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 group relative overflow-hidden pointer-events-auto"
-          aria-label="1:1 상담 시작하기"
+          type="button"
+          onClick={openConsult}
+          className="group flex items-center gap-2 rounded-full bg-forest py-3 pl-4 pr-5 text-ivory shadow-[0_16px_40px_-18px_rgba(11,35,30,0.85)] ring-1 ring-brass/40 transition-all duration-300 hover:bg-forest-deep"
+          aria-label="채널톡 1:1 상담 열기"
         >
-           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-              <circle cx="8" cy="10" r="1.5" fill="white" />
-              <circle cx="12" cy="10" r="1.5" fill="white" />
-              <circle cx="16" cy="10" r="1.5" fill="white" />
-           </svg>
+          <ChatGlyph className="h-4 w-4" />
+          <span className="text-[12.5px] tracking-wide">1:1 상담</span>
         </button>
       </div>
     </div>
