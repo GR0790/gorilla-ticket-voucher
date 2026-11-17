@@ -72,7 +72,7 @@ const ServiceDetail: React.FC = () => {
             </p>
           </div>
 
-          <ul className="space-y-px overflow-hidden rounded-xl border border-line bg-line">
+          <ul className="space-y-px self-start overflow-hidden rounded-xl border border-line bg-line">
             {service.requests.slice(0, 3).map((r, i) => (
               <li key={r} className="flex items-baseline gap-4 bg-frost px-5 py-4">
                 <span className="num text-[10.5px] font-bold text-azure">0{i + 1}</span>
@@ -100,8 +100,8 @@ const ServiceDetail: React.FC = () => {
               <div key={c.title} className="bg-white p-7 md:p-9">
                 <div className="flex items-center justify-between">
                   <span className="num text-[11px] font-bold text-azure">0{i + 1}</span>
-                  <span className="h-6 w-6 text-azure/30">
-                    <ServiceIcon name={service.icon} className="h-6 w-6" />
+                  <span className="h-7 w-7 text-azure/35">
+                    <ServiceIcon name={service.icon} className="h-7 w-7" />
                   </span>
                 </div>
                 <h3 className="mt-4 text-[1.15rem] font-semibold text-ink">{c.title}</h3>
