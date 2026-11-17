@@ -4,8 +4,8 @@
   "description": "공연·전시 티켓 예매, 상품권과 바우처 준비를 안내하는 티켓 컨시어지",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F4ED",
-  "theme_color": "#14352D",
+  "background_color": "#F8FAFC",
+  "theme_color": "#F8FAFC",
   "icons": [
     { "src": "/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
     { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
