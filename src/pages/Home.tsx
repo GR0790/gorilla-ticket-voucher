@@ -270,7 +270,7 @@ const ServicesSection: React.FC = () => (
               </span>
               <span className="num text-[11px] font-semibold text-ink-muted">{s.no}</span>
             </div>
-            <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.16em] text-azure">{s.kicker}</p>
+            <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.16em] text-azure">{s.cardKicker}</p>
             <h3 className="display-sub mt-2.5 text-ink">{s.title}</h3>
             <p className="mt-3 flex-1 text-[13.5px] leading-[1.85] text-ink-soft">{s.cardBody}</p>
             <div className="mt-6 flex flex-wrap gap-1.5">

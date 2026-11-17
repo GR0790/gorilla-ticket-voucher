@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
-import { services } from "./data/services";
 
 // 라우트별 코드 분할
 const Blog = lazy(() => import("./pages/Blog"));
@@ -33,9 +32,7 @@ function App() {
         <Suspense fallback={<div className="min-h-screen bg-frost" />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            {services.map((s) => (
-              <Route key={s.slug} path={`${s.slug}/*`} element={<ServiceDetail />} />
-            ))}
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/how-to-use" element={<HowToUse />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog" element={<Blog />} />

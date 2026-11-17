@@ -5,6 +5,7 @@ export interface ServiceItem {
   no: string;
   nav: string;
   kicker: string;
+  cardKicker: string;
   title: string;
   cardBody: string;
   tags: string[];
@@ -39,6 +40,7 @@ export const services: ServiceItem[] = [
     no: "01",
     nav: "상품권 매입",
     kicker: "상품권 매입",
+    cardKicker: "모바일 · 온라인 상품권",
     title: "상품권 매입",
     cardBody:
       "사용 계획이 바뀌어 남아 있는 모바일 상품권과 기프트카드를, 종류와 잔액을 확인한 뒤 정리 절차를 안내합니다.",
@@ -147,6 +149,7 @@ export const services: ServiceItem[] = [
     no: "02",
     nav: "휴대폰 소액결제",
     kicker: "휴대폰 소액결제 상품권 구매",
+    cardKicker: "통신사 결제 · 한도",
     title: "휴대폰 소액결제",
     cardBody:
       "휴대폰 결제로 모바일 상품권과 디지털 이용권을 구매할 때 확인해야 할 한도, 인증, 상품권 종류를 안내합니다.",
@@ -255,6 +258,7 @@ export const services: ServiceItem[] = [
     no: "03",
     nav: "신용카드 구매",
     kicker: "신용카드 상품권 구매",
+    cardKicker: "카드 결제 · 할부",
     title: "신용카드 구매",
     cardBody:
       "신용카드 결제와 할부로 모바일 상품권을 구매할 때 확인해야 할 승인 조건, 할부 개월, 수수료를 안내합니다.",
@@ -363,6 +367,7 @@ export const services: ServiceItem[] = [
     no: "04",
     nav: "정보이용료 · 게임재화",
     kicker: "정보이용료 게임재화 구매",
+    cardKicker: "스토어 · 게임 재화",
     title: "정보이용료 게임재화",
     cardBody:
       "휴대폰 정보이용료 결제로 게임 재화와 디지털 아이템을 구매할 때 확인해야 할 계정, 한도, 환불 기준을 안내합니다.",
