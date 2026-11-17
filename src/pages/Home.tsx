@@ -219,7 +219,7 @@ const FAQTeaserSection: React.FC = () => (
         <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
           <p className="font-semibold text-gray-900 mb-1">Q. 소액결제현금화는 합법인가요?</p>
           <p className="text-gray-600 text-sm">
-            정식 사업자 등록 업체를 통한 소액결제 한도 활용은 불법이 아닙니다. 다만
+            소액결제 한도 활용은 관련 법령과 통신사 약관 범위 안에서 진행됩니다. 다만
             미등록·과대광고 업체는 피해로 이어질 수 있어 주의가 필요합니다.
           </p>
         </div>
@@ -276,7 +276,7 @@ const Home: React.FC = () => {
         faqItems={[
           {
             question: "소액결제현금화는 합법인가요?",
-            answer: "정식 사업자 등록 업체를 통한 소액결제 한도 활용은 불법이 아닙니다. 다만 미등록·과대광고 업체는 피해로 이어질 수 있어 주의가 필요합니다.",
+            answer: "소액결제 한도 활용은 관련 법령과 통신사 약관 범위 안에서 진행됩니다. 다만 미등록·과대광고 업체는 피해로 이어질 수 있어 주의가 필요합니다.",
           },
           {
             question: "이 사이트(.net)에서 바로 신청할 수 있나요?",

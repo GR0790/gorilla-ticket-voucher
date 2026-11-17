@@ -443,7 +443,7 @@ const ROUTE_META = {
   "/contact": {
     "canonicalOverride": "https://xn--299a64rxvbk71bjne.com/contact/",
     "title": "상담센터 - 24시간 1:1 문의 | 고릴라티켓",
-    "description": "고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 3분 즉시입금, 미납·정책 99.9% 승인 상담 안내.",
+    "description": "고릴라티켓 소액결제현금화 24시간 1:1 상담센터. 전화·채팅으로 언제든 문의하세요. 빠른 입금 안내, 미납·정책 상담 안내.",
     "crumbs": [
       [
         "고릴라티켓",
@@ -486,6 +486,36 @@ const ROUTE_META = {
     ]
   }
 };
+
+// blogPosts.ts에 있는 모든 글의 프리렌더 라우트를 자동으로 채웁니다.
+// (글을 추가할 때 ROUTE_META를 손으로 늘리지 않아도 마지막 글까지 404가 나지 않습니다.)
+const BLOG_BRAND = '고릴라티켓';
+const postsFile = path.resolve(process.cwd(), 'src/data/blogPosts.ts');
+if (fs.existsSync(postsFile)) {
+  const postsSource = fs.readFileSync(postsFile, 'utf-8');
+  let added = 0;
+  for (const block of postsSource.split(/sys: \{ id: "post-/).slice(1)) {
+    const idMatch = block.match(/id:\s*(\d+)/);
+    if (!idMatch) continue;
+    const id = Number(idMatch[1]);
+    const route = '/blog/' + id;
+    if (ROUTE_META[route]) continue;
+    const titleMatch = block.match(/title:\s*"((?:[^"\\]|\\.)*)"/);
+    const descMatch = block.match(/summary:\s*"((?:[^"\\]|\\.)*)"/) || block.match(/excerpt:\s*"((?:[^"\\]|\\.)*)"/);
+    const postTitle = titleMatch ? titleMatch[1] : '정보 블로그';
+    ROUTE_META[route] = {
+      "title": postTitle + ' | ' + BLOG_BRAND,
+      "description": descMatch ? descMatch[1].slice(0, 150) : '',
+      "crumbs": [
+        [BLOG_BRAND, '/'],
+        ['정보 블로그', '/blog/'],
+        [postTitle, route + '/']
+      ]
+    };
+    added++;
+  }
+  if (added > 0) console.log('Added ' + added + ' blog routes from blogPosts.ts');
+}
 
 function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
 
