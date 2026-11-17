@@ -1,4 +1,4 @@
-import type React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { Accordion, ArrowLink, CTABand, SectionHead } from "../components/ui";
@@ -9,17 +9,38 @@ import { site } from "../data/site";
 import { openConsult } from "../lib/consult";
 
 const heroValues = [
-  { value: "4", unit: "가지", label: "이용 안내", note: "상품권 · 결제 · 게임재화" },
+  {
+    value: "4",
+    unit: "가지",
+    label: "이용 안내",
+    note: "상품권 · 결제 · 게임재화",
+  },
   { value: "24", unit: "시간", label: "상담 접수", note: "채널톡 1:1" },
   { value: "1:1", unit: "", label: "담당자 확인", note: "조건을 먼저 안내" },
   { value: "0", unit: "원", label: "상담 비용", note: "진행 전까지 무료" },
 ];
 
 const steps = [
-  { no: "01", title: "상담 정보 입력", body: "성함과 휴대폰 번호를 남기면 채널톡 1:1 상담창이 바로 열립니다." },
-  { no: "02", title: "내용 확인", body: "상품권 종류나 결제 방법, 금액을 확인하고 가능한 범위를 정리합니다." },
-  { no: "03", title: "조건 안내", body: "진행 가능 여부와 조건, 필요한 절차를 먼저 안내합니다." },
-  { no: "04", title: "동의 후 진행", body: "안내된 조건을 확인하고 동의하신 경우에만 다음 단계로 진행합니다." },
+  {
+    no: "01",
+    title: "상담 정보 입력",
+    body: "성함과 휴대폰 번호를 남기면 채널톡 1:1 상담창이 바로 열립니다.",
+  },
+  {
+    no: "02",
+    title: "내용 확인",
+    body: "상품권 종류나 결제 방법, 금액을 확인하고 가능한 범위를 정리합니다.",
+  },
+  {
+    no: "03",
+    title: "조건 안내",
+    body: "진행 가능 여부와 조건, 필요한 절차를 먼저 안내합니다.",
+  },
+  {
+    no: "04",
+    title: "동의 후 진행",
+    body: "안내된 조건을 확인하고 동의하신 경우에만 다음 단계로 진행합니다.",
+  },
 ];
 
 const principles = [
@@ -38,10 +59,22 @@ const principles = [
 ];
 
 const scenes = [
-  { title: "사용하지 않는 상품권이 남아 있을 때", body: "종류와 잔액, 유효기간을 확인하고 정리 절차를 안내합니다." },
-  { title: "휴대폰 결제 한도를 확인하고 싶을 때", body: "통신사 한도와 이번 달 사용 금액을 확인하는 방법부터 안내합니다." },
-  { title: "카드 할부로 구매를 검토할 때", body: "할부 개월과 수수료를 포함한 총액을 먼저 정리해 드립니다." },
-  { title: "게임 재화 구매를 앞두고 있을 때", body: "스토어 계정과 아이템 종류, 환불 기준을 함께 확인합니다." },
+  {
+    title: "사용하지 않는 상품권이 남아 있을 때",
+    body: "종류와 잔액, 유효기간을 확인하고 정리 절차를 안내합니다.",
+  },
+  {
+    title: "휴대폰 결제 한도를 확인하고 싶을 때",
+    body: "통신사 한도와 이번 달 사용 금액을 확인하는 방법부터 안내합니다.",
+  },
+  {
+    title: "카드 할부로 구매를 검토할 때",
+    body: "할부 개월과 수수료를 포함한 총액을 먼저 정리해 드립니다.",
+  },
+  {
+    title: "게임 재화 구매를 앞두고 있을 때",
+    body: "스토어 계정과 아이템 종류, 환불 기준을 함께 확인합니다.",
+  },
 ];
 
 const homeFaq = [
@@ -63,24 +96,183 @@ const homeFaq = [
   },
 ];
 
+const HeroConsultTicket: React.FC = () => {
+  const [pulsing, setPulsing] = React.useState(false);
+  const pulseTimer = React.useRef<number | null>(null);
+
+  React.useEffect(
+    () => () => {
+      if (pulseTimer.current) window.clearTimeout(pulseTimer.current);
+    },
+    [],
+  );
+
+  /** 클릭·엔터·스페이스: 반동 효과를 재생하며 상담(채널톡) 연결 */
+  const handleConsult = () => {
+    setPulsing(false);
+    window.requestAnimationFrame(() => {
+      setPulsing(true);
+      if (pulseTimer.current) window.clearTimeout(pulseTimer.current);
+      pulseTimer.current = window.setTimeout(() => setPulsing(false), 720);
+    });
+    openConsult();
+  };
+
+  return (
+    <div className="mx-auto w-full max-w-[440px] animate-fade lg:max-w-none">
+      <button
+        type="button"
+        aria-label={`${site.name} 채널톡 1:1 상담 연결`}
+        onClick={handleConsult}
+        className={`group relative block w-full cursor-pointer select-none border-0 bg-transparent p-0 text-left transition-transform duration-300 ease-out hover:scale-[1.02] focus-visible:scale-[1.02] active:scale-[0.995] ${
+          pulsing ? "animate-ticket-bounce" : ""
+        }`}
+      >
+        <span
+          aria-hidden="true"
+          className="absolute -inset-4 rounded-[26px] border border-line/80 bg-gradient-to-b from-white/70 to-transparent transition-colors duration-300 group-hover:border-azure/35"
+        />
+        <span
+          aria-hidden="true"
+          className={`pointer-events-none absolute -inset-3 rounded-[24px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
+            pulsing ? "animate-ticket-glow" : ""
+          }`}
+          style={{
+            boxShadow:
+              "0 0 0 1px rgba(56,189,248,0.35), 0 34px 80px -34px rgba(37,99,235,0.55)",
+          }}
+        />
+
+        <div className="relative overflow-hidden rounded-2xl border border-night-soft/40 bg-night shadow-[0_50px_90px_-50px_rgba(11,18,32,0.8)] transition-shadow duration-300 group-hover:shadow-[0_54px_96px_-46px_rgba(37,99,235,0.5)]">
+          <span
+            aria-hidden="true"
+            className="grid-bg-dark absolute inset-0 opacity-60"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-14 -top-16 h-56 w-56 rounded-full opacity-70"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(56,189,248,0.4) 0%, rgba(11,18,32,0) 70%)",
+            }}
+          />
+          <div className="relative flex items-start justify-between px-6 pt-6">
+            <div>
+              <p className="text-[9px] font-semibold uppercase tracking-[0.26em] text-sky-light">
+                Gorilla Ticket
+              </p>
+              <p className="mt-2 text-[13px] font-semibold text-white">
+                1:1 상담 연결
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-white/70">
+              <span
+                aria-hidden="true"
+                className="h-1.5 w-1.5 rounded-full bg-emerald-400"
+              />
+              24시간 접수
+            </span>
+          </div>
+
+          <div className="relative mt-5 px-6">
+            <img
+              src="/gorilla-mascot-cut.webp"
+              alt={`${site.name} 마스코트`}
+              width={1000}
+              height={1000}
+              className="mx-auto h-[236px] w-auto rounded-b-none object-contain object-top drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] sm:h-[270px]"
+              loading="eager"
+            />
+          </div>
+
+          <div className="relative border-t border-white/10 bg-night-deep/60 px-6 py-5">
+            <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-white/40">
+              <span>Consult ticket</span>
+              <span className="tabular-nums">No. 010-2138-0790</span>
+            </div>
+            <div className="my-3 border-t border-dashed border-white/15" />
+            <ul className="grid grid-cols-2 gap-y-2 text-[11.5px] text-white/70">
+              {[
+                "상품권 매입",
+                "휴대폰 소액결제",
+                "신용카드 구매",
+                "정보이용료 게임재화",
+              ].map((t) => (
+                <li key={t} className="flex items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-1 w-1 rounded-full bg-sky"
+                  />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="relative -mt-6 ml-auto w-[86%] max-w-[300px] rounded-xl border border-line bg-white p-4 shadow-[0_26px_50px_-34px_rgba(11,18,32,0.55)] transition-colors duration-300 group-hover:border-azure/40">
+          <div className="flex items-center justify-between">
+            <span className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-azure">
+              Step 01
+            </span>
+            <span className="text-[9.5px] font-medium uppercase tracking-[0.2em] text-ink-muted">
+              무료
+            </span>
+          </div>
+          <p className="mt-2.5 text-[13.5px] font-semibold leading-snug text-ink">
+            성함과 연락처를 남기면
+            <br />
+            바로 상담창으로 연결됩니다.
+          </p>
+          <p className="mt-2 text-[11px] text-ink-muted">
+            최초 1회만 입력 · 다음부터는 자동 연결
+          </p>
+        </div>
+
+        <span className="mt-4 flex items-center justify-center gap-1.5 text-[11px] font-medium tracking-[0.01em] text-ink-muted transition-colors duration-300 group-hover:text-azure">
+          클릭하여 상담 연결
+          <span
+            aria-hidden="true"
+            className="text-[12px] transition-transform duration-300 group-hover:translate-x-0.5"
+          >
+            →
+          </span>
+        </span>
+      </button>
+    </div>
+  );
+};
+
 const HeroSection: React.FC = () => (
   <section className="relative overflow-hidden border-b border-line bg-white">
-    <div aria-hidden="true" className="grid-bg pointer-events-none absolute inset-0 opacity-60" />
+    <div
+      aria-hidden="true"
+      className="grid-bg pointer-events-none absolute inset-0 opacity-60"
+    />
     <div
       aria-hidden="true"
       className="pointer-events-none absolute -right-40 -top-52 h-[620px] w-[620px] rounded-full"
-      style={{ background: "radial-gradient(circle, rgba(56,189,248,0.20) 0%, rgba(255,255,255,0) 66%)" }}
+      style={{
+        background:
+          "radial-gradient(circle, rgba(56,189,248,0.20) 0%, rgba(255,255,255,0) 66%)",
+      }}
     />
     <div
       aria-hidden="true"
       className="pointer-events-none absolute -left-40 top-40 h-[420px] w-[420px] rounded-full"
-      style={{ background: "radial-gradient(circle, rgba(37,99,235,0.10) 0%, rgba(255,255,255,0) 70%)" }}
+      style={{
+        background:
+          "radial-gradient(circle, rgba(37,99,235,0.10) 0%, rgba(255,255,255,0) 70%)",
+      }}
     />
 
     <div className="wrap relative grid items-center gap-14 pb-14 pt-12 md:pb-20 md:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
       <div className="animate-rise">
         <div className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/80 px-3.5 py-1.5">
-          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-azure" />
+          <span
+            aria-hidden="true"
+            className="h-1.5 w-1.5 rounded-full bg-azure"
+          />
           <p className="text-[10.5px] font-semibold uppercase tracking-[0.2em] text-ink-soft">
             Voucher · Mobile · Card · Digital
           </p>
@@ -95,8 +287,9 @@ const HeroSection: React.FC = () => (
         </h1>
 
         <p className="lead mt-7 max-w-xl">
-          상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지.
-          확인할 것을 먼저 정리하고, 가능한 범위와 조건을 안내한 뒤 진행합니다.
+          상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화
+          구매까지. 확인할 것을 먼저 정리하고, 가능한 범위와 조건을 안내한 뒤
+          진행합니다.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -109,10 +302,16 @@ const HeroSection: React.FC = () => (
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 opacity-25"
               style={{
-                background: "radial-gradient(circle at 85% 15%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 55%)",
+                background:
+                  "radial-gradient(circle at 85% 15%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 55%)",
               }}
             />
-            <svg className="relative h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg
+              className="relative h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
               <path
                 d="M20.5 11.6c0 4.2-3.8 7.6-8.5 7.6-.9 0-1.8-.1-2.6-.4L5 20.5l1.1-3.3C4.8 15.9 3.5 13.9 3.5 11.6c0-4.2 3.8-7.6 8.5-7.6s8.5 3.4 8.5 7.6Z"
                 stroke="currentColor"
@@ -124,7 +323,10 @@ const HeroSection: React.FC = () => (
               <circle cx="15.2" cy="11.6" r="0.95" fill="currentColor" />
             </svg>
             <span className="relative">채널톡 1:1 상담 시작</span>
-            <span aria-hidden="true" className="relative text-[17px] transition-transform duration-300 group-hover:translate-x-0.5">
+            <span
+              aria-hidden="true"
+              className="relative text-[17px] transition-transform duration-300 group-hover:translate-x-0.5"
+            >
               →
             </span>
           </button>
@@ -148,84 +350,28 @@ const HeroSection: React.FC = () => (
         </p>
       </div>
 
-      {/* 상담 카드 비주얼 */}
-      <div className="relative mx-auto w-full max-w-[440px] animate-fade lg:max-w-none">
-        <div
-          aria-hidden="true"
-          className="absolute -inset-4 rounded-[26px] border border-line/80 bg-gradient-to-b from-white/70 to-transparent"
-        />
-        <div className="relative overflow-hidden rounded-2xl border border-night-soft/40 bg-night shadow-[0_50px_90px_-50px_rgba(11,18,32,0.8)]">
-          <div aria-hidden="true" className="grid-bg-dark absolute inset-0 opacity-60" />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-14 -top-16 h-56 w-56 rounded-full opacity-70"
-            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.4) 0%, rgba(11,18,32,0) 70%)" }}
-          />
-          <div className="relative flex items-start justify-between px-6 pt-6">
-            <div>
-              <p className="text-[9px] font-semibold uppercase tracking-[0.26em] text-sky-light">Gorilla Ticket</p>
-              <p className="mt-2 text-[13px] font-semibold text-white">1:1 상담 연결</p>
-            </div>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-white/70">
-              <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              24시간 접수
-            </span>
-          </div>
-
-          <div className="relative mt-5 px-6">
-            <img
-              src="/gorilla-mascot-cut.webp"
-              alt={`${site.name} 마스코트`}
-              width={1000}
-              height={1000}
-              className="mx-auto h-[236px] w-auto rounded-b-none object-contain object-top drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] sm:h-[270px]"
-              loading="eager"
-            />
-          </div>
-
-          <div className="relative border-t border-white/10 bg-night-deep/60 px-6 py-5">
-            <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-white/40">
-              <span>Consult ticket</span>
-              <span className="tabular-nums">No. 010-2138-0790</span>
-            </div>
-            <div className="my-3 border-t border-dashed border-white/15" />
-            <ul className="grid grid-cols-2 gap-y-2 text-[11.5px] text-white/70">
-              {["상품권 매입", "휴대폰 소액결제", "신용카드 구매", "정보이용료 게임재화"].map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <span aria-hidden="true" className="h-1 w-1 rounded-full bg-sky" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="relative -mt-6 ml-auto w-[86%] max-w-[300px] rounded-xl border border-line bg-white p-4 shadow-[0_26px_50px_-34px_rgba(11,18,32,0.55)]">
-          <div className="flex items-center justify-between">
-            <span className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-azure">Step 01</span>
-            <span className="text-[9.5px] font-medium uppercase tracking-[0.2em] text-ink-muted">무료</span>
-          </div>
-          <p className="mt-2.5 text-[13.5px] font-semibold leading-snug text-ink">
-            성함과 연락처를 남기면
-            <br />
-            바로 상담창으로 연결됩니다.
-          </p>
-          <p className="mt-2 text-[11px] text-ink-muted">최초 1회만 입력 · 다음부터는 자동 연결</p>
-        </div>
-      </div>
+      {/* 상담 카드 비주얼 — 카드 전체를 누르면 채널톡 1:1 상담으로 연결 */}
+      <HeroConsultTicket />
     </div>
 
     <div className="wrap relative">
       <dl className="grid grid-cols-2 gap-y-8 border-t border-line py-8 md:grid-cols-4 md:py-9">
         {heroValues.map((v) => (
-          <div key={v.label} className="border-l border-line px-4 first:border-l-0 first:pl-0 md:px-6">
+          <div
+            key={v.label}
+            className="border-l border-line px-4 first:border-l-0 first:pl-0 md:px-6"
+          >
             <dt className="flex items-baseline gap-1 text-ink">
               <span className="text-[1.75rem] font-bold leading-none tracking-[-0.03em] md:text-[2rem]">
                 {v.value}
               </span>
-              <span className="text-[12px] font-semibold text-azure">{v.unit}</span>
+              <span className="text-[12px] font-semibold text-azure">
+                {v.unit}
+              </span>
             </dt>
-            <dd className="mt-2.5 text-[12.5px] font-medium text-ink">{v.label}</dd>
+            <dd className="mt-2.5 text-[12.5px] font-medium text-ink">
+              {v.label}
+            </dd>
             <dd className="mt-0.5 text-[11px] text-ink-muted">{v.note}</dd>
           </div>
         ))}
@@ -268,11 +414,17 @@ const ServicesSection: React.FC = () => (
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-azure/[0.08] text-azure ring-1 ring-azure/10 transition-colors group-hover:bg-azure group-hover:text-white group-hover:ring-azure">
                 <ServiceIcon name={s.icon} className="h-[22px] w-[22px]" />
               </span>
-              <span className="num text-[11px] font-semibold text-ink-muted">{s.no}</span>
+              <span className="num text-[11px] font-semibold text-ink-muted">
+                {s.no}
+              </span>
             </div>
-            <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.16em] text-azure">{s.cardKicker}</p>
+            <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.16em] text-azure">
+              {s.cardKicker}
+            </p>
             <h3 className="display-sub mt-2.5 text-ink">{s.title}</h3>
-            <p className="mt-3 flex-1 text-[13.5px] leading-[1.85] text-ink-soft">{s.cardBody}</p>
+            <p className="mt-3 flex-1 text-[13.5px] leading-[1.85] text-ink-soft">
+              {s.cardBody}
+            </p>
             <div className="mt-6 flex flex-wrap gap-1.5">
               {s.tags.map((t) => (
                 <span
@@ -285,7 +437,10 @@ const ServicesSection: React.FC = () => (
             </div>
             <span className="mt-6 inline-flex items-center gap-2 text-[12.5px] font-semibold text-azure">
               안내 보기
-              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
                 →
               </span>
             </span>
@@ -305,8 +460,7 @@ const ProcessSection: React.FC = () => (
           title={
             <>
               복잡한 절차는 없습니다.
-              <br />
-              네 단계면 충분합니다.
+              <br />네 단계면 충분합니다.
             </>
           }
           lead="상담 접수에서 끝나지 않고, 조건 안내와 진행 확인까지 이어집니다."
@@ -325,8 +479,12 @@ const ProcessSection: React.FC = () => (
             <span className="num inline-flex h-8 min-w-8 items-center justify-center rounded-md bg-azure px-2 text-[11px] font-bold text-white">
               {s.no}
             </span>
-            <h3 className="mt-5 text-[1.05rem] font-semibold text-ink">{s.title}</h3>
-            <p className="mt-2 text-[13px] leading-[1.85] text-ink-soft">{s.body}</p>
+            <h3 className="mt-5 text-[1.05rem] font-semibold text-ink">
+              {s.title}
+            </h3>
+            <p className="mt-2 text-[13px] leading-[1.85] text-ink-soft">
+              {s.body}
+            </p>
           </li>
         ))}
       </ol>
@@ -349,10 +507,19 @@ const PrinciplesSection: React.FC = () => (
       />
       <div className="mt-14 grid gap-4 md:grid-cols-3">
         {principles.map((p, i) => (
-          <div key={p.title} className="rounded-xl border border-line bg-white p-7 md:p-8">
-            <span className="num text-[11px] font-semibold text-azure">0{i + 1}</span>
-            <h3 className="mt-5 text-[1.15rem] font-semibold text-ink">{p.title}</h3>
-            <p className="mt-3 text-[13px] leading-[1.9] text-ink-soft">{p.body}</p>
+          <div
+            key={p.title}
+            className="rounded-xl border border-line bg-white p-7 md:p-8"
+          >
+            <span className="num text-[11px] font-semibold text-azure">
+              0{i + 1}
+            </span>
+            <h3 className="mt-5 text-[1.15rem] font-semibold text-ink">
+              {p.title}
+            </h3>
+            <p className="mt-3 text-[13px] leading-[1.9] text-ink-soft">
+              {p.body}
+            </p>
           </div>
         ))}
       </div>
@@ -377,8 +544,12 @@ const ScenesSection: React.FC = () => (
       <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
         {scenes.map((s) => (
           <div key={s.title} className="border-t border-line pt-5">
-            <h3 className="text-[1.02rem] font-semibold leading-snug text-ink">{s.title}</h3>
-            <p className="mt-2 text-[13px] leading-[1.9] text-ink-soft">{s.body}</p>
+            <h3 className="text-[1.02rem] font-semibold leading-snug text-ink">
+              {s.title}
+            </h3>
+            <p className="mt-2 text-[13px] leading-[1.9] text-ink-soft">
+              {s.body}
+            </p>
           </div>
         ))}
       </div>
@@ -387,7 +558,9 @@ const ScenesSection: React.FC = () => (
 );
 
 const JournalSection: React.FC = () => {
-  const latest = [...blogPosts].sort((a, b) => (a.fields.date < b.fields.date ? 1 : -1)).slice(0, 3);
+  const latest = [...blogPosts]
+    .sort((a, b) => (a.fields.date < b.fields.date ? 1 : -1))
+    .slice(0, 3);
   return (
     <section className="border-b border-line bg-frost">
       <div className="wrap py-20 md:py-28">
@@ -397,7 +570,11 @@ const JournalSection: React.FC = () => {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {latest.map((p) => (
-            <Link key={p.fields.id} to={`/blog/${p.fields.id}`} className="group block">
+            <Link
+              key={p.fields.id}
+              to={`/blog/${p.fields.id}`}
+              className="group block"
+            >
               <div className="flex items-center gap-3 text-[10.5px] font-medium uppercase tracking-[0.16em] text-ink-muted">
                 <span className="text-azure">{p.fields.category}</span>
                 <span className="h-px w-5 bg-steel" />
@@ -406,7 +583,9 @@ const JournalSection: React.FC = () => {
               <h3 className="mt-4 text-[1.1rem] font-semibold leading-[1.5] text-ink transition-colors group-hover:text-azure">
                 {p.fields.title}
               </h3>
-              <p className="mt-3 line-clamp-3 text-[13px] leading-[1.85] text-ink-soft">{p.fields.excerpt}</p>
+              <p className="mt-3 line-clamp-3 text-[13px] leading-[1.85] text-ink-soft">
+                {p.fields.excerpt}
+              </p>
             </Link>
           ))}
         </div>
@@ -419,7 +598,11 @@ const FAQTeaserSection: React.FC = () => (
   <section className="border-b border-line bg-white">
     <div className="wrap grid gap-12 py-20 md:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
       <div>
-        <SectionHead eyebrow="FAQ" title={<>자주 묻는 질문</>} lead="상담 전에 미리 확인하면 더 빠릅니다." />
+        <SectionHead
+          eyebrow="FAQ"
+          title={<>자주 묻는 질문</>}
+          lead="상담 전에 미리 확인하면 더 빠릅니다."
+        />
         <div className="mt-8">
           <ArrowLink to="/faq">FAQ 전체 보기</ArrowLink>
         </div>

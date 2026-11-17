@@ -75,10 +75,24 @@ module.exports = {
           "0%": { transform: "translateX(-120%)" },
           "100%": { transform: "translateX(220%)" },
         },
+        /* 상담 티켓 카드 클릭: 살짝 커졌다가 돌아오는 쫀득한 반동 */
+        "ticket-bounce": {
+          "0%": { transform: "scale(1)" },
+          "28%": { transform: "scale(1.045)" },
+          "58%": { transform: "scale(0.982)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "ticket-glow": {
+          "0%": { opacity: "0" },
+          "30%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
       },
       animation: {
         rise: "rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
         fade: "fade 1.1s ease both",
+        "ticket-bounce": "ticket-bounce 0.68s cubic-bezier(0.33, 1, 0.68, 1) both",
+        "ticket-glow": "ticket-glow 0.9s ease-out both",
       },
       transitionProperty: {
         border: "border-color",
