@@ -147,7 +147,7 @@
 
 /* Editorial article body */
 .prose {
-  --tw-prose-body: #4a5257;
+  --tw-prose-body: #3f474c;
   --tw-prose-headings: #14181b;
   --tw-prose-links: #14352d;
   --tw-prose-bold: #14181b;
@@ -157,7 +157,7 @@
   --tw-prose-quote-borders: #d9be8a;
   --tw-prose-hr: #e3ddd1;
   --tw-prose-captions: #7c858a;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   line-height: 1.95;
 }
 

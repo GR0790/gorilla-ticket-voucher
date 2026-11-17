@@ -82,10 +82,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       </a>
 
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? "border-b border-line/90 bg-ivory/92 backdrop-blur-md"
-            : "border-b border-transparent bg-ivory"
+        className={`sticky top-0 z-40 border-b bg-ivory transition-colors duration-300 ${
+          scrolled ? "border-line" : "border-transparent"
         }`}
       >
         <div className="wrap flex h-[74px] items-center justify-between">
@@ -224,7 +222,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
             <div>
               <Wordmark light />
-              <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-ivory/55">
+              <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-ivory/60">
                 공연과 전시, 상품권과 바우처까지. 무엇을 준비해야 할지 막막할 때
                 가장 먼저 확인할 곳, 고릴라티켓입니다.
               </p>
@@ -303,7 +301,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
           </div>
 
-          <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-[11.5px] leading-relaxed text-ivory/35 md:flex-row md:items-start md:justify-between">
+          <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-[11.5px] leading-relaxed text-ivory/45 md:flex-row md:items-start md:justify-between">
             <p className="max-w-2xl">
               고릴라티켓은 티켓·상품권·바우처 준비를 돕는 안내 사이트입니다. 실제 예매,
               발권, 구매 조건은 각 판매처의 약관과 정책을 따릅니다.

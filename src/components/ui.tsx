@@ -186,7 +186,7 @@ export const CTABand: React.FC<{
       className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brass/50 to-transparent"
     />
     <div className="wrap relative py-20 md:py-28">
-      <div className="max-w-2xl">
+      <div className="max-w-3xl">
         <p className="eyebrow text-brass-light">{eyebrow}</p>
         <h2 className="display-section mt-5 text-ivory">{title}</h2>
         <p className="mt-6 max-w-xl text-[0.95rem] leading-[1.9] text-ivory/65">{body}</p>
