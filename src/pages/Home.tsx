@@ -153,9 +153,9 @@ const HeroSection: React.FC = () => (
       <div className="relative mx-auto w-full max-w-[400px] animate-fade lg:max-w-none">
         <div
           aria-hidden="true"
-          className="absolute inset-x-6 bottom-16 top-0 rounded-t-[999px] border border-brass/30"
+          className="absolute inset-x-10 bottom-24 top-0 rounded-t-[999px] border border-brass/25"
         />
-        <div className="relative mx-auto w-[84%] overflow-hidden rounded-t-[999px] border border-line bg-white shadow-[0_50px_90px_-60px_rgba(20,24,27,0.6)]">
+        <div className="relative mx-auto w-[80%] overflow-hidden rounded-b-[18px] rounded-t-[999px] border border-line bg-white shadow-[0_50px_90px_-60px_rgba(20,24,27,0.6)]">
           <img
             src="/gorilla-mascot.webp"
             alt={`${site.name} 마스코트`}
@@ -166,7 +166,7 @@ const HeroSection: React.FC = () => (
           />
         </div>
 
-        <div className="relative -mt-8 ml-0 w-[86%] max-w-[300px] rotate-[-3deg] rounded-[10px] border border-line bg-ivory-light px-5 py-4 shadow-[0_24px_50px_-38px_rgba(20,24,27,0.65)] sm:ml-2">
+        <div className="relative -mt-10 ml-0 w-[82%] max-w-[300px] rotate-[-3deg] rounded-[10px] border border-line bg-ivory-light px-5 py-4 shadow-[0_24px_50px_-38px_rgba(20,24,27,0.65)] sm:ml-4">
           <div className="flex items-center justify-between">
             <span className="text-[9px] uppercase tracking-[0.24em] text-brass">Gorilla Ticket</span>
             <span className="text-[9px] uppercase tracking-[0.24em] text-ink-muted">Admit One</span>
