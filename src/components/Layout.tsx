@@ -140,7 +140,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             >
               <ChatGlyph className="h-4 w-4" />
               1:1 상담
-              <span aria-hidden="true" className="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full bg-sky ring-2 ring-white" />
             </button>
           </div>
 
