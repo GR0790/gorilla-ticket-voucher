@@ -7,6 +7,10 @@
  *  memberId = 숫자만인 휴대폰 번호, profile = { name, mobileNumber })
  */
 export const CHANNEL_PLUGIN_KEY = "b065b9cc-1f27-4780-a688-7d3e28d21b67";
+
+/* Google Ads 전환 — 상담 정보 입력 후 '상담 시작하기' 클릭 시 발동 (gorilla-ticket 과 동일한 계정/액션) */
+const GOOGLE_ADS_SEND_TO = "AW-18305764899/-6hZCI6o8cwcEKOc75hE";
+
 const NAME_KEY = "grpay_name";
 const PHONE_KEY = "grpay_phone";
 
@@ -59,10 +63,23 @@ export function isValidPhone(value: string) {
 declare global {
   interface Window {
     bootChannelAndShow?: (name: string, phone: string) => void;
+    gtag?: (...args: unknown[]) => void;
     ChannelIO?: {
       (command: string, payload?: unknown, callback?: (error: unknown, user: unknown) => void): void;
       q?: unknown[];
     };
+  }
+}
+
+/** 상담 폼 제출 = 전환. 전환 스크립트가 없거나 차단되어도 상담 연결은 계속됩니다. */
+export function trackConsultConversion() {
+  if (typeof window === "undefined") return;
+  try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", { send_to: GOOGLE_ADS_SEND_TO });
+    }
+  } catch {
+    /* 전환 기록 실패는 상담 연결을 막지 않습니다. */
   }
 }
 
@@ -125,10 +142,11 @@ export function openConsult() {
   }
 }
 
-/** 모달에서 제출했을 때 */
+/** 모달에서 제출했을 때 — 전환 기록 후 채널톡 연결 */
 export function submitCustomer(input: { name: string; phone: string }) {
   const customer: Customer = { name: input.name.trim(), phone: onlyDigits(input.phone) };
   saveCustomer(customer);
+  trackConsultConversion();
   listener?.(false);
   bootChannelAndShow(customer);
 }
