@@ -282,7 +282,7 @@ const HeroSection: React.FC = () => (
           휴대폰 소액결제 · 정보이용료,
           <br />
           <span className="bg-gradient-to-r from-azure to-sky-deep bg-clip-text text-transparent">
-            쓸 수 있는 범위를 먼저 확인합니다.
+            쉽고 빠르게 사용 가능합니다.
           </span>
         </h1>
 
