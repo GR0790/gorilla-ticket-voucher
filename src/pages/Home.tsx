@@ -278,18 +278,17 @@ const HeroSection: React.FC = () => (
           </p>
         </div>
 
-        <h1 className="display-hero mt-7 text-ink">
-          상품권 구매와 매입,
+        <h1 className="display-hero mt-7 break-keep text-ink">
+          휴대폰 소액결제 · 정보이용료,
           <br />
           <span className="bg-gradient-to-r from-azure to-sky-deep bg-clip-text text-transparent">
-            절차부터 분명하게.
+            쓸 수 있는 범위를 먼저 확인합니다.
           </span>
         </h1>
 
         <p className="lead mt-7 max-w-xl">
-          상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화
-          구매까지. 확인할 것을 먼저 정리하고, 가능한 범위와 조건을 안내한 뒤
-          진행합니다.
+          휴대폰 소액결제와 정보이용료 게임재화, 상품권 구매·매입까지. 결제 한도와
+          가능한 조건을 상담에서 먼저 확인해 안내합니다.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
