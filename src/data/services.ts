@@ -36,7 +36,7 @@ export interface ServiceItem {
  */
 export const services: ServiceItem[] = [
   {
-    slug: "/services/gift-card",
+    slug: "/services/gift-card/",
     no: "01",
     nav: "상품권 매입",
     kicker: "상품권 매입",
@@ -145,7 +145,7 @@ export const services: ServiceItem[] = [
     ctaBody: "발행사와 잔액, 유효기간을 채널톡으로 남겨주시면 진행 가능 여부와 절차를 안내드립니다.",
   },
   {
-    slug: "/services/micropayment",
+    slug: "/services/micropayment/",
     no: "02",
     nav: "휴대폰 소액결제",
     kicker: "휴대폰 소액결제 상품권 구매",
@@ -254,7 +254,7 @@ export const services: ServiceItem[] = [
     ctaBody: "통신사와 구매하려는 상품권 종류를 알려주시면, 결제 가능 범위와 절차를 안내드립니다.",
   },
   {
-    slug: "/services/credit-card",
+    slug: "/services/credit-card/",
     no: "03",
     nav: "신용카드 구매",
     kicker: "신용카드 상품권 구매",
@@ -363,7 +363,7 @@ export const services: ServiceItem[] = [
     ctaBody: "결제 방법과 할부 여부를 함께 알려주시면, 확인 가능한 조건과 절차를 안내드립니다.",
   },
   {
-    slug: "/services/information-fee",
+    slug: "/services/information-fee/",
     no: "04",
     nav: "정보이용료 · 게임재화",
     kicker: "정보이용료 게임재화 구매",
@@ -473,4 +473,7 @@ export const services: ServiceItem[] = [
   },
 ];
 
-export const serviceBySlug = (slug: string) => services.find((s) => s.slug === slug);
+// slug는 끝 슬래시가 붙은 정본 주소(/services/...)로 두고, 비교할 때는 끝 슬래시 유무를 무시합니다.
+const normalize = (value: string) => value.replace(/\/+$/, "") || "/";
+export const serviceBySlug = (slug: string) =>
+  services.find((s) => normalize(s.slug) === normalize(slug));

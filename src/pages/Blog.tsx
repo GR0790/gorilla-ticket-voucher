@@ -41,7 +41,7 @@ const Blog: React.FC = () => {
       {/* 대표 글 */}
       <section className="border-b border-line bg-frost">
         <div className="wrap py-16 md:py-20">
-          <Link to={`/blog/${featured.fields.id}`} className="group grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <Link to={`/blog/${featured.fields.id}/`} className="group grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="flex flex-col justify-between border-line lg:border-r lg:pr-16">
               <div>
                 <div className="flex items-center gap-3 text-[10.5px] uppercase tracking-[0.18em] text-ink-muted">
@@ -93,7 +93,7 @@ const Blog: React.FC = () => {
             {filtered.map((p, i) => (
               <Link
                 key={p.fields.id}
-                to={`/blog/${p.fields.id}`}
+                to={`/blog/${p.fields.id}/`}
                 className="group grid gap-3 border-b border-line py-8 transition-colors hover:bg-frost md:grid-cols-[70px_1fr_260px] md:items-baseline md:gap-8"
               >
                 <span className="font-display text-[11px] tracking-[0.18em] text-ink-muted">

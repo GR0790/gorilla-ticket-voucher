@@ -159,7 +159,7 @@ const ServiceDetail: React.FC = () => {
           <div>
             <SectionHead eyebrow="FAQ" title={<>{service.title} 문의</>} lead="자주 나오는 질문을 정리했습니다." />
             <div className="mt-8">
-              <ArrowLink to="/faq">FAQ 전체 보기</ArrowLink>
+              <ArrowLink to="/faq/">FAQ 전체 보기</ArrowLink>
             </div>
           </div>
           <Accordion items={service.faq.map((f) => ({ q: f.q, a: f.a }))} />

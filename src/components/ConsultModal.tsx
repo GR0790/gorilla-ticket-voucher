@@ -143,7 +143,7 @@ const ConsultModal: React.FC = () => {
             />
             <span>
               개인정보 수집 및 이용에 동의합니다 (필수){" "}
-              <Link to="/privacy" target="_blank" className="text-azure underline underline-offset-2">
+              <Link to="/privacy/" target="_blank" className="text-azure underline underline-offset-2">
                 내용 보기
               </Link>
             </span>

@@ -37,15 +37,19 @@ function readBlogPosts() {
 const today = new Date().toISOString().split('T')[0];
 const posts = readBlogPosts();
 
+// GitHub Pages는 디렉터리 주소를 '끝 슬래시 있음' 형태로 301 없이 바로 서빙합니다.
+// (= /faq는 301 → /faq/, /faq/는 200) canonical·내부 링크와 같은 형태로 사이트맵을 만듭니다.
+const pageUrl = (route) => (route === '/' ? '/' : route.replace(/\/+$/, '') + '/');
+
 const urls = [
   ...STATIC_PAGES.map((page) => ({
-    loc: BASE_URL + page,
+    loc: BASE_URL + pageUrl(page),
     lastmod: today,
     changefreq: page === '/' ? 'weekly' : 'monthly',
     priority: page === '/' ? '1.0' : '0.8',
   })),
   ...posts.map((post) => ({
-    loc: BASE_URL + '/blog/' + post.id,
+    loc: BASE_URL + '/blog/' + post.id + '/',
     lastmod: post.date || today,
     changefreq: 'monthly',
     priority: '0.7',

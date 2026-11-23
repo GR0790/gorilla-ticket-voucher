@@ -179,7 +179,7 @@ const HowToUse: React.FC = () => (
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
           <ConsultButton label="채널톡 1:1 상담" size="lg" />
-          <Link to="/faq" className="btn-outline min-h-[56px] px-7 text-[14.5px]">
+          <Link to="/faq/" className="btn-outline min-h-[56px] px-7 text-[14.5px]">
             자주 묻는 질문
           </Link>
         </div>
@@ -198,7 +198,7 @@ const HowToUse: React.FC = () => (
     />
     <div className="bg-white py-10">
       <div className="wrap">
-        <ArrowLink to="/services/gift-card">이용 안내로 돌아가기</ArrowLink>
+        <ArrowLink to="/services/gift-card/">이용 안내로 돌아가기</ArrowLink>
       </div>
     </div>
   </>

@@ -28,7 +28,7 @@ const BlogPost: React.FC = () => {
           <p className="lead mt-4 max-w-md">
             주소가 바뀌었거나 삭제된 글입니다. 이야기 목록에서 다시 찾아보세요.
           </p>
-          <Link to="/blog" className="btn-primary mt-8">
+          <Link to="/blog/" className="btn-primary mt-8">
             이야기 목록으로
           </Link>
         </div>
@@ -69,7 +69,7 @@ const BlogPost: React.FC = () => {
                 홈
               </Link>
               <span className="text-line">/</span>
-              <Link to="/blog" className="hover:text-azure">
+              <Link to="/blog/" className="hover:text-azure">
                 이야기
               </Link>
               <span className="text-line">/</span>
@@ -161,13 +161,13 @@ const BlogPost: React.FC = () => {
         <div className="wrap py-16 md:py-20">
           <div className="flex items-end justify-between">
             <h2 className="font-display text-[1.35rem] text-ink">이어서 읽기</h2>
-            <Link to="/blog" className="text-[12.5px] text-azure hover:text-azure">
+            <Link to="/blog/" className="text-[12.5px] text-azure hover:text-azure">
               전체 보기 →
             </Link>
           </div>
           <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-3">
             {related.map((r) => (
-              <Link key={r.fields.id} to={`/blog/${r.fields.id}`} className="group bg-frost p-7 transition-colors hover:bg-frost-light">
+              <Link key={r.fields.id} to={`/blog/${r.fields.id}/`} className="group bg-frost p-7 transition-colors hover:bg-frost-light">
                 <p className="text-[10.5px] uppercase tracking-[0.16em] text-azure">{r.fields.category}</p>
                 <h3 className="mt-3 font-display text-[1.05rem] leading-[1.55] text-ink transition-colors group-hover:text-azure">
                   {r.fields.title}

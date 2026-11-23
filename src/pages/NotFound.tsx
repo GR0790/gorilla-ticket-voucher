@@ -25,16 +25,16 @@ const NotFound: React.FC = () => (
         <ConsultButton />
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[12.5px] text-ink-muted">
-        <Link to="/how-to-use" className="hover:text-azure">
+        <Link to="/how-to-use/" className="hover:text-azure">
           이용 절차
         </Link>
-        <Link to="/faq" className="hover:text-azure">
+        <Link to="/faq/" className="hover:text-azure">
           자주 묻는 질문
         </Link>
-        <Link to="/blog" className="hover:text-azure">
+        <Link to="/blog/" className="hover:text-azure">
           이야기
         </Link>
-        <Link to="/contact" className="hover:text-azure">
+        <Link to="/contact/" className="hover:text-azure">
           상담
         </Link>
       </div>

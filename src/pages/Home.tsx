@@ -330,7 +330,7 @@ const HeroSection: React.FC = () => (
             </span>
           </button>
           <Link
-            to="/how-to-use"
+            to="/how-to-use/"
             className="inline-flex h-[58px] items-center justify-center gap-2 rounded-xl border border-steel bg-white/70 px-7 text-[14.5px] font-semibold text-ink transition-colors hover:border-azure hover:text-azure"
           >
             이용 절차 보기
@@ -394,7 +394,7 @@ const ServicesSection: React.FC = () => (
           lead="상품권 매입과 모바일 상품권 구매, 카드 결제, 정보이용료 게임재화. 각 방법마다 확인할 항목이 다릅니다."
         />
         <div className="hidden shrink-0 md:block">
-          <ArrowLink to="/how-to-use">전체 이용 절차 보기</ArrowLink>
+          <ArrowLink to="/how-to-use/">전체 이용 절차 보기</ArrowLink>
         </div>
       </div>
 
@@ -465,7 +465,7 @@ const ProcessSection: React.FC = () => (
           lead="상담 접수에서 끝나지 않고, 조건 안내와 진행 확인까지 이어집니다."
         />
         <div className="mt-8 hidden lg:block">
-          <ArrowLink to="/how-to-use">단계별 자세히 보기</ArrowLink>
+          <ArrowLink to="/how-to-use/">단계별 자세히 보기</ArrowLink>
         </div>
       </div>
 
@@ -565,13 +565,13 @@ const JournalSection: React.FC = () => {
       <div className="wrap py-20 md:py-28">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHead eyebrow="Journal" title={<>알아두면 편한 이야기</>} />
-          <ArrowLink to="/blog">이야기 전체 보기</ArrowLink>
+          <ArrowLink to="/blog/">이야기 전체 보기</ArrowLink>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {latest.map((p) => (
             <Link
               key={p.fields.id}
-              to={`/blog/${p.fields.id}`}
+              to={`/blog/${p.fields.id}/`}
               className="group block"
             >
               <div className="flex items-center gap-3 text-[10.5px] font-medium uppercase tracking-[0.16em] text-ink-muted">
@@ -603,7 +603,7 @@ const FAQTeaserSection: React.FC = () => (
           lead="상담 전에 미리 확인하면 더 빠릅니다."
         />
         <div className="mt-8">
-          <ArrowLink to="/faq">FAQ 전체 보기</ArrowLink>
+          <ArrowLink to="/faq/">FAQ 전체 보기</ArrowLink>
         </div>
       </div>
       <Accordion items={homeFaq.map((f) => ({ q: f.q, a: f.a }))} />

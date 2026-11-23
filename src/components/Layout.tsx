@@ -247,27 +247,27 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-light">안내</h3>
               <ul className="mt-5 space-y-3 text-[13px] text-white/55">
                 <li>
-                  <Link to="/how-to-use" className="transition-colors hover:text-white">
+                  <Link to="/how-to-use/" className="transition-colors hover:text-white">
                     이용 절차
                   </Link>
                 </li>
                 <li>
-                  <Link to="/faq" className="transition-colors hover:text-white">
+                  <Link to="/faq/" className="transition-colors hover:text-white">
                     자주 묻는 질문
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="transition-colors hover:text-white">
+                  <Link to="/blog/" className="transition-colors hover:text-white">
                     이야기
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy" className="transition-colors hover:text-white">
+                  <Link to="/privacy/" className="transition-colors hover:text-white">
                     개인정보처리방침
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms" className="transition-colors hover:text-white">
+                  <Link to="/terms/" className="transition-colors hover:text-white">
                     이용약관
                   </Link>
                 </li>

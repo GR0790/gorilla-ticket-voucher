@@ -141,7 +141,7 @@ const Contact: React.FC = () => (
           ))}
         </ol>
         <div className="mt-10">
-          <ArrowLink to="/faq">상담 전 자주 묻는 질문 보기</ArrowLink>
+          <ArrowLink to="/faq/">상담 전 자주 묻는 질문 보기</ArrowLink>
         </div>
       </div>
     </section>
@@ -170,15 +170,15 @@ const Contact: React.FC = () => (
       <div className="wrap flex flex-col gap-6 py-14 md:flex-row md:items-center md:justify-between">
         <p className="text-[13px] text-ink-soft">
           결제·정산 조건은 통신사·카드사·발행사의 약관을 따릅니다.{" "}
-          <Link to="/terms" className="link-quiet">
+          <Link to="/terms/" className="link-quiet">
             이용약관
           </Link>
           {" · "}
-          <Link to="/privacy" className="link-quiet">
+          <Link to="/privacy/" className="link-quiet">
             개인정보처리방침
           </Link>
         </p>
-        <ArrowLink to="/how-to-use">이용 절차 보기</ArrowLink>
+        <ArrowLink to="/how-to-use/">이용 절차 보기</ArrowLink>
       </div>
     </section>
 

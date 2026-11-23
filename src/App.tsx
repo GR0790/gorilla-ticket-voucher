@@ -17,11 +17,11 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // 정리된 이전 주소는 새 안내 페이지로 보냅니다.
 const LEGACY_REDIRECTS: Record<string, string> = {
-  "/services/ticket": "/services/gift-card",
-  "/services/voucher": "/services/gift-card",
-  "/services/business": "/contact",
-  "/reviews": "/how-to-use",
-  "/safety": "/how-to-use",
+  "/services/ticket": "/services/gift-card/",
+  "/services/voucher": "/services/gift-card/",
+  "/services/business": "/contact/",
+  "/reviews": "/how-to-use/",
+  "/safety": "/how-to-use/",
 };
 
 function App() {

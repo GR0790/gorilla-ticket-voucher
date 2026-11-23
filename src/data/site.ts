@@ -22,15 +22,15 @@ export interface NavItem {
 export const nav: NavItem[] = [
   {
     label: "이용 안내",
-    to: "/services/gift-card",
+    to: "/services/gift-card/",
     children: services.map((s) => ({
       label: s.nav,
       to: s.slug,
       desc: s.cardBody.split(".")[0],
     })),
   },
-  { label: "이용 절차", to: "/how-to-use" },
-  { label: "이야기", to: "/blog" },
-  { label: "FAQ", to: "/faq" },
-  { label: "상담", to: "/contact" },
+  { label: "이용 절차", to: "/how-to-use/" },
+  { label: "이야기", to: "/blog/" },
+  { label: "FAQ", to: "/faq/" },
+  { label: "상담", to: "/contact/" },
 ];
