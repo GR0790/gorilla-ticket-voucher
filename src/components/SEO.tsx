@@ -19,7 +19,7 @@ interface SEOProps {
 // react-helmet-async v2에서는 Helmet 자식으로 넣은 <script>가 DOM에 주입되지 않아
 // JSON-LD는 Helmet 바깥(형제 요소)으로 렌더링합니다.
 const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems }) => {
-  const defaultKeywords = "고릴라티켓,상품권 매입,모바일 상품권 구매,휴대폰 소액결제,신용카드 상품권,정보이용료 게임재화,채널톡 상담";
+  const defaultKeywords = "고릴라티켓,상품권 매입,모바일 상품권 구매,모바일 결제,신용카드 상품권,게임 재화,채널톡 상담";
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
   const canonicalUrl = `${site.url}${typeof window !== "undefined" ? window.location.pathname : "/"}`;
   const fullTitle = `${title} | ${site.name}`;
@@ -33,7 +33,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems }) => 
     logo: `${site.url}/gorilla-mascot.webp`,
     image: `${site.url}/gorilla-mascot.webp`,
     description:
-      "상품권 매입과 모바일 상품권 구매, 정보이용료 게임재화 구매 절차를 확인해 채널톡 1:1 상담으로 안내하는 사이트입니다.",
+      "상품권 매입과 모바일 상품권 구매, 게임 재화 구매 절차를 확인해 채널톡 1:1 상담으로 안내하는 사이트입니다.",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: site.phone,

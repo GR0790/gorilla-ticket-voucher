@@ -225,7 +225,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div>
               <Wordmark light />
               <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-white/55">
-                상품권 매입부터 휴대폰·카드 결제, 정보이용료 게임재화까지.
+                상품권 매입부터 모바일·카드 결제, 게임 재화까지.
                 확인할 것을 먼저 정리해 안내하는 고릴라티켓입니다.
               </p>
             </div>
