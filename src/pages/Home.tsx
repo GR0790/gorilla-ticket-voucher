@@ -64,8 +64,8 @@ const scenes = [
     body: "종류와 잔액, 유효기간을 확인하고 정리 절차를 안내합니다.",
   },
   {
-    title: "모바일 결제로 상품권을 구매하려 할 때",
-    body: "본인 명의 휴대폰인지, 어떤 상품권이 가능한지부터 확인해 안내합니다.",
+    title: "휴대폰 결제 한도를 확인하고 싶을 때",
+    body: "통신사 한도와 이번 달 사용 금액을 확인하는 방법부터 안내합니다.",
   },
   {
     title: "카드 할부로 구매를 검토할 때",
@@ -194,9 +194,9 @@ const HeroConsultTicket: React.FC = () => {
             <ul className="grid grid-cols-2 gap-y-2 text-[11.5px] text-white/70">
               {[
                 "상품권 매입",
-                "모바일 결제",
+                "휴대폰 소액결제",
                 "신용카드 구매",
-                "게임 재화",
+                "정보이용료 게임재화",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <span
@@ -279,16 +279,16 @@ const HeroSection: React.FC = () => (
         </div>
 
         <h1 className="display-hero mt-7 break-keep text-ink">
-          모바일 결제 · 상품권 매입,
+          휴대폰 소액결제 · 정보이용료,
           <br />
           <span className="bg-gradient-to-r from-azure to-sky-deep bg-clip-text text-transparent">
-            쉽고 빠르게 안내합니다.
+            쉽고 빠르게 사용 가능합니다.
           </span>
         </h1>
 
         <p className="lead mt-7 max-w-xl">
-          모바일 결제와 신용카드 결제, 게임 재화, 상품권 구매·매입까지. 가능한
-          범위와 조건을 상담에서 먼저 확인해 안내합니다.
+          휴대폰 소액결제와 정보이용료 게임재화, 상품권 구매·매입까지. 결제 한도와
+          가능한 조건을 상담에서 먼저 확인해 안내합니다.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -391,7 +391,7 @@ const ServicesSection: React.FC = () => (
               <br className="hidden md:block" /> 필요한 하나부터 확인합니다.
             </>
           }
-          lead="상품권 매입과 모바일 결제 상품권 구매, 카드 결제, 게임 재화. 각 방법마다 확인할 항목이 다릅니다."
+          lead="상품권 매입과 모바일 상품권 구매, 카드 결제, 정보이용료 게임재화. 각 방법마다 확인할 항목이 다릅니다."
         />
         <div className="hidden shrink-0 md:block">
           <ArrowLink to="/how-to-use/">전체 이용 절차 보기</ArrowLink>
@@ -615,8 +615,8 @@ const Home: React.FC = () => (
   <>
     <SEO
       title="상품권 매입·모바일 상품권 구매 절차 안내"
-      description="상품권 매입, 모바일 결제·신용카드 상품권 구매, 게임 재화 구매까지. 확인 절차와 조건을 채널톡 1:1 상담으로 안내합니다."
-      keywords="상품권 매입,모바일 결제 상품권,신용카드 상품권 구매,게임 재화,모바일 상품권,채널톡 상담"
+      description="상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지. 확인 절차와 조건을 채널톡 1:1 상담으로 안내합니다."
+      keywords="상품권 매입,휴대폰 소액결제 상품권,신용카드 상품권 구매,정보이용료 게임재화,모바일 상품권,채널톡 상담"
       faqItems={homeFaq.map((f) => ({ question: f.q, answer: f.a }))}
     />
     <HeroSection />
